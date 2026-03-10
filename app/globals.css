@@ -1,26 +1,52 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* FONTS */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* BRAND */
+  --color-brand-primary: #f97316;
+  --color-brand-secondary: #1e293b;
+  --color-brand-dark: #0f172a;
+  --color-brand-light: #f8fafc;
+  --color-brand-white: #ffffff;
+
+  /* PRIMARY SCALE */
+  --color-primary-50: #fffbf5;
+  --color-primary-100: #fff7ed;
+  --color-primary-200: #ffedd5;
+  --color-primary-300: #fed7aa;
+  --color-primary-400: #fdba74;
+  --color-primary-500: #fb923c;
+  --color-primary-600: #f97316;
+  --color-primary-700: #ea580c;
+  --color-primary-800: #c2410c;
+  --color-primary-900: #9a3412;
+
+  /* SECONDARY SCALE */
+  --color-secondary-50: #faf9f7;
+  --color-secondary-100: #f1efeb;
+  --color-secondary-200: #ddd8cf;
+  --color-secondary-300: #c7bfb1;
+  --color-secondary-400: #8f8575;
+  --color-secondary-500: #1A0F00;
+  --color-secondary-600: #160d00;
+  --color-secondary-700: #120a00;
+  --color-secondary-800: #0e0800;
+  --color-secondary-900: #0a0500;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    font-family: var(--font-body);
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
 }
