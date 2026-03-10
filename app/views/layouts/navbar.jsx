@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Image src={"/Images/logo.svg"} alt="logo" width={150} height={100} />
+          <Image src={"/Images/imaker-logo.svg"} alt="logo" width={150} height={100} />
         </Link>
 
         {/* Desktop nav */}

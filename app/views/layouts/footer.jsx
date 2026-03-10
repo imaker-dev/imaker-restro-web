@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="col-span-2 sm:col-span-3 lg:col-span-2">
           <div className="mb-4">
             <Image
-              src="/Images/logo.svg"
+              src="/Images/imaker-logo.svg"
               alt="ServeIQ Logo"
               width={200}
               height={100}
