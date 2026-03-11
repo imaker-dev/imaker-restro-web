@@ -16,6 +16,7 @@ import CTABanner from "@/app/views/home-page/cta-banner";
 import Testimonials from "@/app/views/home-page/testimonials";
 import Pricing from "@/app/views/home-page/pricing";
 import ContactUsSection from "@/app/views/home-page/contact-us-section";
+import PageWrapper from "@/app/components/page-wrapper";
 /* ─────────────────────────────────────────────────────────────────────────────
    DESIGN TOKENS — single source of truth
 ───────────────────────────────────────────────────────────────────────────── */
@@ -66,7 +67,6 @@ function useCountUp(end, active) {
    STATS
 ───────────────────────────────────────────────────────────────────────────── */
 function Stats() {
-  const [ref, visible] = useReveal(0.2);
   const STATS = [
     { end: 14000, suffix: "+", label: "Restaurants" },
     { end: 99, suffix: ".9%", label: "Uptime" },
@@ -74,18 +74,18 @@ function Stats() {
     { end: 4, suffix: ".9★", label: "App Rating" },
   ];
   return (
-    <section ref={ref} className="bg-white border-y border-[#1A0F00]/8">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <PageWrapper className="bg-white border-y border-[#1A0F00]/8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
           {STATS.map(({ end, suffix, label }, i) => {
-            const v = useCountUp(end, visible);
+            const v = useCountUp(end, true);
             return (
               <div
                 key={label}
                 className={`text-center ${i > 0 ? "lg:border-l lg:border-[#1A0F00]/8" : ""}`}
               >
                 <p className="font-display text-4xl sm:text-5xl font-black text-[#1A0F00] tabular-nums">
-                  {visible ? v.toLocaleString("en-IN") : "0"}
+                  {/* {visible ? ) : "0"} */}
+                  {v.toLocaleString("en-IN")}
                   {suffix}
                 </p>
                 <p className="mt-2 text-sm font-semibold text-[#1A0F00]/45 uppercase tracking-wider">
@@ -95,8 +95,7 @@ function Stats() {
             );
           })}
         </div>
-      </div>
-    </section>
+    </PageWrapper>
   );
 }
 
@@ -104,7 +103,6 @@ function Stats() {
    TRUST STRIP
 ───────────────────────────────────────────────────────────────────────────── */
 function TrustStrip() {
-  const [ref, visible] = useReveal(0.2);
   const ITEMS = [
     { Icon: Shield, label: "Bank-Grade SSL" },
     { Icon: CloudUpload, label: "Auto Cloud Backup" },
@@ -114,30 +112,28 @@ function TrustStrip() {
     { Icon: Headphones, label: "24 × 7 Support" },
   ];
   return (
-    <section ref={ref} className="bg-white border-y border-[#1A0F00]/8 py-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 lg:gap-8">
-          {ITEMS.map(({ Icon, label }, i) => (
-            <div
-              key={label}
-              className={`flex flex-col items-center gap-2.5 group transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-              style={{ transitionDelay: `${i * 60}ms` }}
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#F9F6F1] border border-[#1A0F00]/8 flex items-center justify-center group-hover:border-amber-300 group-hover:bg-amber-50 transition-all duration-300">
-                <Icon
-                  size={20}
-                  className="text-[#1A0F00]/35 group-hover:text-amber-600 transition-colors"
-                  strokeWidth={1.5}
-                />
-              </div>
-              <p className="text-xs font-semibold text-[#1A0F00]/45 text-center group-hover:text-[#1A0F00]/70 transition-colors">
-                {label}
-              </p>
+    <PageWrapper className="bg-white border-y border-secondary-500/8">
+      <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 lg:gap-8">
+        {ITEMS.map(({ Icon, label }, i) => (
+          <div
+            key={label}
+            className={`flex flex-col items-center gap-2.5 group transition-all duration-500`}
+            style={{ transitionDelay: `${i * 60}ms` }}
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary-50 border border-secondary-500/8 flex items-center justify-center group-hover:border-primary-300 group-hover:bg-primary-50 transition-all duration-300">
+              <Icon
+                size={20}
+                className="text-[#1A0F00]/35 group-hover:text-primary-600 transition-colors"
+                strokeWidth={1.5}
+              />
             </div>
-          ))}
-        </div>
+            <p className="text-xs font-semibold text-[#1A0F00]/45 text-center group-hover:text-[#1A0F00]/70 transition-colors">
+              {label}
+            </p>
+          </div>
+        ))}
       </div>
-    </section>
+    </PageWrapper>
   );
 }
 

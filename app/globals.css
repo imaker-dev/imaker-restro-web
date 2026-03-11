@@ -4,41 +4,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* FONTS */
-  --font-heading: "Poppins", sans-serif;
-  --font-body: "DM Sans", sans-serif;
+/* FONTS */
+--font-heading: "Poppins", sans-serif;
+--font-body: "DM Sans", sans-serif;
 
-  /* BRAND */
-  --color-brand-primary: #f97316;
-  --color-brand-secondary: #1e293b;
-  --color-brand-dark: #0f172a;
-  --color-brand-light: #f8fafc;
-  --color-brand-white: #ffffff;
+/* BRAND */
+--color-brand-primary: #C52031;
+--color-brand-secondary: #2B2B2B;
+--color-brand-dark: #0a0a0a;
+--color-brand-light: #f4f4f4;
+--color-brand-white: #ffffff;
 
-  /* PRIMARY SCALE */
-  --color-primary-50: #fffbf5;
-  --color-primary-100: #fff7ed;
-  --color-primary-200: #ffedd5;
-  --color-primary-300: #fed7aa;
-  --color-primary-400: #fdba74;
-  --color-primary-500: #fb923c;
-  --color-primary-600: #f97316;
-  --color-primary-700: #ea580c;
-  --color-primary-800: #c2410c;
-  --color-primary-900: #9a3412;
+/* PRIMARY SCALE (Maroon - #C52031) */
+--color-primary-50: #fdf2f3;
+--color-primary-100: #fbe6e8;
+--color-primary-200: #f6c1c6;
+--color-primary-300: #ee8f98;
+--color-primary-400: #e35c6a;
+--color-primary-500: #d9384a;
+--color-primary-600: #C52031;
+--color-primary-700: #a81b29;
+--color-primary-800: #8a1622;
+--color-primary-900: #6d111b;
+--color-primary-950: #3f070d;
 
-  /* SECONDARY SCALE */
-  --color-secondary-50: #faf9f7;
-  --color-secondary-100: #f1efeb;
-  --color-secondary-200: #ddd8cf;
-  --color-secondary-300: #c7bfb1;
-  --color-secondary-400: #8f8575;
-  --color-secondary-500: #1A0F00;
-  --color-secondary-600: #160d00;
-  --color-secondary-700: #120a00;
-  --color-secondary-800: #0e0800;
-  --color-secondary-900: #0a0500;
+/* SECONDARY SCALE (500 = #2B2B2B Pivot) */
+--color-secondary-50: #f4f4f4;
+--color-secondary-100: #e4e4e4;
+--color-secondary-200: #cfcfcf;
+--color-secondary-300: #a8a8a8;
+--color-secondary-400: #707070;
+--color-secondary-500: #2B2B2B;
+--color-secondary-600: #1f1f1f;
+--color-secondary-700: #171717;
+--color-secondary-800: #101010;
+--color-secondary-900: #0a0a0a;
+--color-secondary-950: #040404;
 }
+
 
 
 @layer base {

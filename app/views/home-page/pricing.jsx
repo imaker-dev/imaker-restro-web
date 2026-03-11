@@ -8,18 +8,20 @@ import PageWrapper from "@/app/components/page-wrapper";
 const PLANS = [
   {
     name: "Starter",
-    price: "₹999",
-    period: "/mo",
+    price: "Free",
+    period: "",
     desc: "For single-outlet cafes and QSRs just getting started.",
     features: [
       "1 Outlet · 2 Devices",
       "Unlimited Orders",
-      "Basic Reports",
+      "Basic Sales Reports",
       "Cash & UPI Payments",
       "KOT Printing",
+      "Basic Menu Management",
+      "Cloud Backup",
       "Email Support",
     ],
-    cta: "Start Free Trial",
+    cta: "Start Free",
     highlight: false,
   },
   {
@@ -52,7 +54,7 @@ const PLANS = [
       "Full API Access",
       "Dedicated Account Manager",
       "Custom Integrations",
-      "SLA Uptime Guarantee",
+      "Advanced Analytics Suite",
       "On-site Training",
       "24×7 Priority Hotline",
     ],
@@ -83,19 +85,19 @@ export default function Pricing() {
               key={name}
               className={`relative flex flex-col rounded-2xl transition-all duration-700 hover:-translate-y-1 ${
                 highlight
-                  ? "bg-[#1A0F00] shadow-2xl shadow-[#1A0F00]/30"
-                  : "bg-[#F9F6F1] border border-[#1A0F00]/8 hover:border-amber-300 hover:shadow-lg hover:shadow-amber-500/8"
+                  ? "bg-secondary-500 shadow-2xl shadow-[#1A0F00]/30"
+                  : "bg-primary-50 border border-[#1A0F00]/8 hover:border-primary-300 hover:shadow-lg hover:shadow-primary-500/8"
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {badge && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs font-extrabold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap uppercase tracking-wider">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary-500 text-white text-xs font-extrabold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap uppercase tracking-wider">
                   {badge}
                 </div>
               )}
               <div className="p-7 flex-1">
                 <h3
-                  className={`font-display text-xl font-black mb-1 ${highlight ? "text-amber-400" : "text-[#1A0F00]"}`}
+                  className={`font-display text-xl font-black mb-1 ${highlight ? "text-white" : "text-[#1A0F00]"}`}
                 >
                   {name}
                 </h3>
@@ -123,7 +125,7 @@ export default function Pricing() {
                     <li key={f} className="flex items-start gap-2.5">
                       <CheckCircle2
                         size={15}
-                        className={`flex-shrink-0 mt-0.5 ${highlight ? "text-amber-400" : "text-green-600"}`}
+                        className={`flex-shrink-0 mt-0.5 ${highlight ? "text-primary-500" : "text-green-600"}`}
                         strokeWidth={2.5}
                       />
                       <span
@@ -140,8 +142,8 @@ export default function Pricing() {
                   href="#"
                   className={`flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-bold text-sm transition-all duration-200 ${
                     highlight
-                      ? "bg-amber-400 text-[#1A0F00] hover:bg-amber-300 shadow-lg shadow-amber-400/20 hover:-translate-y-px"
-                      : "border-2 border-[#1A0F00]/15 text-[#1A0F00] hover:bg-[#1A0F00] hover:text-white hover:border-[#1A0F00]"
+                      ? "bg-primary-500 text-white hover:bg-primary-600  hover:-translate-y-px"
+                      : "text-white bg-secondary-500 hover:bg-secondary-600 "
                   }`}
                 >
                   {cta}
@@ -152,10 +154,6 @@ export default function Pricing() {
           ),
         )}
       </div>
-      <p className="text-center text-sm font-medium text-[#1A0F00]/35 mt-8">
-        Every plan includes a 14-day free trial — no credit card required to
-        start.
-      </p>
     </PageWrapper>
   );
 }

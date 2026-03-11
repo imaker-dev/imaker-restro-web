@@ -10,14 +10,6 @@ export default function CTABanner() {
       <div
         className={`relative bg-secondary-500 rounded-2xl overflow-hidden p-12 lg:p-16 text-center shadow transition-all duration-700 `}
       >
-        {/* <DotBg /> */}
-        <div
-          className="absolute top-0 inset-x-0 h-32 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse at 50% 0%, rgba(245,158,11,0.1) 0%, transparent 70%)",
-          }}
-        />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-primary-400 to-transparent" />
 
         <div className="relative">

@@ -59,9 +59,9 @@ export default function HowItWorksSection() {
               <div className="w-11 h-11 rounded-xl bg-primary-500/12 border border-primary-400/20 flex items-center justify-center">
                 <Icon size={20} className="text-primary-500" strokeWidth={2} />
               </div>
-              <span className="font-display text-4xl font-black text-white/6 leading-none">
+              <h3 className="text-4xl font-black text-white/10 leading-none">
                 {n}
-              </span>
+              </h3>
             </div>
             <h3 className="text-base font-bold text-white mb-2">{title}</h3>
             <p className="text-sm font-medium text-white/45 leading-relaxed">

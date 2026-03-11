@@ -26,9 +26,9 @@ export default function HeroSection() {
         {/* Left Content */}
         <div className="transition-all duration-700">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary-50 border border-primary-300 rounded-full px-4 py-1.5 mb-8">
+          <div className="inline-flex items-center gap-2 bg-primary-100 border border-primary-300 rounded-full px-4 py-1.5 mb-8">
             <Flame size={13} className="text-primary-600" strokeWidth={2.5} />
-            <span className="text-xs font-bold text-primary-700 uppercase tracking-widest">
+            <span className="text-xs font-bold text-primary-600 uppercase tracking-widest">
               Smart Restaurant POS
             </span>
           </div>

@@ -18,7 +18,7 @@ function InputField({ label, type, placeholder }) {
       <input
         type={type}
         placeholder={placeholder}
-        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-white placeholder-white/30 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all"
+        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-white placeholder-white/30 focus:outline-none focus:border-primary-400 transition-all"
       />
     </div>
   );
@@ -66,10 +66,10 @@ export default function ContactUsSection() {
                 href={href}
                 className="group flex items-center gap-4"
               >
-                <div className="w-10 h-10 rounded-xl border border-[#1A0F00]/10 flex items-center justify-center flex-shrink-0 group-hover:border-amber-400 group-hover:bg-amber-50 transition-all duration-200">
+                <div className="w-10 h-10 rounded-xl border border-[#1A0F00]/10 flex items-center justify-center flex-shrink-0 group-hover:border-primary-400 transition-all duration-200">
                   <Icon
                     size={15}
-                    className="text-[#1A0F00]/40 group-hover:text-amber-600 transition-colors"
+                    className="text-[#1A0F00]/40 group-hover:text-primary-600 transition-colors"
                     strokeWidth={2}
                   />
                 </div>
@@ -89,7 +89,7 @@ export default function ContactUsSection() {
 
         {/* RIGHT — form */}
         <div className="transition-all duration-700 delay-200">
-          <div className="bg-[#1A0F00] rounded-3xl p-8 lg:p-10 shadow-2xl shadow-[#1A0F00]/30">
+          <div className="bg-secondary-500 rounded-3xl p-8 lg:p-10 shadow-2xl shadow-[#1A0F00]/30">
             <div className="space-y-5">
               {/* Row 1 */}
               <div className="grid sm:grid-cols-2 gap-4">
@@ -130,7 +130,7 @@ export default function ContactUsSection() {
                 <select
                   name="plan"
                   defaultValue=""
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-white focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-white focus:outline-none focus:border-primary-400 transition-all"
                 >
                   <option value="" disabled>
                     Select a plan
@@ -159,7 +159,7 @@ export default function ContactUsSection() {
                 <textarea
                   rows={4}
                   placeholder="Tell us about your setup — type of restaurant, number of tables, current billing system…"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-white placeholder-white/30 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 transition-all resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-white placeholder-white/30 focus:outline-none focus:border-primary-400 transition-all resize-none"
                 />
               </div>
 

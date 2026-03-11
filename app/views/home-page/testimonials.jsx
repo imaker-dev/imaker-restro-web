@@ -46,7 +46,7 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <PageWrapper className="bg-[#F9F6F1]">
+    <PageWrapper className="bg-primary-50">
       {/* Header */}
       <SectionHeader
         badge="Customer Stories"
