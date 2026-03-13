@@ -1,4 +1,5 @@
 import PageWrapper from "@/app/components/page-wrapper";
+import { CONTACT_INFO } from "@/app/const";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -99,7 +100,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm font-medium text-white/60 text-center sm:text-left">
-          © {new Date().getFullYear()} ServeIQ Technologies Pvt. Ltd.
+          © {new Date().getFullYear()} {CONTACT_INFO.name}
         </p>
 
         <p className="text-sm font-medium text-white/50">

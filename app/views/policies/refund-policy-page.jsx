@@ -68,8 +68,7 @@ Any updates will be posted on this page with the revised effective date.`,
       title: "Contact Us",
       content: `If you have questions regarding refunds or subscription cancellations, please contact us:
 
-Email: ${CONTACT_INFO.email}
-Phone: ${CONTACT_INFO.phone}
+Phone: ${CONTACT_INFO.phones.india}
 Company: iMaker Technology Pvt. Ltd.
 Product: iMaker Restro POS`,
     },

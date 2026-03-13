@@ -156,8 +156,7 @@ The updated policy will be published on this page with the revised effective dat
       title: "Contact Us",
       content: `If you have questions regarding this Privacy Policy or our data practices, please contact us:
 
-Email: ${CONTACT_INFO.email} 
-Phone: ${CONTACT_INFO.phone} 
+Phone: ${CONTACT_INFO.phones.india} 
 Company: iMaker Technology Pvt. Ltd.  
 Product: iMaker Restro POS`,
     },

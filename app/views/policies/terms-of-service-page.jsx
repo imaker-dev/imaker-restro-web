@@ -88,8 +88,7 @@ Continued use of the service after updates constitutes acceptance of the revised
       title: "Contact Us",
       content: `If you have any questions regarding these Terms of Service, please contact us:
 
-Email: ${CONTACT_INFO.email}
-Phone: ${CONTACT_INFO.phone}
+Phone: ${CONTACT_INFO.phones.india}
 Company: iMaker Technology Pvt. Ltd.
 Product: iMaker Restro POS`,
     },

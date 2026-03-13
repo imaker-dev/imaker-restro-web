@@ -40,50 +40,71 @@ export default function ContactUsSection() {
           />
 
           {/* Contact list */}
-          <div className="space-y-6">
-            {[
-              {
-                Icon: Phone,
-                label: "Phone",
-                value: CONTACT_INFO.phone,
-                href: `tel:${CONTACT_INFO.phone}`,
-              },
-              {
-                Icon: Mail,
-                label: "Email",
-                value: CONTACT_INFO.email,
-                href: `mailto:${CONTACT_INFO.email}`,
-              },
-              {
-                Icon: MapPin,
-                label: "Office",
-                value: CONTACT_INFO.address,
-                href: "#",
-              },
-            ].map(({ Icon, label, value, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="group flex items-center gap-4"
-              >
-                <div className="w-10 h-10 rounded-xl border border-[#1A0F00]/10 flex items-center justify-center flex-shrink-0 group-hover:border-primary-400 transition-all duration-200">
-                  <Icon
-                    size={15}
-                    className="text-[#1A0F00]/40 group-hover:text-primary-600 transition-colors"
-                    strokeWidth={2}
-                  />
-                </div>
+          <div className="space-y-4">
+            {/* Phone Grid */}
+            <div className="grid grid-cols-2 gap-2.5">
+              {[
+                {
+                  label: "India · HQ",
+                  value: CONTACT_INFO.phones.india,
+                  span: "col-span-2",
+                },
+                {
+                  label: "Canada",
+                  value: CONTACT_INFO.phones.canada,
+                },
+                {
+                  label: "USA",
+                  value: CONTACT_INFO.phones.usa,
+                },
+              ].map(({ label, value, span }) => (
+                <a
+                  key={value}
+                  href={`tel:${value}`}
+                  className={`group flex items-center gap-4 border border-[#1A0F00]/8 hover:border-primary-400 rounded-2xl px-4 py-3.5 transition-all duration-200 ${span || ""}`}
+                >
+                  <div className="w-9 h-9 rounded-xl border border-[#1A0F00]/10 flex items-center justify-center flex-shrink-0 group-hover:border-primary-400 transition-all duration-200">
+                    <Phone
+                      size={15}
+                      className="text-[#1A0F00]/40 group-hover:text-primary-500 transition-colors"
+                      strokeWidth={2}
+                    />
+                  </div>
 
-                <div>
-                  <p className="text-[10px] font-extrabold text-[#1A0F00]/30 uppercase tracking-widest">
-                    {label}
-                  </p>
-                  <p className="text-sm font-semibold text-[#1A0F00]/70 mt-0.5 group-hover:text-[#1A0F00] transition-colors">
-                    {value}
-                  </p>
-                </div>
-              </a>
-            ))}
+                  <div>
+                    <p className="text-[10px] font-extrabold text-[#1A0F00]/30 uppercase tracking-widest">
+                      {label}
+                    </p>
+                    <p className="text-sm font-semibold text-[#1A0F00]/70 mt-0.5 group-hover:text-[#1A0F00] transition-colors">
+                      {value}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* Address */}
+            <a
+              href="#"
+              className="group flex items-center gap-4 border border-[#1A0F00]/8 hover:border-primary-400 rounded-2xl px-4 py-3.5 transition-all duration-200"
+            >
+              <div className="w-9 h-9 rounded-xl border border-[#1A0F00]/10 flex items-center justify-center flex-shrink-0 group-hover:border-primary-400 transition-all duration-200">
+                <MapPin
+                  size={15}
+                  className="text-[#1A0F00]/40 group-hover:text-primary-500 transition-colors"
+                  strokeWidth={2}
+                />
+              </div>
+
+              <div>
+                <p className="text-[10px] font-extrabold text-[#1A0F00]/30 uppercase tracking-widest">
+                  Office
+                </p>
+                <p className="text-sm font-semibold text-[#1A0F00]/70 mt-0.5 group-hover:text-[#1A0F00] transition-colors">
+                  {CONTACT_INFO.address}
+                </p>
+              </div>
+            </a>
           </div>
         </div>
 
