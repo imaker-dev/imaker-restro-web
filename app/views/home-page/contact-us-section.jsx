@@ -1,7 +1,10 @@
+"use client"
+
 import PageWrapper from "@/app/components/page-wrapper";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Check, ChevronDown, Mail, MapPin, Phone } from "lucide-react";
 import SectionHeader from "../layouts/section-header";
 import { CONTACT_INFO } from "../../const";
+import { useEffect, useRef, useState } from "react";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    CONTACT
@@ -25,6 +28,28 @@ function InputField({ label, type, placeholder }) {
 }
 
 export default function ContactUsSection() {
+  // Add inside ContactUsSection()
+  const [planOpen, setPlanOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const planRef = useRef(null);
+
+  // Close on outside click
+  useEffect(() => {
+    const handler = (e) => {
+      if (planRef.current && !planRef.current.contains(e.target))
+        setPlanOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  // Plan options
+  const PLAN_OPTIONS = [
+    { value: "starter", label: "Starter — ₹999 / mo" },
+    { value: "growth", label: "Growth — ₹2,499 / mo" },
+    { value: "enterprise", label: "Enterprise — Custom pricing" },
+    { value: "just-looking", label: "Just looking — No pressure" },
+  ];
   return (
     <PageWrapper id="contact" className="bg-primary-50 py-24 lg:py-32">
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 lg:gap-20 items-start">
@@ -143,32 +168,55 @@ export default function ContactUsSection() {
               </div>
 
               {/* Plan selector */}
-              <div>
+              <div className="relative" ref={planRef}>
                 <label className="block text-[10px] font-extrabold text-white/40 uppercase tracking-widest mb-2">
                   Interested In
                 </label>
-
-                <select
-                  name="plan"
-                  defaultValue=""
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-white focus:outline-none focus:border-primary-400 transition-all"
+                <button
+                  type="button"
+                  onClick={() => setPlanOpen((p) => !p)}
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm font-medium text-left flex items-center justify-between transition-all focus:outline-none focus:border-primary-400 hover:border-white/20"
                 >
-                  <option value="" disabled>
-                    Select a plan
-                  </option>
+                  <span
+                    className={selectedPlan ? "text-white" : "text-white/30"}
+                  >
+                    {selectedPlan?.label ?? "Select a plan"}
+                  </span>
+                  <ChevronDown
+                    size={15}
+                    strokeWidth={2}
+                    className={`text-white/40 transition-transform duration-200 ${planOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
 
-                  <option value="starter">Starter — ₹999 / mo</option>
-
-                  <option value="growth">Growth — ₹2,499 / mo</option>
-
-                  <option value="enterprise">
-                    Enterprise — Custom pricing
-                  </option>
-
-                  <option value="just-looking">
-                    Just looking — No pressure
-                  </option>
-                </select>
+                {planOpen && (
+                  <div className="absolute top-full left-0 right-0 mt-1.5 bg-[#1a1008] border border-white/10 rounded-xl overflow-hidden z-50 shadow-xl shadow-black/40">
+                    {PLAN_OPTIONS.map((opt) => (
+                      <button
+                        key={opt.value}
+                        type="button"
+                        onClick={() => {
+                          setSelectedPlan(opt);
+                          setPlanOpen(false);
+                        }}
+                        className={`w-full text-left px-4 py-3 text-sm transition-colors duration-150 flex items-center justify-between group ${
+                          selectedPlan?.value === opt.value
+                            ? "bg-white/10 text-white font-semibold"
+                            : "text-white/60 hover:bg-white/5 hover:text-white font-medium"
+                        }`}
+                      >
+                        {opt.label}
+                        {selectedPlan?.value === opt.value && (
+                          <Check
+                            size={13}
+                            strokeWidth={2.5}
+                            className="text-primary-400"
+                          />
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Message */}
