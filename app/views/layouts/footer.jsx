@@ -24,11 +24,11 @@ export default function Footer() {
       { label: "FAQs", href: "/faq" },
     ],
 
-   Legal: [
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Service", href: "/terms-of-service" },
-  { label: "Refund Policy", href: "/refund-policy" },
-],
+    Legal: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
+      { label: "Refund Policy", href: "/refund-policy" },
+    ],
   };
 
   return (
@@ -42,13 +42,16 @@ export default function Footer() {
         {/* Brand */}
         <div className="col-span-2 sm:col-span-3 lg:col-span-2">
           <div className="mb-4">
-            <Image
-              src="/Images/imaker-logo.svg"
-              alt="ServeIQ Logo"
-              width={200}
-              height={100}
-              priority
-            />
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/Images/imaker-logo.svg"
+                alt="logo"
+                width={200}
+                height={100}
+                priority
+                className="w-[200px] lg:w-[220px] xl:w-[240px] h-auto"
+              />
+            </Link>
           </div>
 
           <p className="text-sm font-medium text-white/70 leading-relaxed mb-6 max-w-[260px]">

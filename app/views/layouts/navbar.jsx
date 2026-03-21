@@ -37,9 +37,7 @@ export default function Navbar() {
       <PageWrapper
         paddingY="py-0"
         className={`fixed top-0 inset-x-0 z-30 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
+          scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
         }`}
         containerClassName="h-18 flex items-center justify-between"
       >
@@ -47,9 +45,10 @@ export default function Navbar() {
           <Image
             src="/Images/imaker-logo.svg"
             alt="logo"
-            width={150}
+            width={200}
             height={100}
             priority
+            className="w-[200px] lg:w-[220px] xl:w-[240px] h-auto"
           />
         </Link>
 
