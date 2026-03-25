@@ -1,31 +1,52 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientProviders from "@/app/components/client-providers";
+import { BASE_URL } from "./const";
 
 export const metadata: Metadata = {
-  title: "iMaker Restro POS | Smart Restaurant Billing & POS Software",
+  metadataBase: new URL(BASE_URL),
+
+  title:
+    "Restaurant POS Software in India | Billing & KOT System | iMaker Restro",
+
   description:
-    "iMaker Restro POS helps restaurants manage billing, tables, kitchen orders, and reports from one powerful POS system. Simple setup, fast billing, and real-time insights for modern restaurants.",
+    "iMaker Restro POS is a powerful restaurant billing software with GST, KOT, table management, and inventory. Works offline and helps restaurants run faster and smarter.",
 
   keywords: [
-    "restaurant POS",
-    "restaurant billing software",
+    "restaurant POS software India",
+    "restaurant billing software with GST",
     "restaurant management system",
-    "POS for restaurant India",
-    "GST billing POS",
-    "restaurant billing software India",
+    "KOT system restaurant",
+    "table management restaurant software",
+    "offline restaurant POS",
+    "fast billing POS system",
+    "best POS for restaurant India",
+    "restaurant POS with inventory",
     "iMaker Restro POS",
   ],
 
   authors: [{ name: "iMaker Technology Pvt. Ltd." }],
 
+  icons: {
+    icon: "/favicon.ico",
+  },
+
   openGraph: {
     title: "iMaker Restro POS | Restaurant Billing & Management System",
     description:
       "Manage billing, tables, kitchen orders, and reports with iMaker Restro POS — built for modern restaurants.",
-    type: "website",
-    locale: "en_IN",
+    url: BASE_URL,
     siteName: "iMaker Restro POS",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/Images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "iMaker Restro POS Dashboard Preview",
+      },
+    ],
   },
 
   robots: {
@@ -43,12 +64,47 @@ export const viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className="antialiased bg-white text-[#1A0F00]">
+        {/* SOFTWARE SCHEMA (VERY IMPORTANT) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "iMaker Restro POS",
+              operatingSystem: "Windows",
+              applicationCategory: "BusinessApplication",
+              description:
+                "Restaurant POS software for billing, KOT, table and inventory management.",
+              url: BASE_URL,
+              publisher: {
+                "@type": "Organization",
+                name: "iMaker Technology Private Limited",
+              },
+            }),
+          }}
+        />
+
+        {/* ORGANIZATION SCHEMA */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "iMaker Technology Private Limited",
+              url: BASE_URL,
+              logo: `${BASE_URL}/Images/logo-icon.png`,
+            }),
+          }}
+        />
+
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>

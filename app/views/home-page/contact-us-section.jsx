@@ -51,7 +51,7 @@ export default function ContactUsSection() {
     { value: "just-looking", label: "Just looking — No pressure" },
   ];
   return (
-    <PageWrapper id="contact" className="bg-primary-50 py-24 lg:py-32">
+    <PageWrapper id="contact" className="bg-white py-24 lg:py-32">
       <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 lg:gap-20 items-start">
         {/* LEFT — headline + info */}
         <div className="transition-all duration-700 delay-100">

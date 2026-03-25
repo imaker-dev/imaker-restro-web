@@ -29,6 +29,7 @@ export default function Navbar() {
     { label: "How It Works", href: "#how-it-works" },
     { label: "Pricing", href: "#pricing" },
     { label: "About", href: "#about" },
+    { label: "Download", href: "#download" },
     { label: "Contact", href: "#contact" },
   ];
 

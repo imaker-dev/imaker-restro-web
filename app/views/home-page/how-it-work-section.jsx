@@ -51,22 +51,26 @@ export default function HowItWorksSection() {
         {STEPS.map(({ n, Icon, title, desc }, i) => (
           <div
             key={n}
-            className={`relative bg-white/[0.04] border border-white/8 rounded-2xl p-6 hover:bg-white/[0.07] hover:border-primary-400/20 transition-all duration-300`}
+            className="relative bg-white/[0.06] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.08] hover:border-primary-500/30 transition-all duration-300"
             style={{ transitionDelay: `${i * 100}ms` }}
           >
-            {/* Step number */}
-            <div className="flex items-start justify-between mb-5">
-              <div className="w-11 h-11 rounded-xl bg-primary-500/12 border border-primary-400/20 flex items-center justify-center">
+            {/* Step number + icon */}
+            <div className="flex items-center justify-between mb-5">
+              <div className="w-11 h-11 rounded-xl bg-primary-500/15 border border-primary-500/30 flex items-center justify-center">
                 <Icon size={20} className="text-primary-500" strokeWidth={2} />
               </div>
-              <h3 className="text-4xl font-black text-white/10 leading-none">
+
+              {/* Step number (more visible but still subtle) */}
+              <h3 className="text-3xl font-extrabold text-white/20 leading-none">
                 {n}
               </h3>
             </div>
-            <h3 className="text-base font-bold text-white mb-2">{title}</h3>
-            <p className="text-sm font-medium text-white/45 leading-relaxed">
-              {desc}
-            </p>
+
+            {/* Title */}
+            <h3 className="text-base font-semibold text-white mb-2">{title}</h3>
+
+            {/* Description */}
+            <p className="text-sm text-white/70 leading-relaxed">{desc}</p>
           </div>
         ))}
       </div>

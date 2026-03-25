@@ -1,5 +1,4 @@
 import PageWrapper from "@/app/components/page-wrapper";
-import { Zap } from "lucide-react";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    CTA BANNER
