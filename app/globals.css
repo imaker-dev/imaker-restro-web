@@ -43,6 +43,9 @@
 }
 
 
+button {
+  @apply cursor-pointer;
+}
 
 @layer base {
   body {

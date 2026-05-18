@@ -22,7 +22,7 @@ export default function Homepage() {
       <HowItWorksSection />
       <DownloadSection />
       <AboutUsSection />
-      <Pricing />
+      {/* <Pricing /> */}
       <FAQSection />
       <Testimonials />
       <ContactUsSection />
