@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientProviders from "@/app/components/client-providers";
 import { BASE_URL } from "./const";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -106,6 +107,17 @@ export default function RootLayout({
         />
 
         <ClientProviders>{children}</ClientProviders>
+
+        {/* Live Chat Scripts */}
+        <Script
+          src="https://office.imaker.technology/im_livechat/loader/1"
+          strategy="afterInteractive"
+        />
+
+        <Script
+          src="https://office.imaker.technology/im_livechat/assets_embed.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
