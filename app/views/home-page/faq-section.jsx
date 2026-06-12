@@ -10,10 +10,10 @@ const FAQ_CATEGORIES = [
     id: "general",
     label: "General",
   },
-//   {
-//     id: "pricing",
-//     label: "Pricing",
-//   },
+  //   {
+  //     id: "pricing",
+  //     label: "Pricing",
+  //   },
   {
     id: "features",
     label: "Features",
@@ -129,7 +129,7 @@ const FAQS = [
     answer:
       "Yes, your data is stored securely and remains under your control. We ensure reliability and safety for your business data.",
   },
-];  
+];
 
 export default function FAQSection() {
   const [activeCategory, setActiveCategory] = useState("general");
@@ -144,7 +144,6 @@ export default function FAQSection() {
       className="relative bg-white"
       containerWidth="max-w-4xl mx-auto"
     >
-
       <div className="relative z-10">
         <SectionHeader
           badge={"Got Questions?"}
@@ -269,9 +268,12 @@ export default function FAQSection() {
               Our support team replies in under 2 hours on business days.
             </p>
           </div>
-          <button className="relative z-10 flex-shrink-0 bg-white text-primary-600 hover:bg-primary-50 font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+          <a
+            href="#contact"
+            className="relative z-10 flex-shrink-0 bg-white text-primary-600 hover:bg-primary-50 font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+          >
             Contact Support →
-          </button>
+          </a>
         </div>
       </div>
     </PageWrapper>

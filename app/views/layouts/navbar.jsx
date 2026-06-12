@@ -27,7 +27,6 @@ export default function Navbar() {
   const NAV = [
     { label: "Features", href: "#features" },
     { label: "How It Works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
     { label: "About", href: "#about" },
     { label: "Download", href: "#download" },
     { label: "Contact", href: "#contact" },

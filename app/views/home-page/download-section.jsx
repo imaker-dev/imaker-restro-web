@@ -100,7 +100,19 @@ export default function DownloadSection() {
 
                   {/* Button + Version */}
                   <div className="mt-5 md:mt-8">
-                    <button
+                    <a
+                      href="#contact"
+                      className={`w-full flex items-center justify-center py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold transition-all
+                        ${
+                          isHovered
+                            ? "bg-primary-600 text-white shadow-md"
+                            : "bg-primary-50 text-primary-600 hover:bg-primary-100"
+                        }`}
+                    >
+                      Contact Us
+                    </a>
+
+                    {/* <button
                       className={`w-full py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold transition-all
                       ${
                         isHovered
@@ -110,7 +122,7 @@ export default function DownloadSection() {
                     >
                       <Download size={14} className="inline mr-1.5 md:mr-2" />
                       Download
-                    </button>
+                    </button> */}
 
                     {/* Version */}
                     <div className="mt-1 text-xs text-secondary-500/80 text-center font-medium">
