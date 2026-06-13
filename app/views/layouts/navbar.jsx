@@ -66,7 +66,7 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Link
-            href="/register"
+            href="#contact"
             className="flex items-center gap-2 bg-primary-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-primary-700 transition shadow hover:-translate-y-px"
           >
             Free Trial
@@ -124,7 +124,7 @@ export default function Navbar() {
 
         <div className="px-4 pb-6 border-t border-secondary-100 pt-4">
           <Link
-            href="/signup"
+            href="#contact"
             className="block w-full text-center py-3 bg-primary-600 text-white rounded-xl text-sm font-bold hover:bg-primary-700 transition"
           >
             Start Free Trial
