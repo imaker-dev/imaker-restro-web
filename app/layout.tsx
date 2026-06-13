@@ -118,6 +118,22 @@ export default function RootLayout({
           src="https://office.imaker.technology/im_livechat/assets_embed.js"
           strategy="afterInteractive"
         />
+
+        {/* Google Ads / Google Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18235414628"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18235414628');
+          `}
+        </Script>
       </body>
     </html>
   );
