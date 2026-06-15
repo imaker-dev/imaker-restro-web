@@ -108,6 +108,13 @@ export default function RootLayout({
 
         <ClientProviders>{children}</ClientProviders>
 
+        {/* CookieYes */}
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/e051748bf16101cfa7f0d75d/script.js"
+          strategy="beforeInteractive"
+        />
+
         {/* Live Chat Scripts */}
         <Script
           src="https://office.imaker.technology/im_livechat/loader/1"
