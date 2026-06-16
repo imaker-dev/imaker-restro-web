@@ -1,7 +1,7 @@
 "use client";
 
 import PageWrapper from "@/app/components/page-wrapper";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionHeader from "../layouts/section-header";
 import {
   UtensilsCrossed,
@@ -12,6 +12,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 const USE_CASES = [
   {
@@ -97,13 +98,23 @@ const USE_CASES = [
 ];
 
 export default function UseCasesSection() {
+  const searchParams = useSearchParams();
   const [activeId, setActiveId] = useState("restaurants");
 
-  const active = USE_CASES.find((u) => u.id === activeId);
+  useEffect(() => {
+    const type = searchParams.get("type");
+
+    if (type && USE_CASES.some((u) => u.id === type)) {
+      setActiveId(type);
+    }
+  }, [searchParams]);
+
+  const active = USE_CASES.find((u) => u.id === activeId) || USE_CASES[0];
+
   const Icon = active.icon;
 
   return (
-    <PageWrapper className="relative bg-white overflow-hidden">
+    <PageWrapper id={"use-cases"} className="relative bg-white overflow-hidden">
       <SectionHeader
         badge={"Built For Every Format"}
         title={"Designed for Every "}

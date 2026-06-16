@@ -141,6 +141,7 @@ export default function FAQSection() {
 
   return (
     <PageWrapper
+      id={"faq"}
       className="relative bg-white"
       containerWidth="max-w-4xl mx-auto"
     >

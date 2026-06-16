@@ -7,21 +7,21 @@ import Link from "next/link";
 export default function Footer() {
   const COLS = {
     Product: [
-      { label: "Features", href: "/features" },
-      { label: "Pricing", href: "/pricing" },
-      { label: "Request Demo", href: "/demo" },
+      { label: "Features", href: "#features" },
+      { label: "Pricing", href: "#contact" },
+      { label: "Request Demo", href: "#contact" },
     ],
 
     Solutions: [
-      { label: "Restaurants", href: "/solutions/restaurants" },
-      { label: "Cafes", href: "/solutions/cafes" },
-      { label: "Cloud Kitchens", href: "/solutions/cloud-kitchens" },
+      { label: "Restaurants", href: "/?type=restaurants#use-cases" },
+      { label: "Cafes", href: "/?type=cafes#use-cases" },
+      { label: "Cloud Kitchens", href: "/?type=cloud#use-cases" },
     ],
 
     Company: [
-      { label: "About Us", href: "/about" },
-      { label: "Contact", href: "/contact" },
-      { label: "FAQs", href: "/faq" },
+      { label: "About Us", href: "#about" },
+      { label: "Contact", href: "#contact" },
+      { label: "FAQs", href: "#faq" },
     ],
 
     Legal: [
@@ -102,9 +102,14 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm font-medium text-white/60 text-center sm:text-left">
+        <a
+          href="https://imaker.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-medium text-white/60 text-center sm:text-left hover:text-white transition-colors"
+        >
           © {new Date().getFullYear()} {CONTACT_INFO.name}
-        </p>
+        </a>
 
         <p className="text-sm font-medium text-white/50">
           Made with ♥ in India
