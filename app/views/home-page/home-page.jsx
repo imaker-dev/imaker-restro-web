@@ -10,6 +10,7 @@ import Pricing from "@/app/views/home-page/pricing";
 import FAQSection from "@/app/views/home-page/faq-section";
 import ContactUsSection from "@/app/views/home-page/contact-us-section";
 import BenefitsSection from "@/app/views/home-page/benefits-section";
+import FranchiseMarketplace from "@/app/views/home-page/franchise-marketplace";
 
 export default function Homepage() {
   return (
@@ -18,6 +19,7 @@ export default function Homepage() {
       <UseCasesSection />
       <FeaturesSection />
       <BenefitsSection />
+      <FranchiseMarketplace />
       <CTABanner />
       <HowItWorksSection />
       <DownloadSection />

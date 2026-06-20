@@ -117,7 +117,7 @@ export default function RootLayout({
 
         {/* Live Chat Scripts */}
         <Script
-          src="https://office.imaker.technology/im_livechat/loader/1"
+          src="https://office.imaker.technology/im_livechat/loader/3"
           strategy="afterInteractive"
         />
 
