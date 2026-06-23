@@ -190,37 +190,42 @@ const FranchiseDetailsPage = ({ franchise, loading = false }) => {
                 <MetricCell
                   icon={Banknote}
                   label="Total investment"
-                  value={`${formatValue(investmentMin, "compact")} – ${formatValue(
+                  value={`Approx. ${formatValue(investmentMin, "compact")} – ${formatValue(
                     investmentMax,
                     "compact",
                   )}`}
                   span
                 />
+
                 <MetricCell
                   icon={Wallet}
                   label="Franchise fee"
-                  value={formatValue(franchiseFee, "compact")}
+                  value={`Approx. ${formatValue(franchiseFee, "compact")}`}
                 />
+
                 <MetricCell
                   icon={Wallet}
                   label="Working capital"
-                  value={formatValue(workingCapital, "compact")}
+                  value={`Approx. ${formatValue(workingCapital, "compact")}`}
                 />
+
                 <MetricCell
                   icon={Banknote}
                   label="Monthly revenue"
-                  value={formatValue(monthlyRevenue, "compact")}
+                  value={`Approx. ${formatValue(monthlyRevenue, "compact")}`}
                 />
+
                 <MetricCell
                   icon={TrendingUp}
                   label="Expected ROI"
-                  value={`${franchise?.expected_roi}%`}
+                  value={`Approx. ${franchise?.expected_roi}%`}
                   highlight
                 />
+
                 <MetricCell
                   icon={Clock}
                   label="Break-even"
-                  value={`${franchise?.break_even_months} months`}
+                  value={`Approx. ${franchise?.break_even_months} months`}
                 />
               </div>
             </section>
