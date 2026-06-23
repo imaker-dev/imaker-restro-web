@@ -5,8 +5,14 @@ import FranchiseApi from "../api/FranchiseApi";
 // GET ALL FRANCHISES
 export const fetchFranchises = createAsyncThunk(
   "/franchise/fetch-franchises",
-  async ({search,category,city, investment_min,investment_max}) => {
-    const res = await FranchiseApi.getAllFranchisesApi(search,category,city, investment_min,investment_max);
+  async ({ search, category, city, investment_min, investment_max }) => {
+    const res = await FranchiseApi.getAllFranchisesApi(
+      search,
+      category,
+      city,
+      investment_min,
+      investment_max,
+    );
     return res.data;
   },
 );

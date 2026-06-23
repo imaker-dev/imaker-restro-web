@@ -24,14 +24,14 @@ export default function Navbar() {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-  const NAV = [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "About", href: "#about" },
-    { label: "Download", href: "#download" },
-    { label: "Contact", href: "#contact" },
-  ];
-
+const NAV = [
+  { label: "Features", href: "/#features" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "About", href: "/#about" },
+  { label: "Top Franchise", href: "/franchises" },
+  { label: "Download", href: "/#download" },
+  { label: "Contact", href: "/#contact" },
+];
   return (
     <>
       <PageWrapper

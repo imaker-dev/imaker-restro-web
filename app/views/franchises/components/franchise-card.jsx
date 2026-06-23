@@ -123,7 +123,7 @@ function FranchiseCard({ franchise, isSelected, canSelect, onToggleCompare }) {
 
         <div className="mt-5">
           <Link
-            href={`/franchise/${franchise?.slug}`}
+            href={`/franchises/${franchise?.slug}`}
             className="flex w-full items-center justify-center rounded-xl bg-primary-500 px-4 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-primary-600"
           >
             View details
