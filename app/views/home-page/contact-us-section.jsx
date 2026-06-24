@@ -73,6 +73,8 @@ function InputField({
 export default function ContactUsSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileSize, setTurnstileSize] = useState("normal");
+
   const [captchaToken, setCaptchaToken] = useState("");
   const turnstileRef = useRef(null);
 
@@ -223,6 +225,16 @@ export default function ContactUsSection() {
       }
     },
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setTurnstileSize(window.innerWidth < 640 ? "compact" : "normal");
+    };
+
+    handleResize(); // Set initial size
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <PageWrapper id="contact" className="bg-white py-24 lg:py-32">
@@ -430,17 +442,21 @@ export default function ContactUsSection() {
               </div>
 
               {/* Turnstile */}
-              <div className="flex justify-center">
-                <Turnstile
-                  ref={turnstileRef}
-                  sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-                  onVerify={(token) => {
-                    setCaptchaToken(token);
-                  }}
-                  onExpire={() => {
-                    setCaptchaToken("");
-                  }}
-                />
+              <div className="flex justify-center w-full">
+                <div className="turnstile-wrapper">
+                  <Turnstile
+                    ref={turnstileRef}
+                    sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                    onVerify={(token) => {
+                      setCaptchaToken(token);
+                    }}
+                    onExpire={() => {
+                      setCaptchaToken("");
+                    }}
+                    theme="dark"
+                    size={turnstileSize}
+                  />
+                </div>
               </div>
 
               {/* Submit */}

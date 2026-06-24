@@ -107,6 +107,10 @@ function FranchiseCard({ franchise, isSelected, canSelect, onToggleCompare }) {
           </div>
         </div>
 
+        <p className="mt-2 text-[10px] italic text-slate-400">
+          *All financial figures are approximate
+        </p>
+        
         <div className="mt-3 flex items-center justify-between text-[12px] text-slate-500">
           <span>{franchise?.break_even_months} mo payback</span>
           <span className="flex items-center gap-1">

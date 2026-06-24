@@ -224,11 +224,16 @@ const FranchiseDetailsPage = ({ franchise, loading = false }) => {
 
                 <MetricCell
                   icon={Clock}
-                  label="Break-even"
+                  label="Break-even period"
                   value={`Approx. ${franchise?.break_even_months} months`}
                 />
               </div>
             </section>
+
+            <p className="mt-2 text-[11px] text-slate-500">
+              *Financial figures are estimates and may vary by location and
+              operations.
+            </p>
 
             {/* Growth stats */}
             <section className="grid grid-cols-3 gap-3">
