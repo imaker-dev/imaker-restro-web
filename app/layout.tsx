@@ -128,18 +128,20 @@ export default function RootLayout({
 
         {/* Google Analytics */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18235414628"
+          src="https://www.googletagmanager.com/gtag/js?id=G-85BKEX4SMD"
           strategy="afterInteractive"
         />
 
-        <Script id="google-ads" strategy="afterInteractive">
+        <Script id="google-tag" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-
             window.gtag = gtag;
 
             gtag('js', new Date());
+
+            gtag('config', 'G-85BKEX4SMD');
+
             gtag('config', 'AW-18235414628');
           `}
         </Script>
