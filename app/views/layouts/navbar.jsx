@@ -24,20 +24,20 @@ export default function Navbar() {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-const NAV = [
-  { label: "Features", href: "/#features" },
-  { label: "How It Works", href: "/#how-it-works" },
-  { label: "About", href: "/#about" },
-  { label: "Top Franchise", href: "/franchises" },
-  { label: "Download", href: "/#download" },
-  { label: "Contact", href: "/#contact" },
-];
+  const NAV = [
+    { label: "Features", href: "/#features" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "About", href: "/#about" },
+    { label: "Top Franchise", href: "/franchises" },
+    { label: "Download", href: "/#download" },
+    { label: "Contact", href: "/contact" },
+  ];
   return (
     <>
       <PageWrapper
         paddingY="py-0"
         className={`fixed top-0 inset-x-0 z-30 transition-all duration-300 ${
-          scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+          scrolled ? "bg-white/90 backdrop-blur-md" : "bg-transparent"
         }`}
         containerClassName="h-18 flex items-center justify-between"
       >
@@ -48,7 +48,7 @@ const NAV = [
             width={200}
             height={100}
             priority
-            className="w-[200px] lg:w-[220px] xl:w-[240px] h-auto"
+            className="w-[180px] lg:w-[200px] xl:w-[220px] h-auto"
           />
         </Link>
 
@@ -66,7 +66,7 @@ const NAV = [
 
         <div className="hidden lg:flex items-center gap-3">
           <Link
-            href="/#contact"
+            href="/contact"
             className="flex items-center gap-2 bg-primary-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-primary-700 transition shadow hover:-translate-y-px"
           >
             Free Trial
@@ -124,7 +124,7 @@ const NAV = [
 
         <div className="px-4 pb-6 border-t border-secondary-100 pt-4">
           <Link
-            href="/#contact"
+            href="/contact"
             className="block w-full text-center py-3 bg-primary-600 text-white rounded-xl text-sm font-bold hover:bg-primary-700 transition"
           >
             Start Free Trial

@@ -4,6 +4,7 @@ import PageWrapper from "@/app/components/page-wrapper";
 import { useState } from "react";
 import SectionHeader from "../layouts/section-header";
 import { Plus, Minus } from "lucide-react";
+import Link from "next/link";
 
 const FAQ_CATEGORIES = [
   {
@@ -269,12 +270,12 @@ export default function FAQSection() {
               Our support team replies in under 2 hours on business days.
             </p>
           </div>
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="relative z-10 flex-shrink-0 bg-white text-primary-600 hover:bg-primary-50 font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             Contact Support →
-          </a>
+          </Link>
         </div>
       </div>
     </PageWrapper>

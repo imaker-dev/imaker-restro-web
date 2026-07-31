@@ -4,6 +4,7 @@ import PageWrapper from "@/app/components/page-wrapper";
 import { Download } from "lucide-react";
 import { useState } from "react";
 import SectionHeader from "../layouts/section-header";
+import Link from "next/link";
 
 const DOWNLOADS = [
   {
@@ -100,8 +101,8 @@ export default function DownloadSection() {
 
                   {/* Button + Version */}
                   <div className="mt-5 md:mt-8">
-                    <a
-                      href="#contact"
+                    <Link
+                      href="/contact"
                       className={`w-full flex items-center justify-center py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold transition-all
                         ${
                           isHovered
@@ -110,7 +111,7 @@ export default function DownloadSection() {
                         }`}
                     >
                       Contact Us
-                    </a>
+                    </Link>
 
                     {/* <button
                       className={`w-full py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold transition-all

@@ -1,5 +1,6 @@
 import PageWrapper from "@/app/components/page-wrapper";
 import { ArrowRight, MessageSquare } from "lucide-react";
+import Link from "next/link";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    CTA BANNER
@@ -22,8 +23,8 @@ export default function CTABanner() {
             from day one.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="group inline-flex items-center justify-center gap-3 bg-primary-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-primary-500/20 hover:bg-primary-600 hover:-translate-y-1 transition-all duration-300"
             >
               <MessageSquare size={20} />
@@ -32,7 +33,7 @@ export default function CTABanner() {
                 size={18}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

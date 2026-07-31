@@ -1,4 +1,5 @@
 import { ArrowRight, Flame, Zap } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const HeroContent = ({ isVisible = false }) => {
@@ -51,13 +52,13 @@ const HeroContent = ({ isVisible = false }) => {
       </div>
       <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-7">
         {" "}
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className="inline-flex items-center justify-center gap-2 bg-primary-500 hover:bg-primary-600 text-white font-bold text-sm px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-primary-300/50"
         >
           <Zap size={15} strokeWidth={2.5} />
           Start Free Trial
-        </a>
+        </Link>
         <a
           href="#features"
           className="inline-flex items-center justify-center gap-2 border border-zinc-200 bg-white hover:border-zinc-300 text-zinc-700 font-semibold text-sm px-7 py-3.5 rounded-xl transition-all shadow-sm"

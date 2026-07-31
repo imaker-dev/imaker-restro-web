@@ -8,8 +8,8 @@ export default function Footer() {
   const COLS = {
     Product: [
       { label: "Features", href: "/#features" },
-      { label: "Pricing", href: "/#contact" },
-      { label: "Request Demo", href: "/#contact" },
+      { label: "Pricing", href: "/contact" },
+      { label: "Request Demo", href: "/contact" },
     ],
 
     Solutions: [
@@ -20,7 +20,7 @@ export default function Footer() {
 
     Company: [
       { label: "About Us", href: "/#about" },
-      { label: "Contact", href: "/#contact" },
+      { label: "Contact", href: "/contact" },
       { label: "FAQs", href: "/#faq" },
     ],
 
