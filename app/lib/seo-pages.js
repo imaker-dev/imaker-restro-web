@@ -2,149 +2,115 @@ import { generateSEO } from "./seo-config";
 
 export const seoPages = {
   home: generateSEO({
-    title: "Solar Panels, Inverters & Installation Services",
-
+    title: "iMaker Restro | Restaurant POS & Management Software",
     description:
-      "Savior Solar Energy provides complete solar power solutions for residential, commercial, and industrial projects.",
-
+      "Run your restaurant, café, hotel, food court, or multi-outlet business with iMaker Restro. Manage billing, orders, kitchen, inventory, customers, reports, and more.",
     keywords: [
-      "solar panels",
-      "solar energy company",
-      "solar installation",
-      "solar inverter",
-      "rooftop solar",
-      "solar power solutions",
-      "renewable energy",
-      "commercial solar",
-      "industrial solar",
-      "residential solar",
-      "solar company India",
+      "restaurant POS software",
+      "restaurant management software",
+      "restaurant POS system",
+      "restaurant billing software",
+      "restaurant point of sale software",
     ],
-
     path: "/",
   }),
 
   about: generateSEO({
-    title: "About Us",
-
+    title: "About iMaker Restro | Restaurant POS & Management Platform",
     description:
-      "Learn more about Savior Solar Energy and our renewable energy solutions.",
-
+      "Discover iMaker Restro, a complete POS and management platform built to help food and hospitality businesses simplify daily operations and manage their business from one system.",
     keywords: [
-      "about solar company",
-      "solar energy experts",
-      "renewable energy company",
-      "solar company India",
-      "solar panel provider",
-      "clean energy solutions",
-      "solar EPC company",
+      "iMaker Restro",
+      "restaurant POS company",
+      "restaurant management platform",
+      "restaurant technology",
+      "food business management software",
     ],
-
     path: "/about",
   }),
 
-  services: generateSEO({
-    title: "Solar Services",
-
+  pos: generateSEO({
+    title: "Restaurant POS Software | Billing, Orders & Management",
     description:
-      "Professional solar panel installation, maintenance, and renewable energy services.",
-
+      "iMaker Restro restaurant POS software brings billing, orders, tables, kitchen operations, inventory, payments, customers, reporting, and multi-branch management into one connected platform.",
     keywords: [
-      "solar services",
-      "solar panel installation",
-      "solar maintenance",
-      "rooftop solar installation",
-      "solar inverter installation",
-      "commercial solar services",
-      "industrial solar solutions",
-      "solar EPC services",
-      "renewable energy services",
+      "restaurant POS software",
+      "restaurant POS system",
+      "restaurant point of sale software",
+      "restaurant billing software",
+      "POS software for restaurants",
+      "restaurant management software",
+      "restaurant order management software",
+      "restaurant inventory software",
+      "restaurant reporting software",
+      "multi outlet restaurant POS",
     ],
-
-    path: "/services",
+    path: "/pos",
   }),
 
-  projects: generateSEO({
-    title: "Our Projects",
-
+  addons: generateSEO({
+    title: "Restaurant POS Add-ons | Extend Your iMaker Restro POS",
     description:
-      "Explore completed solar energy projects delivered by Savior Solar Energy.",
-
+      "Extend iMaker Restro with restaurant POS add-ons for captain ordering, kitchen display, QR self ordering, loyalty, customer feedback, SMS, analytics, and more.",
     keywords: [
-      "solar projects",
-      "completed solar projects",
-      "solar installations",
-      "commercial solar projects",
-      "industrial solar projects",
-      "residential solar systems",
-      "solar EPC projects",
-      "renewable energy projects",
+      "restaurant POS add-ons",
+      "restaurant software add-ons",
+      "restaurant POS extensions",
+      "captain ordering app",
+      "kitchen display system",
+      "QR self ordering",
+      "restaurant loyalty program",
+      "restaurant customer feedback",
+      "restaurant analytics",
     ],
+    path: "/addons",
+  }),
 
-    path: "/projects",
+  outlets: generateSEO({
+    title: "Restaurant POS Solutions for Every Business Type",
+    description:
+      "Explore iMaker Restro POS solutions for restaurants, cafés, hotels, food courts, franchises, and multi-outlet businesses with tools built around their operational needs.",
+    keywords: [
+      "restaurant POS solutions",
+      "cafe POS software",
+      "hotel restaurant POS",
+      "food court POS software",
+      "franchise POS software",
+      "multi outlet restaurant software",
+      "restaurant management solutions",
+    ],
+    path: "/outlets",
   }),
 
   contact: generateSEO({
-    title: "Contact Us",
-
+    title: "Contact iMaker Restro | Book a Restaurant POS Demo",
     description:
-      "Get in touch with Savior Solar Energy for solar panel installation, rooftop solar systems, and renewable energy solutions.",
-
+      "Talk to the iMaker Restro team about restaurant POS software, billing, kitchen operations, inventory, reporting, and multi-outlet management. Request a demo today.",
     keywords: [
-      "contact solar company",
-      "solar consultation",
-      "solar installation inquiry",
-      "solar services India",
-      "renewable energy consultation",
-      "solar support",
-      "solar energy solutions",
+      "iMaker Restro contact",
+      "restaurant POS demo",
+      "restaurant POS software demo",
+      "restaurant management software demo",
+      "restaurant POS consultation",
+      "restaurant software contact",
     ],
-
     path: "/contact",
   }),
 
-  schemes: generateSEO({
-    title: "Solar Schemes",
-
-    description:
-      "Explore solar subsidy programs, government solar schemes, and renewable energy initiatives.",
-
-    keywords: [
-      "solar subsidy",
-      "government solar schemes",
-      "PM solar yojana",
-      "solar subsidy India",
-      "renewable energy schemes",
-      "solar panel subsidy",
-      "rooftop solar subsidy",
-      "solar government programs",
-    ],
-
-    path: "/schemes",
-  }),
-
   blogs: generateSEO({
-    title: "Blogs",
-
+    title: "Restaurant POS & Management Resources | iMaker Restro",
     description:
-      "Read the latest insights, news, and expert articles on solar panels, renewable energy, rooftop solar systems, solar subsidies, energy savings, and sustainable power solutions.",
-
+      "Explore insights and practical guides on restaurant POS, billing, kitchen operations, inventory, restaurant technology, reporting, and business management.",
     keywords: [
-      "solar blog",
-      "solar energy articles",
-      "renewable energy news",
-      "solar panel tips",
-      "rooftop solar guide",
-      "solar installation blog",
-      "solar subsidy updates",
-      "clean energy blog",
-      "solar power insights",
-      "energy saving tips",
+      "restaurant POS blog",
+      "restaurant management blog",
+      "restaurant technology blog",
+      "restaurant POS guides",
+      "restaurant billing tips",
+      "restaurant inventory management",
+      "restaurant operations",
+      "restaurant management tips",
     ],
-
     path: "/blogs",
   }),
 };
-
-
-// restaurant-pos

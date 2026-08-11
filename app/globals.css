@@ -56,3 +56,149 @@ button {
     font-family: var(--font-heading);
   }
 }
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-10 items-center justify-center
+      gap-2 whitespace-nowrap rounded-full
+      px-5
+      font-body text-sm font-semibold leading-none
+      text-white
+      transition-[background-color,border-color,color,box-shadow,transform]
+      duration-200 ease-out
+      focus-visible:outline-none
+      focus-visible:ring-2 focus-visible:ring-primary-500/30
+      disabled:pointer-events-none
+      disabled:opacity-50;
+  }
+
+  /* Small */
+  .btn-sm {
+    @apply min-h-8 px-3.5 text-xs;
+  }
+
+  /* Large */
+  .btn-lg {
+    @apply min-h-12 px-7 text-sm;
+  }
+
+  /* Extra Large */
+  .btn-xl {
+    @apply min-h-14 px-8 text-base;
+  }
+
+  /* Primary */
+  .btn-primary {
+    @apply bg-primary-500 text-white;
+  }
+
+  .btn-primary:hover {
+    @apply -translate-y-px bg-primary-600;
+
+    box-shadow: 0 8px 24px color-mix(
+      in srgb,
+      var(--color-primary-500) 22%,
+      transparent
+    );
+  }
+
+  .btn-primary:active {
+    @apply translate-y-0 bg-primary-700;
+    box-shadow: none;
+  }
+
+  /* Secondary */
+  .btn-secondary {
+    @apply border border-secondary-100
+      bg-white
+      text-secondary-500;
+  }
+
+  .btn-secondary:hover {
+    @apply -translate-y-px
+      border-primary-200
+      bg-primary-50
+      text-primary-600;
+
+    box-shadow: 0 6px 18px color-mix(
+      in srgb,
+      var(--color-secondary-500) 8%,
+      transparent
+    );
+  }
+
+  .btn-secondary:active {
+    @apply translate-y-0 bg-primary-100;
+    box-shadow: none;
+  }
+
+  /* Ghost */
+  .btn-ghost {
+    @apply bg-transparent text-secondary-500;
+  }
+
+  .btn-ghost:hover {
+    @apply bg-secondary-50 text-primary-600;
+  }
+
+  .btn-ghost:active {
+    @apply bg-secondary-100;
+  }
+
+  /* Tablet */
+  @media (max-width: 1023px) {
+    .btn {
+      @apply min-h-9.5 px-4.5 text-[13px];
+    }
+
+    .btn-sm {
+      @apply min-h-8 px-3.5 text-[11px];
+    }
+
+    .btn-lg {
+      @apply min-h-11 px-6 text-[13px];
+    }
+
+    .btn-xl {
+      @apply min-h-13 px-7 text-[15px];
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 639px) {
+    .btn {
+      @apply min-h-9 px-4 text-[13px];
+    }
+
+    .btn-sm {
+      @apply min-h-8 px-3 text-[11px];
+    }
+
+    .btn-lg {
+      @apply min-h-10.5 px-5 text-[13px];
+    }
+
+    .btn-xl {
+      @apply min-h-12 px-6 text-sm;
+    }
+  }
+
+  /* Very small phones */
+  @media (max-width: 374px) {
+    .btn {
+      @apply gap-1.5 px-3.5 text-xs;
+    }
+
+    .btn-sm {
+      @apply px-2.5 text-[10px];
+    }
+
+    .btn-lg {
+      @apply min-h-10 px-4 text-xs;
+    }
+
+    .btn-xl {
+      @apply min-h-11 px-5 text-[13px];
+    }
+  }
+}

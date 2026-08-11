@@ -13,7 +13,7 @@ import { getIndustryMenuItems } from "@/app/data/industries";
 // renders a single column.
 const NAV = [
   {
-    label: "Platform",
+    label: "Pos",
     href: "#",
     children: [
       {
@@ -45,7 +45,7 @@ const NAV = [
     ],
   },
   {
-    label: "Solutions",
+    label: "Add ons",
     href: "#",
     children: [
       {
@@ -71,32 +71,27 @@ const NAV = [
     ],
   },
   {
-    label: "Restaurant Types",
+    label: "Outlet Types",
     href: "#",
     columns: 2,
     children: getIndustryMenuItems(),
   },
   { label: "Pricing", href: "/pricing" },
+  {
+    label: "Company",
+    href: "#",
+    children: [
+      { label: "About", href: "/about", icon: "/Images/icons/blog.svg" },
+      { label: "Blogs", href: "/blogs", icon: "/Images/icons/blog.svg" },
+      {
+        label: "Help center",
+        href: "/help",
+        icon: "/Images/icons/help-center.svg",
+      },
+     
+    ],
+  },
 ];
-
-const COMPANY = {
-  label: "Company",
-  href: "#",
-  children: [
-    { label: "About", href: "/about", icon: "/Images/icons/blog.svg" },
-    { label: "Blog", href: "/blog", icon: "/Images/icons/blog.svg" },
-    {
-      label: "Help center",
-      href: "/help",
-      icon: "/Images/icons/help-center.svg",
-    },
-    {
-      label: "Case studies",
-      href: "/case-studies",
-      icon: "/Images/icons/case-studies.svg",
-    },
-  ],
-};
 
 /* ------------------------------- Active match ------------------------------ */
 
@@ -395,7 +390,7 @@ export default function Navbar() {
   const toggle = (label) =>
     setDesktopOpenMenu((prev) => (prev === label ? null : label));
 
-  const allDesktopItems = [...NAV, COMPANY];
+  const allDesktopItems = [...NAV];
 
   return (
     <>
@@ -442,25 +437,10 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-6 lg:flex">
-          <div
-            className="relative"
-            onMouseEnter={() => handleEnter(COMPANY.label)}
-            onMouseLeave={handleLeave}
-          >
-            <DesktopNavItem
-              item={COMPANY}
-              isOpen={desktopOpenMenu === COMPANY.label}
-              onEnter={() => handleEnter(COMPANY.label)}
-              onLeave={handleLeave}
-              onToggle={() => toggle(COMPANY.label)}
-              align="right"
-              pathname={pathname}
-            />
-          </div>
-
           <Link
             href="/book-a-demo"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-sm transition-all duration-150 hover:bg-primary-700 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+            className="btn btn-primary"
+            // className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-sm transition-all duration-150 hover:bg-primary-700 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
           >
             Book a demo
             <ArrowRight size={14} strokeWidth={2.25} />
@@ -533,7 +513,8 @@ export default function Navbar() {
           <Link
             href="/book-a-demo"
             onClick={() => setOpen(false)}
-            className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-600 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700"
+            className="w-full btn btn-primary"
+            // className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-600 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700"
           >
             Book a demo
             <ArrowRight size={14} strokeWidth={2.25} />

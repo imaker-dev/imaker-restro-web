@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Search, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import SectionHeader from "../layouts/section-header";
 import PageWrapper from "@/app/components/page-wrapper";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFranchises } from "@/app/store/slices/franchiseSlice";
@@ -12,6 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import SectionHeading from "../layouts/section-heading";
 
 // ---------------------------------------------------------------------------
 // Main Component
@@ -38,9 +38,10 @@ export default function FranchiseMarketplace() {
 
   return (
     <PageWrapper containerClassName="space-y-6">
-      <SectionHeader
-        badge="Trusted Franchise Opportunities"
+      <SectionHeading
+        eyebrow="Trusted Franchise Opportunities"
         title="Start Your Franchise Journey"
+        highlight={"Franchise"}
         description="Explore proven brands, clear investment details, and the support you need to grow."
       />
 

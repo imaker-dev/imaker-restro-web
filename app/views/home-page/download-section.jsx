@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 import { useState } from "react";
 import SectionHeader from "../layouts/section-header";
 import Link from "next/link";
+import SectionHeading from "../layouts/section-heading";
 
 const DOWNLOADS = [
   {
@@ -46,10 +47,11 @@ export default function DownloadSection() {
 
   return (
     <PageWrapper id="download" className="relative bg-white">
+
       {/* Header */}
-      <SectionHeader
+      <SectionHeading
         badge={"Multi-Platform Available"}
-        title={"Get Our App on "}
+        title={"Get Our App on Any Device"}
         highlight={"Any Device"}
         description={
           "Download our restaurant management software for iOS, Android, Windows, and macOS. Manage your outlet from anywhere, anytime."

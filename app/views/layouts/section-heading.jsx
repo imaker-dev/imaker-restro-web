@@ -23,7 +23,7 @@ const variants = {
       "mt-5 text-[15px] font-normal leading-[1.6] text-gray-500 sm:text-[16px] lg:text-[17px]",
   },
   compact: {
-    wrapper: "max-w-2xl",
+    wrapper: "mb-6 sm:mb-8 lg:mb-10 max-w-2xl",
     showGrid: false,
     eyebrow: "",
     title:
@@ -71,12 +71,6 @@ export function SectionHeading({
         className,
       )}
     >
-      {v.showGrid && (
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,theme(colors.gray.100)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.gray.100)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_65%_65%_at_50%_0%,black_30%,transparent_100%)]"
-        />
-      )}
 
       <div className={clsx("relative", isCenter ? "text-center" : "text-left")}>
         {eyebrow && (

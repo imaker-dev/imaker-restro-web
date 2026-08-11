@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import PageWrapper from "@/app/components/page-wrapper";
 
 const POS = [
   { label: "Billing", href: "/pos/billing" },
@@ -92,8 +93,8 @@ function FooterColumn({ title, links, columns = 1, wide = false }) {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-secondary-100 bg-secondary-50">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <PageWrapper className="border-t border-secondary-100 bg-secondary-50">
+      <div >
         <div className="grid gap-y-14 gap-x-8 lg:grid-cols-12">
           {/* Brand */}
           <div className="lg:col-span-3">
@@ -148,6 +149,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </PageWrapper>
   );
 }
