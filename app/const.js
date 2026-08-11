@@ -15,3 +15,8 @@ export const CONTACT_INFO = {
 };
 
 export const BASE_URL = 'https://imakerrestro.com'
+
+
+
+export const BRAND_LOGO = "/Images/imaker-logo.svg";
+export const BRAND_ICON = "/Images/logo-icon.png";

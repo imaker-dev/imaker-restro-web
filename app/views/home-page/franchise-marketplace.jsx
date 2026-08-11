@@ -146,7 +146,8 @@ export default function FranchiseMarketplace() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/franchises"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[15px] font-semibold text-white bg-secondary-500 rounded-xl hover:bg-secondary-600 transition-all duration-200 shadow-[0_4px_16px_-4px_rgba(15,23,42,0.2)] hover:shadow-[0_8px_24px_-6px_rgba(15,23,42,0.3)] hover:-translate-y-0.5"
+              className="btn btn-primary"
+              // className="inline-flex items-center gap-2 px-6 py-3 text-[15px] font-semibold text-white bg-secondary-500 rounded-xl hover:bg-secondary-600 transition-all duration-200 shadow-[0_4px_16px_-4px_rgba(15,23,42,0.2)] hover:shadow-[0_8px_24px_-6px_rgba(15,23,42,0.3)] hover:-translate-y-0.5"
             >
               View All Franchises
               <ArrowRight className="h-4 w-4" />

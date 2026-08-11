@@ -6,92 +6,10 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import PageWrapper from "@/app/components/page-wrapper";
 import Image from "next/image";
-import { getIndustryMenuItems } from "@/app/data/industries";
+import { BRAND_LOGO } from "@/app/const";
+import { NAVBAR_MENU } from "@/app/config/navigation/navbar";
 
-// Every dropdown item = { label, href, icon }. `columns: 2` on a parent
-// lays children out in two columns on desktop only; mobile always
-// renders a single column.
-const NAV = [
-  {
-    label: "Pos",
-    href: "#",
-    children: [
-      {
-        label: "Billing",
-        href: "/pos/billing",
-        icon: "/Images/icons/billing.svg",
-      },
-      {
-        label: "Inventory",
-        href: "/pos/inventory",
-        icon: "/Images/icons/inventory.svg",
-      },
-      {
-        label: "Online ordering",
-        href: "/pos/online-ordering",
-        icon: "/Images/icons/online-ordering.svg",
-      },
-      {
-        label: "Reporting",
-        href: "/pos/reporting",
-        icon: "/Images/icons/reporting.svg",
-      },
-      {
-        label: "Menu management",
-        href: "/pos/menu",
-        icon: "/Images/icons/menu.svg",
-      },
-      { label: "CRM", href: "/pos/crm", icon: "/Images/icons/crm.svg" },
-    ],
-  },
-  {
-    label: "Add ons",
-    href: "#",
-    children: [
-      {
-        label: "Loyalty program",
-        href: "/add-ons/loyalty",
-        icon: "/Images/icons/loyalty.svg",
-      },
-      {
-        label: "Feedback management",
-        href: "/add-ons/feedback",
-        icon: "/Images/icons/feedback.svg",
-      },
-      {
-        label: "Table reservations",
-        href: "/add-ons/reservations",
-        icon: "/Images/icons/reservations.svg",
-      },
-      {
-        label: "Waiter app",
-        href: "/add-ons/waiter-app",
-        icon: "/Images/icons/waiter-app.svg",
-      },
-    ],
-  },
-  {
-    label: "Outlet Types",
-    href: "#",
-    columns: 2,
-    children: getIndustryMenuItems(),
-  },
-  { label: "Pricing", href: "/pricing" },
-  {
-    label: "Company",
-    href: "#",
-    children: [
-      { label: "About", href: "/about", icon: "/Images/icons/blog.svg" },
-      { label: "Blogs", href: "/blogs", icon: "/Images/icons/blog.svg" },
-      {
-        label: "Help center",
-        href: "/help",
-        icon: "/Images/icons/help-center.svg",
-      },
-     
-    ],
-  },
-];
+
 
 /* ------------------------------- Active match ------------------------------ */
 
@@ -120,7 +38,6 @@ function DropdownRow({ label, href, icon, active }) {
           alt=""
           width={20}
           height={20}
-          quality={100}
           unoptimized
           draggable={false}
           className="shrink-0 object-contain opacity-70"
@@ -154,7 +71,7 @@ function DropdownPanel({ item, align = "left", isOpen, pathname }) {
     >
       <div
         className={`rounded-xl border border-secondary-100 bg-white p-2.5 shadow-[0_12px_32px_-8px_rgba(15,15,20,0.14)] ${
-          twoCol ? "w-[420px]" : "w-[260px]"
+          twoCol ? "w-[400px]" : "w-[200px]"
         }`}
       >
         <p className="px-3 pb-2 pt-0.5 text-[11px] font-semibold uppercase tracking-wide text-secondary-400">
@@ -390,8 +307,6 @@ export default function Navbar() {
   const toggle = (label) =>
     setDesktopOpenMenu((prev) => (prev === label ? null : label));
 
-  const allDesktopItems = [...NAV];
-
   return (
     <>
       <PageWrapper
@@ -406,7 +321,7 @@ export default function Navbar() {
         <div className="flex items-center gap-9" ref={navRef}>
           <Link href="/" className="flex items-center">
             <Image
-              src="/Images/imaker-logo.svg"
+              src={BRAND_LOGO}
               alt="logo"
               width={200}
               height={100}
@@ -421,7 +336,7 @@ export default function Navbar() {
           />
 
           <nav className="hidden items-center gap-2 lg:flex">
-            {NAV.map((item) => (
+            {NAVBAR_MENU.map((item) => (
               <DesktopNavItem
                 key={item.label}
                 item={item}
@@ -472,11 +387,11 @@ export default function Navbar() {
       >
         <div className="flex h-[72px] shrink-0 items-center justify-between border-b border-secondary-100 px-6">
           <Image
-            src="/Images/imaker-logo.svg"
+            src={BRAND_LOGO}
             alt="logo"
             width={120}
             height={80}
-            className="w-[120px]"
+            className="w-[150px]"
           />
 
           <button
@@ -489,7 +404,7 @@ export default function Navbar() {
         </div>
 
         <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-5">
-          {allDesktopItems.map((item, i) => (
+          {NAVBAR_MENU.map((item, i) => (
             <div
               key={item.label}
               className={i !== 0 ? "border-t border-secondary-50 pt-1" : ""}

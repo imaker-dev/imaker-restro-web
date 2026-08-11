@@ -23,11 +23,12 @@ export const FEATURES = [
     },
 
     card: {
+      menuTitle: "Billing",
       eyebrow: "POINT OF SALE",
       title: "Restaurant Billing",
       description:
         "Create bills, manage dine-in and takeaway orders, apply discounts and taxes, accept multiple payment methods, and keep every transaction organized in one POS.",
-      image: "/Images/Pos/Billing/card.webp",
+      image: "/Images/Pos/Billing/card-1.webp",
     },
 
     hero: {
@@ -249,11 +250,13 @@ export const FEATURES = [
     },
 
     card: {
+      menuTitle: "Orders",
+
       eyebrow: "ORDER OPERATIONS",
       title: "Restaurant Order Management",
       description:
         "Manage dine-in and takeaway orders from one place with easy order taking, KOT generation, kitchen updates, reorders, cancellations, adjustments, and billing.",
-      image: "/Images/Pos/Orders/card.webp",
+      image: "/Images/Pos/Orders/card-1.webp",
     },
 
     hero: {
@@ -476,11 +479,12 @@ export const FEATURES = [
       canonical: "/pos/table-management",
     },
     card: {
+      menuTitle: "Tables",
       eyebrow: "FLOOR MANAGEMENT",
       title: "Restaurant Table Management",
       description:
         "Manage restaurant sections, tables, seating capacity, table status, and table-based orders while keeping your floor operations connected to billing.",
-      image: "/images/features/tables/hero.webp",
+      image: "/Images/Pos/Tables/card-1.webp",
     },
 
     hero: {
@@ -693,11 +697,12 @@ export const FEATURES = [
     },
 
     card: {
+      menuTitle: "Menu",
       eyebrow: "MENU & ITEMS",
       title: "Restaurant Menu Management",
       description:
         "Create and organize menu categories, items, variants, add-ons, open-price items, special instructions, and tax settings for flexible restaurant ordering.",
-      image: "/images/features/menu/hero.webp",
+      image: "/Images/Pos/Menu/card-1.webp",
     },
 
     hero: {
@@ -910,11 +915,12 @@ export const FEATURES = [
     },
 
     card: {
+      menuTitle: "Inventory",
       eyebrow: "STOCK CONTROL",
       title: "Restaurant Inventory Management",
       description:
         "Manage restaurant inventory and stock from one connected system, keeping your stock information organized alongside everyday restaurant operations.",
-      image: "/images/features/inventory/hero.webp",
+      image: "/Images/Pos/Inventory/card-1.webp",
     },
 
     hero: {
@@ -1125,11 +1131,12 @@ export const FEATURES = [
       canonical: "/pos/kitchen-management",
     },
     card: {
+      menuTitle: "Kitchen",
       eyebrow: "KITCHEN OPERATIONS",
       title: "Restaurant Kitchen Management",
       description:
         "Connect orders with your kitchen using automatic KOTs, multiple kitchen and station routing, Kitchen Display System, and clear order preparation statuses.",
-      image: "/images/features/kitchen/hero.webp",
+      image: "/Images/Pos/Kitchen/card-1.webp",
     },
     hero: {
       eyebrow: "RESTAURANT KITCHEN MANAGEMENT",
@@ -1344,11 +1351,12 @@ export const FEATURES = [
     },
 
     card: {
+      menuTitle: "Customers",
       eyebrow: "CUSTOMER RECORDS",
       title: "Restaurant Customer Management",
       description:
         "Maintain customer information and keep it connected with orders, billing, payments, and dues so your team can manage customer records more easily.",
-      image: "/images/features/customers/hero.webp",
+      image: "/Images/Pos/Customers/card-1.webp",
     },
 
     hero: {
@@ -1561,11 +1569,12 @@ export const FEATURES = [
     },
 
     card: {
+      menuTitle: "Shifts",
       eyebrow: "SHIFT CONTROL",
       title: "Restaurant Shift Management",
       description:
         "Manage shift opening and closing, cash handling, staff activity, sales, payments, reconciliation, and shift reports from your restaurant POS.",
-      image: "/images/features/shifts/hero.webp",
+      image: "/images/Pos/Shifts/card-1.webp",
     },
 
     hero: {
@@ -1774,11 +1783,12 @@ export const FEATURES = [
     },
 
     card: {
+      menuTitle: "Reports",
       eyebrow: "BUSINESS INSIGHTS",
       title: "Restaurant Reports & Analytics",
       description:
         "Track sales, revenue, orders, tables, staff performance, items, categories, payments, taxes, discounts, shifts, cancellations, and other restaurant activity.",
-      image: "/images/features/reports/hero.webp",
+      image: "/Images/Pos/Reports/card-1.webp",
     },
 
     hero: {
@@ -2006,11 +2016,12 @@ export const FEATURES = [
       canonical: "/pos/multi-branch",
     },
     card: {
+      menuTitle: "Multi-Outlet",
       eyebrow: "MULTI-OUTLET",
       title: "Restaurant Multi-Branch Management",
       description:
         "Manage multiple restaurant branches from one platform with centralized monitoring, reporting, and visibility across your growing restaurant business.",
-      image: "/images/features/multi-branch/hero.webp",
+      image: "/Images/Pos/Franchises/card-1.webp",
     },
     hero: {
       eyebrow: "RESTAURANT MULTI-BRANCH MANAGEMENT",
@@ -2220,4 +2231,14 @@ export const getAllFeatures = () => {
 
 export const getFeatureBySlug = (slug) => {
   return FEATURES.find((feature) => feature.slug === slug) ?? null;
+};
+
+export const getPosMenuItems = ({ featuredOnly = true } = {}) => {
+  return FEATURES
+    .filter((feature) => !featuredOnly || feature.isFeatured === true)
+    .map(({ slug, card }) => ({
+      icon: card.icon,
+      label: card.menuTitle,
+      href: `/features/${slug}`,
+    }));
 };

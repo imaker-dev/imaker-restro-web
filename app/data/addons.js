@@ -17,6 +17,7 @@ export const ADDONS = [
       ],
     },
     card: {
+      menuTitle: "Captain App",
       title: "Captain Ordering App",
       description:
         "Take table orders faster with a mobile ordering app for restaurant captains, connected KOTs, order tracking, and your POS.",
@@ -463,6 +464,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "QR Ordering",
       title: "QR Self-Ordering",
       description:
         "Let guests scan a table QR code, browse your menu, and place orders directly from their phones without waiting for a server.",
@@ -949,6 +951,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "Kitchen Display",
       title: "Kitchen Display System",
       description:
         "Replace paper KOTs with a digital kitchen display that keeps orders organized and helps your team track preparation status.",
@@ -1425,6 +1428,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "Loyalty Program",
       title: "Restaurant Loyalty Program",
       description:
         "Keep customer details and loyalty points connected to your restaurant POS to build stronger customer relationships.",
@@ -1882,6 +1886,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "Analytics",
       title: "Restaurant Analytics & Insights",
       description:
         "Understand sales, orders, payments, products, and outlet performance with connected restaurant analytics and dashboards.",
@@ -2382,6 +2387,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "Events & Catering",
       title: "Event & Catering Management",
       description:
         "Manage restaurant events, party bookings, catering requirements, customer details, and event collections in one workflow.",
@@ -2884,6 +2890,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "Messaging",
       title: "Restaurant Messaging",
       description:
         "Keep customers informed with connected restaurant messaging for important updates and customer communication through SMS.",
@@ -3342,6 +3349,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "Purchasing",
       title: "Purchase Management",
       description:
         "Manage restaurant suppliers, purchases, quantities, and purchase records while keeping purchasing connected to inventory.",
@@ -3809,6 +3817,7 @@ export const ADDONS = [
     },
 
     card: {
+      menuTitle: "Recipes",
       title: "Recipe Management",
       description:
         "Standardize recipes, ingredients, and quantities while keeping recipe information connected to restaurant inventory.",
@@ -4292,10 +4301,12 @@ export const ADDONS = [
 ];
 
 export const getFeaturedAddons = () => {
-  return ADDONS.filter((addon) => addon.isFeatured === true).map(({ slug, card }) => ({
-    id: slug,
-    ...card,
-  }));
+  return ADDONS.filter((addon) => addon.isFeatured === true).map(
+    ({ slug, card }) => ({
+      id: slug,
+      ...card,
+    }),
+  );
 };
 
 export const getAddons = () => {
@@ -4307,4 +4318,14 @@ export const getAddons = () => {
 
 export const getAddonsBySlug = (slug) => {
   return ADDONS.find((addon) => addon.slug === slug) ?? null;
+};
+
+export const getAddonsMenuItems = ({ featuredOnly = true } = {}) => {
+  return ADDONS.filter(
+    (feature) => !featuredOnly || feature.isFeatured === true,
+  ).map(({ slug, card }) => ({
+    icon: card.icon,
+    label: card.menuTitle || card.title,
+    href: `/addons/${slug}`,
+  }));
 };

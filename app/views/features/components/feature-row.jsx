@@ -13,11 +13,11 @@ import { ArrowUpRight } from "lucide-react";
  * equal-size tiles.
  */
 export default function FeatureRow({ feature, index }) {
-  const { title, description, image,eyebrow } = feature;
+  const { title, description, image, eyebrow } = feature;
   const isReversed = index % 2 === 1;
 
   return (
-    <div className="grid items-center gap-10 border-t border-[#E4E4E1] py-14 first:border-t-0 first:pt-0 lg:grid-cols-2 lg:gap-20 lg:py-20">
+    <div className="grid items-center gap-10 py-4 first:border-t-0 first:pt-0 lg:grid-cols-2 lg:gap-20 lg:py-8 ">
       {/* Visual */}
       <div className={`relative ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
         {/* Offset panel behind the image — gives the row depth without a floating badge */}
@@ -58,16 +58,16 @@ export default function FeatureRow({ feature, index }) {
           {description}
         </p>
 
-          <Link
-            href={`/features/${feature.id}`}
-            className="group mt-6 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[#14181c] transition-colors duration-300 hover:text-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
-          >
-            Learn more
-            <ArrowUpRight
-              aria-hidden="true"
-              className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </Link>
+        <Link
+          href={`/features/${feature.id}`}
+          className="group mt-6 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[#14181c] transition-colors duration-300 hover:text-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
+        >
+          Learn more
+          <ArrowUpRight
+            aria-hidden="true"
+            className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          />
+        </Link>
       </div>
     </div>
   );

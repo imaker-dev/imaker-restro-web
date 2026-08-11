@@ -142,7 +142,7 @@ export default function AddonsMarketplaceSection() {
                         <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-[#E4E0D6] bg-white shadow-[0_10px_24px_-16px_rgba(18,20,26,0.24)]">
                           <Image
                             src={item.image}
-                            alt={item.imageAlt}
+                            alt={item.title}
                             fill
                             sizes="100vw"
                             className="object-cover object-top"
