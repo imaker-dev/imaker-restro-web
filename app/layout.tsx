@@ -4,63 +4,27 @@ import ClientProviders from "@/app/components/client-providers";
 import { BASE_URL } from "./const";
 import Script from "next/script";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+import { DM_Sans, Poppins } from "next/font/google";
+import { seoPages } from "./lib/seo-pages";
 
-  title:
-    "Restaurant POS Software in India | Billing & KOT System | iMaker Restro",
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
-  description:
-    "iMaker Restro POS is a powerful restaurant billing software with GST, KOT, table management, and inventory. Works offline and helps restaurants run faster and smarter.",
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
 
-  keywords: [
-    "restaurant POS software India",
-    "restaurant billing software with GST",
-    "restaurant management system",
-    "KOT system restaurant",
-    "table management restaurant software",
-    "offline restaurant POS",
-    "fast billing POS system",
-    "best POS for restaurant India",
-    "restaurant POS with inventory",
-    "iMaker Restro POS",
-  ],
-
-  authors: [{ name: "iMaker Technology Pvt. Ltd." }],
-
-  icons: {
-    icon: "/favicon.ico",
-  },
-
-  openGraph: {
-    title: "iMaker Restro POS | Restaurant Billing & Management System",
-    description:
-      "Manage billing, tables, kitchen orders, and reports with iMaker Restro POS — built for modern restaurants.",
-    url: BASE_URL,
-    siteName: "iMaker Restro POS",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: `${BASE_URL}/Images/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "iMaker Restro POS Dashboard Preview",
-      },
-    ],
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export const metadata = seoPages.home;
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({
@@ -70,38 +34,44 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased bg-white text-[#1A0F00]">
+      <body className={`${dmSans.variable} ${poppins.variable} antialiased`}>
         {/* SOFTWARE SCHEMA (VERY IMPORTANT) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "iMaker Restro POS",
-              operatingSystem: "Windows",
-              applicationCategory: "BusinessApplication",
-              description:
-                "Restaurant POS software for billing, KOT, table and inventory management.",
-              url: BASE_URL,
-              publisher: {
-                "@type": "Organization",
-                name: "iMaker Technology Private Limited",
-              },
-            }),
-          }}
-        />
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": `${BASE_URL}/#website`,
+                  name: "iMaker Restro",
+                  alternateName: "iMaker",
+                  url: BASE_URL,
+                },
 
-        {/* ORGANIZATION SCHEMA */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "iMaker Technology Private Limited",
-              url: BASE_URL,
-              logo: `${BASE_URL}/Images/logo-icon.png`,
+                {
+                  "@type": "Organization",
+                  "@id": `${BASE_URL}/#organization`,
+                  name: "iMaker Technology Private Limited",
+                  url: BASE_URL,
+                  logo: `${BASE_URL}/Images/logo-icon.png`,
+                },
+
+                {
+                  "@type": "SoftwareApplication",
+                  "@id": `${BASE_URL}/#software`,
+                  name: "iMaker Restro",
+                  operatingSystem: "Android, iOS, Windows, macOS",
+                  applicationCategory: "BusinessApplication",
+                  description:
+                    "iMaker Restro is restaurant POS and management software for billing, orders, tables, kitchen operations, inventory, customers, reporting, and multi-outlet management.",
+                  url: BASE_URL,
+                  publisher: {
+                    "@id": `${BASE_URL}/#organization`,
+                  },
+                },
+              ],
             }),
           }}
         />
