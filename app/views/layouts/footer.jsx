@@ -3,12 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-import { Facebook, Instagram, Linkedin, Twitter, Phone, Mail } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Phone,
+  Mail,
+  ArrowRight,
+} from "lucide-react";
 import PageWrapper from "@/app/components/page-wrapper";
-import { BRAND_LOGO } from "@/app/const";
+import { BRAND_LOGO, CONTACT_INFO } from "@/app/const";
 import { FOOTER_NAVIGATION } from "@/app/config/navigation/footer";
 
-const { pos, addons, outletTypes, company, legal, social, contact } = FOOTER_NAVIGATION;
+const { pos, addons, outletTypes, company, legal, social, contact } =
+  FOOTER_NAVIGATION;
 
 const SOCIAL_ICONS = {
   twitter: Twitter,
@@ -21,9 +30,7 @@ function FooterColumn({ title, links, columns = 1 }) {
   return (
     <div>
       <div className="mb-4">
-        <div className="font-semibold text-secondary-900">
-          {title}
-        </div>
+        <div className="font-semibold text-secondary-900">{title}</div>
         <div className="relative mt-2 h-px w-full bg-secondary-200">
           <span className="absolute left-0 top-0 h-px w-6 lg:w-10 bg-primary-500" />
         </div>
@@ -54,16 +61,24 @@ export default function Footer() {
   return (
     <PageWrapper className="border-t border-secondary-100 bg-secondary-50">
       <div>
-        {/* Nav — fixed 7-track grid: Features(2) + Add-ons(2) + Outlet Types(2)
-            + Company(1). Same span ratios collapse cleanly at each breakpoint
-            instead of columns resizing to their content. */}
+        {/* Footer Navigation */}
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 lg:grid-cols-7 lg:gap-x-8">
           <div className="col-span-2">
-            <FooterColumn title={pos.title} links={pos.links} columns={pos.columns} />
+            <FooterColumn
+              title={pos.title}
+              links={pos.links}
+              columns={pos.columns}
+            />
           </div>
+
           <div className="col-span-2">
-            <FooterColumn title={addons.title} links={addons.links} columns={addons.columns} />
+            <FooterColumn
+              title={addons.title}
+              links={addons.links}
+              columns={addons.columns}
+            />
           </div>
+
           <div className="col-span-2">
             <FooterColumn
               title={outletTypes.title}
@@ -71,75 +86,128 @@ export default function Footer() {
               columns={outletTypes.columns}
             />
           </div>
+
           <div className="col-span-2 sm:col-span-2 lg:col-span-1">
-            <FooterColumn title={company.title} links={company.links} />
+            <FooterColumn
+              title={company.title}
+              links={company.links}
+            />
           </div>
         </div>
 
-        {/* Company / contact strip */}
-        <div className="mt-12 flex flex-col gap-8 border-t border-secondary-200 pt-8 lg:flex-row lg:items-start lg:justify-between">
-          <div>
-            <Image src={BRAND_LOGO} alt="iMaker Restro" width={160} height={40} />
+        {/* Brand + Contact */}
+        <div className="mt-12 border-t border-secondary-200 pt-9">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+            {/* Brand */}
+            <div className="flex-1">
+              <Image
+                src={BRAND_LOGO}
+                alt="iMaker Restro"
+                width={180}
+                height={45}
+                className="h-auto w-[180px]"
+              />
 
-            <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-secondary-500">
-              The all-in-one restaurant management platform for modern
-              restaurants.
-            </p>
+              <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-secondary-500">
+                iMaker Restro is an all-in-one restaurant POS and management
+                platform that helps businesses manage billing, orders, tables,
+                kitchen, inventory, customers, reports, and multiple outlets
+                from one system.
+              </p>
 
-            <div className="mt-5 flex gap-2.5">
-              {social.map(({ platform, href }) => {
-                const Icon = SOCIAL_ICONS[platform];
-                if (!Icon) return null;
+              {/* Social Links */}
+              <div className="mt-5 flex gap-2.5">
+                {social.map(({ platform, href }) => {
+                  const Icon = SOCIAL_ICONS[platform];
 
-                return (
+                  if (!Icon) return null;
+
+                  return (
+                    <a
+                      key={platform}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={platform}
+                      className="flex h-10 w-10 items-center justify-center rounded-lg border border-secondary-200 bg-white text-secondary-500 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-200 hover:bg-primary-50 hover:text-primary-600"
+                    >
+                      <Icon size={16} />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Contact */}
+            <div className="lg:w-[320px] lg:shrink-0">
+              <div className="space-y-4">
+                {/* Address */}
+                <a
+                  href={CONTACT_INFO.mapDirectionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Get directions to ${CONTACT_INFO.name}`}
+                  className="group block"
+                >
+                  <p className="text-[13.5px] font-semibold text-secondary-900 transition-colors duration-200 group-hover:text-primary-600">
+                    {CONTACT_INFO.name}
+                  </p>
+
+                  <p className="mt-1 max-w-sm text-[13px] leading-relaxed text-secondary-500 transition-colors duration-200 group-hover:text-secondary-700">
+                    {CONTACT_INFO.address}
+                  </p>
+                </a>
+
+                {/* Phone + Email */}
+                <div className="space-y-2.5">
                   <a
-                    key={platform}
-                    href={href}
-                    aria-label={platform}
-                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-secondary-200 bg-white text-secondary-500 transition hover:border-primary-200 hover:bg-primary-50 hover:text-primary-600"
+                    href={`tel:${CONTACT_INFO.phones.india.replace(/\s+/g, "")}`}
+                    className="flex items-center gap-2.5 text-[13.5px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
                   >
-                    <Icon size={16} />
+                    <Phone
+                      size={15}
+                      className="shrink-0 text-secondary-400"
+                    />
+                    {CONTACT_INFO.phones.india}
                   </a>
-                );
-              })}
-            </div>
-          </div>
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center lg:items-end">
-            <div className="space-y-2.5">
-              <a
-                href={`tel:${contact.phone.replace(/\s+/g, "")}`}
-                className="flex items-center gap-2.5 text-[13.5px] text-secondary-600 transition hover:text-primary-600"
-              >
-                <Phone size={15} className="shrink-0 text-secondary-400" />
-                {contact.phone}
-              </a>
-              <a
-                href={`mailto:${contact.email}`}
-                className="flex items-center gap-2.5 text-[13.5px] text-secondary-600 transition hover:text-primary-600"
-              >
-                <Mail size={15} className="shrink-0 text-secondary-400" />
-                {contact.email}
-              </a>
-              <Link
-              href={contact.ctaHref}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-secondary-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-secondary-800"
-            >
-              {contact.ctaLabel}
-            </Link>
-            </div>
+                  <a
+                    href={`mailto:${CONTACT_INFO.email}`}
+                    className="flex items-center gap-2.5 text-[13.5px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
+                  >
+                    <Mail
+                      size={15}
+                      className="shrink-0 text-secondary-400"
+                    />
+                    {CONTACT_INFO.email}
+                  </a>
+                </div>
 
-            
+                {/* CTA */}
+                <div className="pt-1">
+                  <Link href={contact.ctaHref} className="btn btn-primary">
+                    {contact.ctaLabel}
+                    <ArrowRight size={15} className="shrink-0" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
+        {/* Bottom Bar */}
         <div className="mt-8 flex flex-col gap-4 border-t border-secondary-200 pt-5 text-[13px] text-secondary-400 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} iMaker Restro. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} iMaker Restro. All rights reserved.
+          </p>
 
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             {legal.map(({ label, href }) => (
-              <Link key={label} href={href} className="transition hover:text-primary-600">
+              <Link
+                key={label}
+                href={href}
+                className="transition-colors duration-200 hover:text-primary-600"
+              >
                 {label}
               </Link>
             ))}

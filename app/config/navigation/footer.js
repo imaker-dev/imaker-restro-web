@@ -28,7 +28,9 @@ export const FOOTER_NAVIGATION = {
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
+      { label: "Contact", href: "/contact" },
       { label: "Blogs", href: "/blogs" },
+      { label: "Find a Franchise", href: "/franchises" },
     ],
   },
 

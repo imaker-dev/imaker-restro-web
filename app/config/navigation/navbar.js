@@ -33,6 +33,7 @@ export const NAVBAR_MENU = [
         label: "Contact",
         href: "/contact",
       },
+      { label: "Find a Franchise", href: "/franchises" },
     ],
   },
 ];
