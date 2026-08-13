@@ -6,12 +6,14 @@ import { getIndustryMenuItems } from "@/app/data/industries";
 export const NAVBAR_MENU = [
   {
     label: "Features",
-    href: "#",
+    href: "/features",
+    columns: 2,
     children: getPosMenuItems(),
   },
   {
     label: "Add-ons",
-    href: "#",
+    href: "/addons",
+    columns: 2,
     children: getAddonsMenuItems(),
   },
   {
@@ -20,7 +22,7 @@ export const NAVBAR_MENU = [
     columns: 2,
     children: getIndustryMenuItems(),
   },
-  { label: "Pricing", href: "/pricing" },
+  // { label: "Pricing", href: "/pricing" },
   {
     label: "Company",
     href: "#",
@@ -28,8 +30,8 @@ export const NAVBAR_MENU = [
       { label: "About", href: "/about" },
       { label: "Blogs", href: "/blogs" },
       {
-        label: "Help center",
-        href: "/help",
+        label: "Contact",
+        href: "/contact",
       },
     ],
   },

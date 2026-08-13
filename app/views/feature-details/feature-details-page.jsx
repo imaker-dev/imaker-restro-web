@@ -762,7 +762,7 @@ const FeatureDetailsPage = ({ data }) => {
   const { hero, problems, screens, workflow, analytics, faq, cta } = data;
 
   return (
-    <main className="bg-[#fbfaf8]">
+    <main>
       {/* ============================================================ */}
       {/* HERO — the screenshot is the only accent it needs             */}
       {/* ============================================================ */}
@@ -777,13 +777,13 @@ const FeatureDetailsPage = ({ data }) => {
 
         <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
           <Eyebrow className="justify-center">{hero.eyebrow}</Eyebrow>
-          <h1 className="mt-6 font-serif text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-[#14181c] sm:text-[52px] md:text-[60px]">
+          <h1 className="mt-6 text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-[#14181c] sm:text-[52px] md:text-[60px]">
             {hero.title}{" "}
-            <span className="italic text-primary-500">
+            <span className="text-primary-500">
               {hero.highlightedTitle}
             </span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl font-sans text-[16px] leading-[1.7] text-[#5b6472]">
+          <p className="mx-auto mt-6 max-w-xl text-[16px] leading-[1.7] text-[#5b6472]">
             {hero.description}
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -800,7 +800,7 @@ const FeatureDetailsPage = ({ data }) => {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-24 max-w-5xl sm:mt-32">
+        <div className="relative mx-auto mt-16 max-w-5xl sm:mt-20">
           <ScreenshotStage>
             <WindowFrame
               src={hero.image}
@@ -888,15 +888,11 @@ const FeatureDetailsPage = ({ data }) => {
       {/* ============================================================ */}
       {/* WORKFLOW — a single flow, read in five seconds                */}
       {/* ============================================================ */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-4xl px-5 py-24 text-center sm:px-8 sm:py-32 lg:px-12">
-          <Eyebrow className="justify-center">{workflow.eyebrow}</Eyebrow>
-          <h2 className="mx-auto mt-5 max-w-2xl font-serif text-[28px] leading-[1.15] text-[#14181c] sm:text-[36px] md:text-[40px]">
-            {workflow.title}
-          </h2>
+      <PageWrapper className="bg-white">
+        <SectionHeading eyebrow={workflow.eyebrow} title={workflow.title} variant="compact"/>
 
           {/* A single connected bar — stages of one pipeline, not separate floating steps */}
-          <div className="mt-16 overflow-hidden rounded-[28px] ring-1 ring-[#e4e4e1]/80">
+          <div className="overflow-hidden rounded-[28px] ring-1 ring-[#e4e4e1]/80">
             <div className="flex flex-col sm:flex-row">
               {workflow.steps.map((step, idx) => {
                 const Icon = WORKFLOW_ICONS[step.icon] || CreditCard;
@@ -926,8 +922,7 @@ const FeatureDetailsPage = ({ data }) => {
               })}
             </div>
           </div>
-        </div>
-      </section>
+      </PageWrapper>
 
       {/* ============================================================ */}
       {/* ANALYTICS — dashboard-dominant showcase                      */}

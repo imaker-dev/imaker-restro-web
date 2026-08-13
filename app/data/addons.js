@@ -4320,7 +4320,7 @@ export const getAddonsBySlug = (slug) => {
   return ADDONS.find((addon) => addon.slug === slug) ?? null;
 };
 
-export const getAddonsMenuItems = ({ featuredOnly = true } = {}) => {
+export const getAddonsMenuItems = ({ featuredOnly = false } = {}) => {
   return ADDONS.filter(
     (feature) => !featuredOnly || feature.isFeatured === true,
   ).map(({ slug, card }) => ({

@@ -3,15 +3,17 @@ import clsx from "clsx";
 export const Eyebrow = ({ children, className = "" }) => (
   <p
     className={clsx(
-      "inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-500/90 sm:text-[13px] lg:text-[14px]",
+      "inline-flex items-start gap-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-500/90 sm:text-[13px] lg:text-[14px]",
       className,
     )}
   >
-    <span className="h-px w-6 bg-primary-500/90" aria-hidden="true" />
-    {children}
+    <span
+      className="mt-[0.55em] h-px w-6 shrink-0 bg-primary-500/90"
+      aria-hidden="true"
+    />
+    <span>{children}</span>
   </p>
 );
-
 const variants = {
   default: {
     wrapper: "mb-8 sm:mb-10 lg:mb-12 max-w-3xl",
@@ -22,12 +24,12 @@ const variants = {
     description:
       "mt-5 text-[15px] font-normal leading-[1.6] text-gray-500 sm:text-[16px] lg:text-[17px]",
   },
-  compact: {
+compact: {
     wrapper: "mb-6 sm:mb-8 lg:mb-10 max-w-2xl",
     showGrid: false,
     eyebrow: "",
     title:
-      "mt-5 text-[28px] font-normal leading-[1.15] tracking-[-0.01em] text-[#14181c] sm:text-[34px] md:text-[40px]",
+      "mt-5 text-[24px] font-medium leading-[1.2] tracking-[-0.01em] text-ink sm:text-[28px] md:text-[32px]",
     description: "mt-4 text-[15px] leading-relaxed text-[#5b6472] sm:text-base",
   },
 };
@@ -71,7 +73,6 @@ export function SectionHeading({
         className,
       )}
     >
-
       <div className={clsx("relative", isCenter ? "text-center" : "text-left")}>
         {eyebrow && (
           <Eyebrow className={clsx(v.eyebrow, isCenter && "justify-center")}>

@@ -2233,7 +2233,7 @@ export const getFeatureBySlug = (slug) => {
   return FEATURES.find((feature) => feature.slug === slug) ?? null;
 };
 
-export const getPosMenuItems = ({ featuredOnly = true } = {}) => {
+export const getPosMenuItems = ({ featuredOnly = false } = {}) => {
   return FEATURES
     .filter((feature) => !featuredOnly || feature.isFeatured === true)
     .map(({ slug, card }) => ({

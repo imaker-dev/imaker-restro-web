@@ -113,4 +113,23 @@ export const seoPages = {
     ],
     path: "/blogs",
   }),
+
+  franchise: generateSEO({
+    title: "Find the Right Franchise | Explore Franchise Opportunities",
+    description:
+      "Explore franchise opportunities across different business categories and locations. Discover suitable franchises, compare options, and find a business opportunity that fits your goals.",
+    keywords: [
+      "franchise opportunities",
+      "franchise opportunities in India",
+      "find a franchise",
+      "franchise business opportunities",
+      "franchise marketplace",
+      "best franchise opportunities",
+      "franchise businesses",
+      "franchise investment opportunities",
+      "food franchise opportunities",
+      "restaurant franchise opportunities",
+    ],
+    path: "/franchise",
+  }),
 };

@@ -30,7 +30,7 @@ const PosFeaturesSection = () => {
           href={"/features"}
           className="btn btn-primary"
         >
-          View All
+          View All Features
           <ArrowRight
             size={15}
             className="transition-transform motion-reduce:transition-none group-hover:translate-x-1"

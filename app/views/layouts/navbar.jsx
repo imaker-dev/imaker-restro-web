@@ -9,8 +9,6 @@ import Image from "next/image";
 import { BRAND_LOGO } from "@/app/const";
 import { NAVBAR_MENU } from "@/app/config/navigation/navbar";
 
-
-
 /* ------------------------------- Active match ------------------------------ */
 
 const isPathActive = (pathname, href) =>
@@ -386,13 +384,15 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-[72px] shrink-0 items-center justify-between border-b border-secondary-100 px-6">
-          <Image
-            src={BRAND_LOGO}
-            alt="logo"
-            width={120}
-            height={80}
-            className="w-[150px]"
-          />
+          <Link href="/" className="flex items-center">
+            <Image
+              src={BRAND_LOGO}
+              alt="logo"
+              width={120}
+              height={80}
+              className="w-[150px]"
+            />
+          </Link>
 
           <button
             onClick={() => setOpen(false)}

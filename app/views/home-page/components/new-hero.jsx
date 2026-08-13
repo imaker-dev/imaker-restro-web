@@ -141,7 +141,7 @@ export default function NewHero() {
             customers, and business performance from one connected POS system.
           </p>
 
-          <div className="mt-8 flex flex-col items-center gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 lg:justify-start">
+          <div className="mt-8 flex items-center gap-3 sm:mt-9 sm:flex-wrap sm:justify-center sm:gap-4 lg:justify-start">
             <button
               type="button"
               className="btn btn-lg btn-primary"

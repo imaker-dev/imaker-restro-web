@@ -32,6 +32,7 @@ export default function FeatureRow({ feature, index }) {
             src={image}
             alt={title}
             fill
+            unoptimized
             sizes="(min-width: 1024px) 45vw, 100vw"
             className="object-cover object-top"
           />
