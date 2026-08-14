@@ -1432,7 +1432,7 @@ export const ADDONS = [
       title: "Restaurant Loyalty Program",
       description:
         "Keep customer details and loyalty points connected to your restaurant POS to build stronger customer relationships.",
-      image: "/Images/Addons/restaurant-loyalty/hero.webp",
+      image: "/Images/Addons/Restaurant-Loyalty/hero.webp",
     },
 
     hero: {
@@ -1459,7 +1459,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/restaurant-loyalty/hero.webp",
+        src: "/Images/Addons/Restaurant-Loyalty/hero.webp",
         alt: "iMaker Restro restaurant loyalty program showing customer information and loyalty points",
       },
     },

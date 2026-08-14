@@ -351,7 +351,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-6 lg:flex">
           <Link
-            href="/book-a-demo"
+            href="/contact"
             className="btn btn-primary"
             // className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-sm transition-all duration-150 hover:bg-primary-700 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
           >
@@ -426,7 +426,7 @@ export default function Navbar() {
 
         <div className="shrink-0 border-t border-secondary-100 px-4 pb-6 pt-4">
           <Link
-            href="/book-a-demo"
+            href="/contact"
             onClick={() => setOpen(false)}
             className="w-full btn btn-primary"
             // className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-600 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700"

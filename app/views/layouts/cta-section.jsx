@@ -97,7 +97,7 @@ const CtaSection = ({ cta }) => {
     description = "Simplify billing, inventory, customer engagement and operations with one connected platform.",
     primaryButton = {
       text: "Book a Demo",
-      link: "/book-a-demo",
+      link: "/contact",
     },
     secondaryButton = {
       text: "Talk to Sales",
