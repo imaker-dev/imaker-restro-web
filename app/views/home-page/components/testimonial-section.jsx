@@ -228,12 +228,19 @@
 //     </PageWrapper>
 //   );
 // }
+
 "use client";
 
 import PageWrapper from "@/app/components/page-wrapper";
-import { useState } from "react";
 import SectionHeading from "../../layouts/section-heading";
-import { ChevronLeft, ChevronRight, QuoteIcon } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, QuoteIcon } from "lucide-react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import Link from "next/link";
 
 export const TESTIMONIALS = [
   {
@@ -270,24 +277,7 @@ function getInitials(name) {
 export default function TestimonialCarousel({
   testimonials = TESTIMONIALS,
 }) {
-  const [index, setIndex] = useState(0);
-  const [imgFailed, setImgFailed] = useState(false);
-
   if (testimonials.length === 0) return null;
-
-  const current = testimonials[index];
-
-  function goPrev() {
-    setImgFailed(false);
-    setIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1));
-  }
-
-  function goNext() {
-    setImgFailed(false);
-    setIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1));
-  }
-
-  const showImage = current.ownerImage && !imgFailed;
 
   return (
     <PageWrapper aria-label="What our community says">
@@ -302,12 +292,12 @@ export default function TestimonialCarousel({
             align="start"
           />
 
+          {/* Navigation */}
           <div className="mt-8 flex items-center gap-3">
             <button
               type="button"
-              onClick={goPrev}
+              className="testimonial-prev flex h-11 w-11 items-center justify-center rounded-full border border-stone-200 text-stone-600 transition hover:border-stone-400 hover:text-stone-900 disabled:cursor-not-allowed disabled:opacity-40"
               aria-label="Previous testimonial"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-stone-200 text-stone-600 transition hover:border-stone-400 hover:text-stone-900"
             >
               <ChevronLeft
                 aria-hidden="true"
@@ -318,9 +308,8 @@ export default function TestimonialCarousel({
 
             <button
               type="button"
-              onClick={goNext}
+              className="testimonial-next flex h-11 w-11 items-center justify-center rounded-full border border-stone-200 text-stone-600 transition hover:border-stone-400 hover:text-stone-900 disabled:cursor-not-allowed disabled:opacity-40"
               aria-label="Next testimonial"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-stone-200 text-stone-600 transition hover:border-stone-400 hover:text-stone-900"
             >
               <ChevronRight
                 aria-hidden="true"
@@ -331,73 +320,95 @@ export default function TestimonialCarousel({
           </div>
         </div>
 
-        {/* Right */}
-        <div
-          key={current.id}
-          className="min-h-[380px] animate-in fade-in slide-in-from-bottom-2 duration-500"
-        >
-          {/* Quote icon */}
-          <span className="mb-5 block text-primary-600">
-            <QuoteIcon
-              className="h-7 w-7"
-              strokeWidth={1.5}
-              aria-hidden="true"
-            />
-          </span>
+        {/* Right - Swiper */}
+        <div className="min-w-0">
+          <Swiper
+            modules={[Navigation]}
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={testimonials.length > 1}
+            navigation={{
+              prevEl: ".testimonial-prev",
+              nextEl: ".testimonial-next",
+            }}
+            className="testimonial-swiper"
+          >
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <article className="min-h-[380px]">
+                  {/* Quote icon */}
+                  <span className="mb-5 block text-primary-600">
+                    <QuoteIcon
+                      className="h-7 w-7"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  </span>
 
-          {/* Testimonial */}
-          <blockquote className="max-w-2xl text-[21px] font-medium leading-[1.45] text-stone-900 sm:text-2xl lg:text-[32px] lg:leading-[1.4]">
-            “{current.quote}”
-          </blockquote>
+                  {/* Testimonial */}
+                  <blockquote className="max-w-2xl text-[21px] font-medium leading-[1.45] text-stone-900 sm:text-2xl lg:text-[32px] lg:leading-[1.4]">
+                    “{testimonial.quote}”
+                  </blockquote>
 
-          {/* Customer information */}
-          <div className="mt-10 flex items-center gap-4">
-            {/* Owner image / initials fallback */}
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-50 text-primary-600">
-              {showImage ? (
-                <img
-                  src={current.ownerImage}
-                  alt={current.ownerName}
-                  onError={() => setImgFailed(true)}
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                <span className="text-sm font-semibold tracking-wide">
-                  {getInitials(current.ownerName)}
-                </span>
-              )}
-            </div>
+                  {/* Customer information */}
+                  <div className="mt-10 flex items-center gap-4">
+                    {/* Owner image / initials */}
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-50 text-primary-600">
+                      {testimonial.ownerImage ? (
+                        <img
+                          src={testimonial.ownerImage}
+                          alt={testimonial.ownerName}
+                          className="h-full w-full object-cover"
+                          onError={(event) => {
+                            event.currentTarget.style.display = "none";
+                          }}
+                        />
+                      ) : (
+                        <span className="text-sm font-semibold tracking-wide">
+                          {getInitials(testimonial.ownerName)}
+                        </span>
+                      )}
+                    </div>
 
-            {/* Owner information */}
-            <div className="min-w-0">
-              <p className="text-sm font-semibold text-stone-900">
-                {current.ownerName}
-              </p>
+                    {/* Owner information */}
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-stone-900">
+                        {testimonial.ownerName}
+                      </p>
 
-              <p className="mt-0.5 text-sm text-stone-500">
-                {current.ownerRole}
-                {current.restaurantName && ` · ${current.restaurantName}`}
-              </p>
+                      <p className="mt-0.5 text-sm text-stone-500">
+                        {testimonial.ownerRole}
+                        {testimonial.restaurantName &&
+                          ` · ${testimonial.restaurantName}`}
+                      </p>
 
-              {current.location && (
-                <p className="mt-0.5 text-xs text-stone-400">
-                  {current.location}
-                </p>
-              )}
-            </div>
+                      {testimonial.location && (
+                        <p className="mt-0.5 text-xs text-stone-400">
+                          {testimonial.location}
+                        </p>
+                      )}
+                    </div>
 
-            {/* Restaurant brand */}
-            {current.restaurantLogo && (
-              <div className="ml-auto border-l border-stone-200 pl-6">
-                <img
-                  src={current.restaurantLogo}
-                  alt={`${current.restaurantName} logo`}
-                  className="max-h-8 max-w-[110px] object-contain"
-                />
-              </div>
-            )}
-          </div>
+                    {/* Restaurant brand */}
+                    {testimonial.restaurantLogo && (
+                      <div className="ml-auto border-l border-stone-200 pl-6">
+                        <img
+                          src={testimonial.restaurantLogo}
+                          alt={`${testimonial.restaurantName} logo`}
+                          className="max-h-8 max-w-[110px] object-contain"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </article>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+      </div>
+
+      <div className="w-full flex justify-center lg:mt-10">
+        <Link href="/testimonials" className="btn btn-primary">View All Testimonials <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
       </div>
     </PageWrapper>
   );

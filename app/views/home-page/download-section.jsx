@@ -1,9 +1,7 @@
 "use client";
 
 import PageWrapper from "@/app/components/page-wrapper";
-import { Download } from "lucide-react";
 import { useState } from "react";
-import SectionHeader from "../layouts/section-header";
 import Link from "next/link";
 import SectionHeading from "../layouts/section-heading";
 

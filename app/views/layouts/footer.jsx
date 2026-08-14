@@ -30,7 +30,7 @@ function FooterColumn({ title, links, columns = 1 }) {
   return (
     <div>
       <div className="mb-4">
-        <div className="font-semibold text-secondary-900">{title}</div>
+        <div className="text-lg font-semibold text-secondary-900">{title}</div>
         <div className="relative mt-2 h-px w-full bg-secondary-200">
           <span className="absolute left-0 top-0 h-px w-6 lg:w-10 bg-primary-500" />
         </div>
@@ -46,7 +46,7 @@ function FooterColumn({ title, links, columns = 1 }) {
           <li key={label}>
             <Link
               href={href}
-              className="inline-flex items-center text-[13.5px] text-secondary-400 transition-all duration-200 hover:translate-x-0.5 hover:text-primary-600"
+              className="inline-flex items-center text-base text-secondary-400 transition-all duration-200 hover:translate-x-0.5 hover:text-primary-600"
             >
               {label}
             </Link>
@@ -108,7 +108,7 @@ export default function Footer() {
                 className="h-auto w-[180px]"
               />
 
-              <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-secondary-500">
+              <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-secondary-500">
                 iMaker Restro is an all-in-one restaurant POS and management
                 platform that helps businesses manage billing, orders, tables,
                 kitchen, inventory, customers, reports, and multiple outlets
@@ -149,11 +149,11 @@ export default function Footer() {
                   aria-label={`Get directions to ${CONTACT_INFO.name}`}
                   className="group block"
                 >
-                  <p className="text-[13.5px] font-semibold text-secondary-900 transition-colors duration-200 group-hover:text-primary-600">
+                  <p className="text-base font-semibold text-secondary-900 transition-colors duration-200 group-hover:text-primary-600">
                     {CONTACT_INFO.name}
                   </p>
 
-                  <p className="mt-1 max-w-sm text-[13px] leading-relaxed text-secondary-500 transition-colors duration-200 group-hover:text-secondary-700">
+                  <p className="mt-1 max-w-sm text-[14px] leading-relaxed text-secondary-500 transition-colors duration-200 group-hover:text-secondary-700">
                     {CONTACT_INFO.address}
                   </p>
                 </a>
@@ -162,7 +162,7 @@ export default function Footer() {
                 <div className="space-y-2.5">
                   <a
                     href={`tel:${CONTACT_INFO.phones.india.replace(/\s+/g, "")}`}
-                    className="flex items-center gap-2.5 text-[13.5px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
+                    className="flex items-center gap-2.5 text-[14px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
                   >
                     <Phone
                       size={15}
@@ -173,7 +173,7 @@ export default function Footer() {
 
                   <a
                     href={`mailto:${CONTACT_INFO.email}`}
-                    className="flex items-center gap-2.5 text-[13.5px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
+                    className="flex items-center gap-2.5 text-[14px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
                   >
                     <Mail
                       size={15}

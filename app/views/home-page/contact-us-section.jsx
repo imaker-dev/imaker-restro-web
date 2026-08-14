@@ -3,17 +3,13 @@
 import PageWrapper from "@/app/components/page-wrapper";
 import {
   Mail,
-  MapPin,
   Phone,
   Loader2,
   CheckCircle,
   User,
   Building2,
   MessageSquare,
-  BadgeCheck,
 } from "lucide-react";
-import SectionHeader from "../layouts/section-header";
-import { CONTACT_INFO } from "../../const";
 import { useEffect, useRef, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -27,49 +23,6 @@ import Image from "next/image";
    CONTACT
 ───────────────────────────────────────────────────────────────────────────── */
 
-/* ─── Reusable input ─────────────────────────────────────────────────────── */
-// function InputField({
-//   label,
-//   type,
-//   placeholder,
-//   name,
-//   value,
-//   onChange,
-//   onBlur,
-//   error,
-//   touched,
-//   icon: Icon,
-//   maxLength,
-// }) {
-//   return (
-//     <div>
-//       <label className="block text-[10px] font-mono font-bold text-[#14181c]/40 uppercase tracking-widest mb-2">
-//         {label}
-//       </label>
-
-//       <div className="relative">
-//         {Icon && (
-//           <Icon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#14181c]/30" />
-//         )}
-//         <input
-//           type={type}
-//           name={name}
-//           placeholder={placeholder}
-//           value={value}
-//           onChange={onChange}
-//           onBlur={onBlur}
-//           maxLength={maxLength}
-//           aria-invalid={touched && !!error}
-//           className={`w-full bg-[#14181c]/[0.035] rounded-xl py-3.5 text-sm font-medium text-[#14181c] placeholder-[#14181c]/30 focus:outline-none focus:bg-[#14181c]/[0.06] focus:ring-2 focus:ring-primary-400/40 transition-all
-//             ${Icon ? "pl-10 pr-4" : "px-4"}
-//             ${touched && error ? "ring-2 ring-red-400/50 bg-red-50" : ""}`}
-//         />
-//       </div>
-
-//       {touched && error && <p className="mt-1 text-xs text-red-500">{error}</p>}
-//     </div>
-//   );
-// }
 function InputField({
   label,
   type,

@@ -1,5 +1,4 @@
 import HeroSection from "@/app/views/home-page/hero-section";
-import AboutUsSection from "@/app/views/home-page/about-us-section";
 import DownloadSection from "@/app/views/home-page/download-section";
 import FAQSection from "@/app/views/home-page/faq-section";
 import FranchiseMarketplace from "@/app/views/home-page/franchise-marketplace";
@@ -30,6 +29,7 @@ export default function Homepage() {
       {/* Platform Compatibility */}
       <PlatformCompatibility />
 
+
       {/* FAQ */}
       <FAQSection />
 
@@ -37,11 +37,10 @@ export default function Homepage() {
       <FranchiseMarketplace />
 
       {/* <DownloadSection /> */}
-      {/* <AboutUsSection /> */}
-      {/* <Pricing /> */}
 
       {/* Customer Testimonials */}
       <TestimonialSlider />
+
 
       <CtaSection
         eyebrow="READY WHEN YOU ARE"

@@ -1,7 +1,7 @@
 import React from "react";
 import { Check, X } from "lucide-react";
 import PageWrapper from "@/app/components/page-wrapper";
-import SectionHeader from "../../layouts/section-header";
+import SectionHeading from "../../layouts/section-heading";
 
 /* ---------------------------------------------------------------
    Pure Tailwind, no custom fonts, no inline styles. Ribbon-tab
@@ -145,9 +145,9 @@ export default function CompareSection() {
   return (
     <PageWrapper>
       <div>
-        <SectionHeader
-          badge={"A fair comparison"}
-          title={"Why restaurants are switching to "}
+        <SectionHeading
+          eyebrow={"A fair comparison"}
+          title={"Why restaurants are switching to iMaker Restro"}
           highlight={"iMaker Restro"}
           description={
             "Same jobs you already expect from restaurant software — billing, printing, kitchens, stock — done without the workarounds."
