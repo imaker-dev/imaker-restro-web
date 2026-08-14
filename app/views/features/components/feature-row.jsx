@@ -61,7 +61,8 @@ export default function FeatureRow({ feature, index }) {
 
         <Link
           href={`/features/${feature.id}`}
-          className="group mt-6 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[#14181c] transition-colors duration-300 hover:text-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 rounded-sm"
+          aria-label={`Learn more about ${title}`}
+          className="group mt-6 inline-flex items-center gap-1.5 rounded-sm text-[13.5px] font-medium text-[#14181c] transition-colors duration-300 hover:text-primary-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
         >
           Learn more
           <ArrowUpRight

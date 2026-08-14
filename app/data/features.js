@@ -1574,7 +1574,7 @@ export const FEATURES = [
       title: "Restaurant Shift Management",
       description:
         "Manage shift opening and closing, cash handling, staff activity, sales, payments, reconciliation, and shift reports from your restaurant POS.",
-      image: "/images/Pos/Shifts/card-1.webp",
+      image: "/Images/Pos/Shifts/card-1.webp",
     },
 
     hero: {

@@ -11,7 +11,7 @@ const heroStates = [
   {
     id: "billing",
     word: "Faster Billing",
-    image: "/Images/Pos/billing/hero.webp",
+    image: "/Images/Pos/Billing/hero.webp",
     imageAlt: "iMaker Restro restaurant billing POS interface",
   },
   {
