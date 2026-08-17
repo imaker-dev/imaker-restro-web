@@ -1,25 +1,26 @@
 export const FEATURES = [
+  // Billing
   {
     slug: "restaurant-billing",
     isFeatured: true,
     seo: {
-      title:
-        "Restaurant Billing Software | Fast & GST-Ready POS Billing | iMaker Restro",
+      title: "Restaurant Billing Software | GST POS Billing | iMaker Restro",
+
       description:
         "Simplify restaurant billing with a fast POS for dine-in and takeaway orders, GST billing, discounts, split payments, receipts, and real-time sales reports.",
+
       keywords: [
         "restaurant billing software",
         "restaurant POS billing software",
         "restaurant billing system",
-        "restaurant POS software",
         "GST billing software for restaurants",
         "restaurant billing software India",
-        "restaurant billing system India",
         "dine-in billing software",
         "takeaway billing software",
         "restaurant payment management",
       ],
-      canonical: "/pos/billing",
+
+      canonical: "/features/restaurant-billing",
     },
 
     card: {
@@ -227,13 +228,17 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // Orders
   {
     slug: "restaurant-order-management",
     isFeatured: true,
     seo: {
       title: "Restaurant Order Management Software | iMaker Restro",
+
       description:
-        "Manage dine-in and takeaway orders with connected POS workflows for order taking, KOTs, status tracking, cancellations, reorders, discounts, and billing.",
+        "Manage dine-in and takeaway orders with connected POS workflows for order taking, KOTs, status tracking, reorders, cancellations, discounts, and billing.",
+
       keywords: [
         "restaurant order management software",
         "restaurant order management system",
@@ -242,11 +247,10 @@ export const FEATURES = [
         "dine-in order management",
         "takeaway order management",
         "restaurant order tracking software",
-        "restaurant order management system India",
-        "restaurant POS software India",
-        "iMaker Restro order management",
+        "restaurant order management India",
       ],
-      canonical: "/pos/orders",
+
+      canonical: "/features/restaurant-order-management",
     },
 
     card: {
@@ -457,26 +461,28 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // TABLE MANAGEMENT
   {
     slug: "restaurant-table-management",
     isFeatured: true,
     seo: {
       title: "Restaurant Table Management Software | iMaker Restro",
+
       description:
-        "Manage restaurant floors, sections, tables, seating capacity, and table-based orders with flexible table management built into iMaker Restro POS.",
+        "Manage restaurant floors, sections, tables, seating capacity, and table-based orders with flexible table management built into your POS.",
+
       keywords: [
         "restaurant table management software",
         "restaurant table management system",
         "restaurant floor management software",
         "restaurant seating management",
-        "restaurant table booking software",
         "restaurant POS table management",
         "restaurant floor and table management",
-        "restaurant table management software India",
-        "restaurant POS software India",
-        "iMaker Restro table management",
+        "restaurant table management India",
       ],
-      canonical: "/pos/table-management",
+
+      canonical: "/features/restaurant-table-management",
     },
     card: {
       menuTitle: "Tables",
@@ -674,13 +680,17 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // Restaurant Menu Management
   {
     slug: "restaurant-menu-management",
     isFeatured: true,
     seo: {
       title: "Restaurant Menu Management Software | iMaker Restro",
+
       description:
-        "Manage restaurant menus with categories, simple and variant items, add-ons, custom-price items, special instructions, and flexible tax settings.",
+        "Manage restaurant menus with categories, variants, add-ons, custom-price items, special instructions, and flexible tax settings.",
+
       keywords: [
         "restaurant menu management software",
         "restaurant menu management system",
@@ -689,11 +699,10 @@ export const FEATURES = [
         "restaurant menu builder",
         "restaurant item management software",
         "restaurant menu management India",
-        "restaurant POS software India",
         "restaurant menu and item management",
-        "iMaker Restro menu management",
       ],
-      canonical: "/pos/menu-management",
+
+      canonical: "/features/restaurant-menu-management",
     },
 
     card: {
@@ -892,13 +901,17 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // Restaurant Inventory Management
   {
     slug: "restaurant-inventory-management",
     isFeatured: true,
     seo: {
       title: "Restaurant Inventory Management Software | iMaker Restro",
+
       description:
-        "Manage restaurant inventory and stock with iMaker Restro. Keep stock organized, monitor inventory, and connect inventory management with daily restaurant operations.",
+        "Manage restaurant inventory and stock with iMaker Restro. Keep stock organized, monitor inventory, and connect stock management with daily restaurant operations.",
+
       keywords: [
         "restaurant inventory management software",
         "restaurant inventory management system",
@@ -908,10 +921,9 @@ export const FEATURES = [
         "restaurant POS inventory management",
         "inventory management for restaurants",
         "restaurant inventory management India",
-        "restaurant POS software India",
-        "iMaker Restro inventory management",
       ],
-      canonical: "/pos/inventory-management",
+
+      canonical: "/features/restaurant-inventory-management",
     },
 
     card: {
@@ -1108,14 +1120,18 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // KITCHEN
   {
     slug: "restaurant-kitchen-management",
     isFeatured: false,
     seo: {
       title:
         "Restaurant Kitchen Management Software | KOT & KDS | iMaker Restro",
+
       description:
-        "Manage restaurant kitchen operations with automatic KOTs, multiple kitchen and station routing, Kitchen Display System, and real-time order status tracking.",
+        "Manage restaurant kitchen operations with automatic KOTs, kitchen and station routing, Kitchen Display System, and real-time order status tracking.",
+
       keywords: [
         "restaurant kitchen management software",
         "restaurant kitchen management system",
@@ -1126,9 +1142,9 @@ export const FEATURES = [
         "restaurant kitchen software",
         "restaurant KOT management system",
         "restaurant kitchen management India",
-        "iMaker Restro kitchen management",
       ],
-      canonical: "/pos/kitchen-management",
+
+      canonical: "/features/restaurant-kitchen-management",
     },
     card: {
       menuTitle: "Kitchen",
@@ -1328,13 +1344,17 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // Customer Management
   {
     slug: "restaurant-customer-management",
     isFeatured: false,
     seo: {
       title: "Restaurant Customer Management Software | iMaker Restro",
+
       description:
-        "Manage restaurant customer information, records, and dues with iMaker Restro. Keep customer data connected to orders, billing, and everyday restaurant operations.",
+        "Manage restaurant customer records, contact information, and dues while keeping customer data connected to orders, billing, payments, and daily operations.",
+
       keywords: [
         "restaurant customer management software",
         "restaurant customer management system",
@@ -1344,10 +1364,9 @@ export const FEATURES = [
         "restaurant POS customer management",
         "restaurant customer records software",
         "restaurant customer management India",
-        "restaurant POS software India",
-        "iMaker Restro customer management",
       ],
-      canonical: "/pos/customer-management",
+
+      canonical: "/features/restaurant-customer-management",
     },
 
     card: {
@@ -1546,13 +1565,17 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // Restaurant Shift Management
   {
     slug: "restaurant-shift-management",
     isFeatured: false,
     seo: {
       title: "Restaurant Shift Management Software | iMaker Restro",
+
       description:
-        "Manage restaurant shifts, opening and closing balances, staff activity, cash handling, and shift reports with iMaker Restro's connected POS.",
+        "Manage restaurant shifts, opening and closing balances, staff activity, cash handling, and shift reports with iMaker Restro.",
+
       keywords: [
         "restaurant shift management software",
         "restaurant shift management system",
@@ -1562,10 +1585,10 @@ export const FEATURES = [
         "restaurant shift reporting",
         "restaurant cash drawer management",
         "restaurant shift closing software",
-        "restaurant POS software India",
-        "iMaker Restro shift management",
+        "restaurant shift management India",
       ],
-      canonical: "/pos/shift-management",
+
+      canonical: "/features/restaurant-shift-management",
     },
 
     card: {
@@ -1759,13 +1782,17 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // Restaurant Reports
   {
     slug: "restaurant-reports-analytics",
     isFeatured: false,
     seo: {
       title: "Restaurant Reports & Analytics Software | iMaker Restro",
+
       description:
         "Track restaurant sales, payments, staff performance, items, taxes, discounts, shifts, and business activity with connected reports and live dashboards.",
+
       keywords: [
         "restaurant reports and analytics software",
         "restaurant analytics software",
@@ -1776,10 +1803,9 @@ export const FEATURES = [
         "restaurant sales analytics",
         "restaurant performance dashboard",
         "restaurant reporting software India",
-        "restaurant POS software India",
-        "iMaker Restro reports and analytics",
       ],
-      canonical: "/pos/reports",
+
+      canonical: "/features/restaurant-reports-analytics",
     },
 
     card: {
@@ -1993,13 +2019,17 @@ export const FEATURES = [
       secondaryCta: "Talk to Our Team",
     },
   },
+
+  // Multi-Outlet
   {
     slug: "restaurant-multi-branch-management",
     isFeatured: false,
     seo: {
       title: "Restaurant Multi-Branch Management Software | iMaker Restro",
+
       description:
-        "Manage multiple restaurant branches and franchise outlets from one connected POS with centralized reporting, monitoring, and business visibility.",
+        "Manage multiple restaurant branches and outlets from one connected POS with centralized reporting, monitoring, and business visibility.",
+
       keywords: [
         "restaurant multi branch management software",
         "multi outlet restaurant management software",
@@ -2010,10 +2040,9 @@ export const FEATURES = [
         "restaurant branch management software",
         "centralized restaurant management software",
         "multi branch restaurant software India",
-        "restaurant POS software India",
-        "iMaker Restro multi branch management",
       ],
-      canonical: "/pos/multi-branch",
+
+      canonical: "/features/restaurant-multi-branch-management",
     },
     card: {
       menuTitle: "Multi-Outlet",
@@ -2234,11 +2263,11 @@ export const getFeatureBySlug = (slug) => {
 };
 
 export const getPosMenuItems = ({ featuredOnly = false } = {}) => {
-  return FEATURES
-    .filter((feature) => !featuredOnly || feature.isFeatured === true)
-    .map(({ slug, card }) => ({
-      icon: card.icon,
-      label: card.menuTitle,
-      href: `/features/${slug}`,
-    }));
+  return FEATURES.filter(
+    (feature) => !featuredOnly || feature.isFeatured === true,
+  ).map(({ slug, card }) => ({
+    icon: card.icon,
+    label: card.menuTitle,
+    href: `/features/${slug}`,
+  }));
 };

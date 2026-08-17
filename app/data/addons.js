@@ -5,8 +5,10 @@ export const ADDONS = [
     isFeatured: true,
     seo: {
       title: "Captain Ordering App for Restaurants | iMaker Restro",
+
       description:
         "Take restaurant orders faster with a Captain Ordering App for table service. Manage tables, send KOTs, track orders, and stay connected to your POS.",
+
       keywords: [
         "restaurant captain ordering app",
         "captain ordering app",
@@ -14,8 +16,10 @@ export const ADDONS = [
         "table ordering app",
         "restaurant order taking app",
         "restaurant POS ordering app",
-        "iMaker Restro Captain Ordering",
+        "captain app for restaurants",
       ],
+
+      canonical: "/addons/captain-ordering-app",
     },
     card: {
       menuTitle: "Captain App",
@@ -422,8 +426,10 @@ export const ADDONS = [
     isFeatured: true,
     seo: {
       title: "QR Self-Ordering for Restaurants | iMaker Restro",
+
       description:
         "Let restaurant customers scan a table QR code, browse your menu, and place orders from their phones with a connected self-ordering workflow.",
+
       keywords: [
         "QR self ordering restaurant",
         "restaurant QR ordering",
@@ -431,8 +437,10 @@ export const ADDONS = [
         "restaurant self ordering system",
         "table QR ordering",
         "QR ordering system for restaurants",
-        "iMaker Restro QR self ordering",
+        "restaurant QR self ordering",
       ],
+
+      canonical: "/addons/scan-and-order",
     },
 
     card: {
@@ -878,8 +886,10 @@ export const ADDONS = [
     isFeatured: true,
     seo: {
       title: "Kitchen Display System (KDS) for Restaurants | iMaker Restro",
+
       description:
-        "Manage restaurant kitchen orders digitally with a Kitchen Display System. Track KOTs, route orders to stations, and monitor Pending to Served status.",
+        "Manage restaurant kitchen orders digitally with a Kitchen Display System. Track KOTs, route orders to stations, and monitor order status from Pending to Served.",
+
       keywords: [
         "kitchen display system",
         "KDS for restaurants",
@@ -887,8 +897,10 @@ export const ADDONS = [
         "digital KOT system",
         "kitchen order management system",
         "restaurant KDS software",
-        "iMaker Restro KDS",
+        "restaurant kitchen display system",
       ],
+
+      canonical: "/addons/kitchen-display-system",
     },
 
     card: {
@@ -1323,9 +1335,11 @@ export const ADDONS = [
     slug: "restaurant-loyalty-program",
     isFeatured: true,
     seo: {
-      title: "Restaurant Loyalty Program | Customer Loyalty Software",
+      title: "Restaurant Loyalty Program Software | iMaker Restro",
+
       description:
-        "Build stronger restaurant customer relationships with connected customer records and loyalty points through iMaker Restro.",
+        "Build stronger restaurant customer relationships with loyalty points and connected customer records through iMaker Restro.",
+
       keywords: [
         "restaurant loyalty program",
         "restaurant loyalty software",
@@ -1333,8 +1347,9 @@ export const ADDONS = [
         "restaurant customer loyalty",
         "restaurant loyalty points",
         "customer retention software for restaurants",
-        "iMaker Restro loyalty program",
       ],
+
+      canonical: "/addons/restaurant-loyalty-program",
     },
 
     card: {
@@ -1751,8 +1766,10 @@ export const ADDONS = [
     isFeatured: true,
     seo: {
       title: "Restaurant Analytics & Insights Software | iMaker Restro",
+
       description:
         "Understand restaurant performance with analytics for sales, products, payments, orders, and outlets through connected dashboards and reports.",
+
       keywords: [
         "restaurant analytics software",
         "restaurant reporting software",
@@ -1760,8 +1777,10 @@ export const ADDONS = [
         "restaurant sales analytics",
         "restaurant performance dashboard",
         "restaurant reporting system",
-        "iMaker Restro analytics",
+        "restaurant analytics and insights",
       ],
+
+      canonical: "/addons/restaurant-analytics-insights",
     },
 
     card: {
@@ -2220,9 +2239,11 @@ export const ADDONS = [
     slug: "event-and-catering-management",
     isFeatured: true,
     seo: {
-      title: "Restaurant Event & Catering Management Software",
+      title: "Restaurant Event & Catering Management Software | iMaker Restro",
+
       description:
         "Manage restaurant events, party bookings, catering requirements, customer details, and event collections from one connected workflow.",
+
       keywords: [
         "restaurant event management software",
         "restaurant catering management software",
@@ -2230,8 +2251,9 @@ export const ADDONS = [
         "restaurant party booking software",
         "catering management system",
         "restaurant event booking system",
-        "iMaker Restro event management",
       ],
+
+      canonical: "/addons/event-and-catering-management",
     },
 
     card: {
@@ -2692,18 +2714,22 @@ export const ADDONS = [
     slug: "restaurant-messaging",
     isFeaured: false,
     seo: {
-      title: "Restaurant Messaging & Customer Communication Software",
+      title:
+        "Restaurant Messaging & Customer Communication Software | iMaker Restro",
+
       description:
         "Keep restaurant customers informed with connected messaging tools for customer updates and communication through your everyday restaurant workflow.",
+
       keywords: [
         "restaurant messaging software",
         "restaurant SMS software",
         "restaurant customer communication",
         "customer messaging for restaurants",
-        "restaurant SMS marketing",
         "restaurant communication software",
-        "iMaker Restro messaging",
+        "restaurant customer messaging",
       ],
+
+      canonical: "/addons/restaurant-messaging",
     },
 
     card: {
@@ -3121,8 +3147,10 @@ export const ADDONS = [
     isFeatured: false,
     seo: {
       title: "Restaurant Purchase Management Software | iMaker Restro",
+
       description:
         "Manage restaurant purchases, suppliers, quantities, and purchase records while keeping purchasing connected with your inventory workflow.",
+
       keywords: [
         "restaurant purchase management software",
         "restaurant procurement software",
@@ -3130,8 +3158,9 @@ export const ADDONS = [
         "restaurant purchase tracking",
         "restaurant inventory purchasing",
         "restaurant purchase management system",
-        "iMaker Restro purchase management",
       ],
+
+      canonical: "/addons/purchase-management",
     },
 
     card: {
@@ -3558,17 +3587,20 @@ export const ADDONS = [
     isFeatured: false,
     seo: {
       title: "Restaurant Recipe Management Software | iMaker Restro",
+
       description:
         "Standardize restaurant recipes, ingredients, and quantities while keeping recipe information connected to inventory and daily restaurant operations.",
+
       keywords: [
         "restaurant recipe management software",
         "recipe management for restaurants",
         "restaurant recipe software",
         "food recipe management system",
         "restaurant ingredient management",
-        "recipe costing software for restaurants",
-        "iMaker Restro recipe management",
+        "restaurant recipe management",
       ],
+
+      canonical: "/addons/recipe-management",
     },
 
     card: {
