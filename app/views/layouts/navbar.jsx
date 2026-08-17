@@ -42,7 +42,7 @@ function DropdownRow({ label, href, icon, active }) {
         />
       )}
       <span
-        className={`text-[13.5px] leading-tight ${
+        className={`text-[14px] leading-tight ${
           active
             ? "font-semibold text-secondary-900"
             : "font-medium text-secondary-900"
@@ -72,7 +72,7 @@ function DropdownPanel({ item, align = "left", isOpen, pathname }) {
           twoCol ? "w-[400px]" : "w-[200px]"
         }`}
       >
-        <p className="px-3 pb-2 pt-0.5 text-[11px] font-semibold uppercase tracking-wide text-secondary-400">
+        <p className="px-3 pb-2 pt-0.5 text-[12px] font-semibold uppercase tracking-wide text-secondary-400">
           {item.label}
         </p>
         <div
@@ -110,7 +110,7 @@ function DesktopNavItem({
     return (
       <Link
         href={item.href}
-        className={`rounded-lg px-3 py-2 text-[14px] font-medium transition-colors duration-150 focus-visible:outline-none ${
+        className={`rounded-lg px-3 py-2 text-[16px] font-medium transition-colors duration-150 focus-visible:outline-none ${
           active
             ? "bg-secondary-50 text-secondary-900"
             : "text-secondary-500 hover:text-secondary-900"
@@ -127,7 +127,7 @@ function DesktopNavItem({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-[14px] font-medium transition-colors duration-150 focus-visible:outline-none ${
+        className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-[16px] font-medium transition-colors duration-150 focus-visible:outline-none ${
           isOpen || active
             ? "bg-secondary-50 text-secondary-900"
             : "text-secondary-500 hover:text-secondary-900"
@@ -351,7 +351,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-6 lg:flex">
           <Link
-            href="/contact"
+            href="/book-a-demo"
             className="btn btn-primary"
             // className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-sm transition-all duration-150 hover:bg-primary-700 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
           >
@@ -426,7 +426,7 @@ export default function Navbar() {
 
         <div className="shrink-0 border-t border-secondary-100 px-4 pb-6 pt-4">
           <Link
-            href="/contact"
+            href="/book-a-demo"
             onClick={() => setOpen(false)}
             className="w-full btn btn-primary"
             // className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary-600 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-700"

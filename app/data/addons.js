@@ -101,7 +101,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/captain-ordering-app/step-table.webp",
+            src: "/Images/Addons/Captain-App/step-1.webp",
             alt: "Captain selecting a restaurant table in iMaker Restro",
           },
         },
@@ -115,7 +115,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/captain-ordering-app/step-order.webp",
+            src: "/Images/Addons/Captain-App/step-2.webp",
             alt: "Captain taking a customer order using iMaker Restro",
           },
         },
@@ -129,7 +129,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/captain-ordering-app/step-kot.webp",
+           src: "/Images/Addons/Captain-App/step-3.webp",
             alt: "Captain sending an order to the kitchen through iMaker Restro",
           },
         },
@@ -143,7 +143,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/captain-ordering-app/step-status.webp",
+           src: "/Images/Addons/Captain-App/step-4.webp",
             alt: "Captain tracking restaurant order status in iMaker Restro",
           },
         },
@@ -177,7 +177,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/captain-ordering-app/table-ordering.webp",
+            src: "/Images/Addons/Captain-App/step-2.webp",
             alt: "Captain taking a restaurant order directly from the table",
           },
         },
@@ -200,7 +200,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/captain-ordering-app/kot-management.webp",
+           src: "/Images/Addons/Captain-App/step-3.webp",
             alt: "iMaker Restro KOT generated from the Captain Ordering App",
           },
         },
@@ -223,7 +223,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/captain-ordering-app/order-status.webp",
+            src: "/Images/Addons/Captain-App/step-4.webp",
             alt: "Captain viewing active restaurant orders and table status",
           },
         },

@@ -41,6 +41,7 @@ import PageWrapper from "@/app/components/page-wrapper";
 import Link from "next/link";
 import SectionHeading, { Eyebrow } from "../layouts/section-heading";
 import CtaSection from "../layouts/cta-section";
+import FaqItem from "@/app/components/faq-item";
 
 /* ------------------------------------------------------------------ */
 /* Icon lookups                                                        */
@@ -179,7 +180,7 @@ const IndustryDetailsPage = ({ data }) => {
   };
 
   return (
-    <main className="bg-[#fbfaf8]">
+    <main>
       {/* ============================================================ */}
       {/* HERO — 50/50 messaging vs. product, premium framed visual     */}
       {/* ============================================================ */}
@@ -632,8 +633,7 @@ const IndustryDetailsPage = ({ data }) => {
       {/* ============================================================ */}
       {/* FAQ — accessible accordion                                     */}
       {/* ============================================================ */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
+      <PageWrapper className="bg-white" containerWidth="max-w-3xl mx-auto">
           <SectionHeading
             eyebrow="Questions"
             title="Frequently Asked Questions"
@@ -641,52 +641,24 @@ const IndustryDetailsPage = ({ data }) => {
             variant="compact"
           />
 
-          <div className="mt-14 divide-y divide-[#e4e4e1] border-t border-b border-[#e4e4e1]">
-            {faqs.map((faq, idx) => {
-              const isOpen = openFaq === idx;
-              const panelId = `faq-panel-${idx}`;
-              const buttonId = `faq-button-${idx}`;
-              return (
-                <div key={faq.question}>
-                  <button
-                    type="button"
-                    id={buttonId}
-                    onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                    aria-expanded={isOpen}
-                    aria-controls={panelId}
-                    className="group flex w-full items-center justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d9384a]/60 rounded-lg"
-                  >
-                    <span className="text-base leading-snug text-[#14181c] sm:text-lg">
-                      {faq.question}
-                    </span>
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-[#e4e4e1] transition-colors group-hover:border-[#d9384a]/30">
-                      {isOpen ? (
-                        <Minus size={14} className="text-[#d9384a]" />
-                      ) : (
-                        <Plus size={14} className="text-[#d9384a]" />
-                      )}
-                    </span>
-                  </button>
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={buttonId}
-                    className={`grid overflow-hidden transition-all duration-300 ease-out ${
-                      isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="max-w-2xl text-[14px] leading-relaxed text-[#5b6472]">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="divide-y divide-[#e4e4e1] border-t border-b border-[#e4e4e1]">
+
+            {
+              faqs.map((faq,idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <FaqItem
+                    key={faq.question}
+                    question={faq.question}
+                    answer={faq.answer}
+                    isOpen={isOpen}
+                    onToggle={() => setOpenFaq(isOpen ? -1 : idx)}
+                  />
+                )
+              })
+            }
           </div>
-        </div>
-      </section>
+      </PageWrapper>
 
       {/* ============================================================ */}
       {/* CTA                                                            */}

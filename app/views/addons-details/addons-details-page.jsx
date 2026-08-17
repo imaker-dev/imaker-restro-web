@@ -9,6 +9,8 @@ import SectionHeading, { Eyebrow } from "../layouts/section-heading";
 import CtaSection from "../layouts/cta-section";
 import FaqItem from "@/app/components/faq-item";
 import Link from "next/link";
+import AddonsDetailsHero from "./components/addons-details-hero";
+import AddonsDetailsShowcase from "./components/addons-details-showcase";
 
 /* -------------------------------------------------------------------------
  * Design tokens (matches the existing iMaker Restro system)
@@ -176,64 +178,9 @@ const AddonsDetailsPage = ({ data }) => {
   } = data;
 
   return (
-    <div >
+    <>
       {/* ============================== HERO ============================== */}
-      {hero && (
-        <PageWrapper containerClassName="pt-10 lg:pt-16">
-          <div className="grid gap-10 lg:grid-cols-[2fr_3fr] lg:items-center lg:gap-12">
-            <div className="lg:pb-6">
-              {hero.eyebrow && <Eyebrow>{hero.eyebrow}</Eyebrow>}
-              <h1 className="mt-4 font-medium text-[2.5rem] leading-[1.05] tracking-tight text-[#14181c] sm:text-5xl lg:text-[3.1rem]">
-                {hero.title}{" "}
-                {hero.highlightedTitle && (
-                  <span className="text-[#d9384a]">
-                    {hero.highlightedTitle}
-                  </span>
-                )}
-              </h1>
-              {hero.description && (
-                <p className="mt-5 max-w-md text-base leading-relaxed text-[#14181c]/65">
-                  {hero.description}
-                </p>
-              )}
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                {hero.primaryCta && (
-                  <Link
-                    href={hero.primaryCta.href}
-                    className="btn btn-lg btn-primary"
-                  >
-                    {hero.primaryCta.label}
-                    <ArrowUpRight
-                      size={16}
-                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:size-[18px]"
-                    />
-                  </Link>
-                )}
-                {hero.secondaryCta && (
-                  <Link
-                    href={hero.secondaryCta.href}
-                    className="btn btn-lg btn-secondary"
-                  >
-                    {hero.secondaryCta.label}
-                  </Link>
-                )}
-              </div>
-              {hero.trustLine && (
-                <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.16em] text-[#14181c]/40">
-                  {hero.trustLine}
-                </p>
-              )}
-            </div>
-
-            <ScreenshotFrame
-              src={hero.visual?.src}
-              alt={hero.visual?.alt}
-              aspect="aspect-[16/12] sm:aspect-[16/11]"
-              priority
-            />
-          </div>
-        </PageWrapper>
-      )}
+      <AddonsDetailsHero hero={hero} />
 
       {/* ============================ OVERVIEW ============================= */}
       {overview && (
@@ -286,67 +233,8 @@ const AddonsDetailsPage = ({ data }) => {
       )}
 
       {/* ============================== SHOWCASE ============================== */}
-      {showcase && (
-        <PageWrapper>
-          <SectionHeading
-            eyebrow={showcase.eyebrow}
-            title={showcase.title}
-            description={showcase.description}
-            variant="compact"
-          />
+      <AddonsDetailsShowcase showcase={showcase} />
 
-          <div className="space-y-16 sm:space-y-20">
-            {showcase.items?.map((item, i) => {
-              const reversed = i % 2 === 1;
-              return (
-                <div
-                  key={item.id || i}
-                  className={`grid items-center gap-8 lg:grid-cols-5 lg:gap-10 ${
-                    reversed ? "lg:[&>*:first-child]:order-2" : ""
-                  }`}
-                >
-                  <div className="lg:col-span-2">
-                    <span className="font-mono text-xs uppercase tracking-[0.18em] text-[#d9384a]">
-                      {item.number} / {item.eyebrow}
-                    </span>
-                    <h3 className="mt-3  text-2xl leading-[1.15] text-[#14181c] sm:text-[1.75rem]">
-                      {item.title}
-                    </h3>
-                    {item.description && (
-                      <p className="mt-3 text-sm leading-relaxed text-[#14181c]/60">
-                        {item.description}
-                      </p>
-                    )}
-                    {item.points?.length > 0 && (
-                      <ul className="mt-5 space-y-2">
-                        {item.points.map((p, pi) => (
-                          <li
-                            key={pi}
-                            className="flex items-start gap-2 text-sm text-[#14181c]/70"
-                          >
-                            <CheckCircle
-                              className="mt-0.5 h-4 w-4 shrink-0 text-[#d9384a]"
-                              aria-hidden="true"
-                            />
-                            {p}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                  <div className="lg:col-span-3">
-                    <ScreenshotFrame
-                      src={item.visual?.src}
-                      alt={item.visual?.alt}
-                      aspect="aspect-[16/11]"
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </PageWrapper>
-      )}
 
       {/* =========================== CAPABILITIES =========================== */}
       {capabilities && (
@@ -527,7 +415,7 @@ const AddonsDetailsPage = ({ data }) => {
 
       {/* ============================= FINAL CTA ============================= */}
       <CtaSection cta={finalCta} />
-    </div>
+    </>
   );
 };
 
