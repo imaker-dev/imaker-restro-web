@@ -32,47 +32,59 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      // ---------------------------------------------------------
+      // WEBSITE
+      // Used primarily to help Google understand the site identity
+      // ---------------------------------------------------------
+      {
+        "@type": "WebSite",
+        "@id": `${BASE_URL}/#website`,
+        name: "iMaker Restro",
+        alternateName: ["iMaker Restro POS", "iMaker"],
+        url: `${BASE_URL}/`,
+      },
+
+      // ---------------------------------------------------------
+      // ORGANIZATION
+      // ---------------------------------------------------------
+      {
+        "@type": "Organization",
+        "@id": `${BASE_URL}/#organization`,
+        name: "iMaker Technology Private Limited",
+        url: BASE_URL,
+        logo: `${BASE_URL}/Images/logo-icon.png`,
+      },
+
+      // ---------------------------------------------------------
+      // SOFTWARE
+      // ---------------------------------------------------------
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${BASE_URL}/#software`,
+        name: "iMaker Restro",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Android, iOS, Windows, macOS",
+        description:
+          "iMaker Restro is restaurant POS and management software for billing, orders, tables, kitchen operations, inventory, customers, reporting, and multi-outlet management.",
+        url: BASE_URL,
+        publisher: {
+          "@id": `${BASE_URL}/#organization`,
+        },
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${poppins.variable} antialiased`}>
-        {/* SOFTWARE SCHEMA (VERY IMPORTANT) */}
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebSite",
-                  "@id": `${BASE_URL}/#website`,
-                  name: "iMaker Restro",
-                  alternateName: "iMaker",
-                  url: BASE_URL,
-                },
-
-                {
-                  "@type": "Organization",
-                  "@id": `${BASE_URL}/#organization`,
-                  name: "iMaker Technology Private Limited",
-                  url: BASE_URL,
-                  logo: `${BASE_URL}/Images/logo-icon.png`,
-                },
-
-                {
-                  "@type": "SoftwareApplication",
-                  "@id": `${BASE_URL}/#software`,
-                  name: "iMaker Restro",
-                  operatingSystem: "Android, iOS, Windows, macOS",
-                  applicationCategory: "BusinessApplication",
-                  description:
-                    "iMaker Restro is restaurant POS and management software for billing, orders, tables, kitchen operations, inventory, customers, reporting, and multi-outlet management.",
-                  url: BASE_URL,
-                  publisher: {
-                    "@id": `${BASE_URL}/#organization`,
-                  },
-                },
-              ],
-            }),
+            __html: JSON.stringify(structuredData),
           }}
         />
 
@@ -85,7 +97,7 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
 
-        {/* Live Chat Scripts */}
+        {/* Live Chat */}
         <Script
           src="https://office.imaker.technology/im_livechat/loader/3"
           strategy="afterInteractive"
@@ -105,13 +117,16 @@ export default function RootLayout({
         <Script id="google-tag" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+
             window.gtag = gtag;
 
             gtag('js', new Date());
 
             gtag('config', 'G-85BKEX4SMD');
-
             gtag('config', 'AW-18235414628');
           `}
         </Script>
