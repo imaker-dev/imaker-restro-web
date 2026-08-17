@@ -176,7 +176,6 @@ const AddonsDetailsPage = ({ data }) => {
     relatedAddons,
     finalCta,
   } = data;
-
   return (
     <>
       {/* ============================== HERO ============================== */}
@@ -216,7 +215,7 @@ const AddonsDetailsPage = ({ data }) => {
       )}
 
       {/* ============================ WORKFLOW ============================= */}
-      {workflow && (
+      {/* {workflow && (
         <PageWrapper
           id={workflow.id}
           className="border-y border-[#14181c]/8 bg-white"
@@ -230,11 +229,10 @@ const AddonsDetailsPage = ({ data }) => {
 
           <WorkflowWalkthrough workflow={workflow} />
         </PageWrapper>
-      )}
+      )} */}
 
       {/* ============================== SHOWCASE ============================== */}
       <AddonsDetailsShowcase showcase={showcase} />
-
 
       {/* =========================== CAPABILITIES =========================== */}
       {capabilities && (
@@ -384,12 +382,12 @@ const AddonsDetailsPage = ({ data }) => {
               {relatedAddons.items.map((addon, i) => (
                 <NextLink
                   key={i}
-                  href={addon.href || "#"}
+                  href={`/addons/${addon.id}`}
                   className="group block"
                 >
                   <PhotoFrame
-                    src={addon.visual?.src}
-                    alt={addon.visual?.alt}
+                    src={addon.image}
+                    alt={addon.title}
                     aspect="aspect-[4/3]"
                   />
                   <div className="mt-4 flex items-start justify-between gap-2">
@@ -397,7 +395,7 @@ const AddonsDetailsPage = ({ data }) => {
                       <h3 className="text-sm font-semibold text-[#14181c]">
                         {addon.title}
                       </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-[#14181c]/60">
+                      <p className="mt-1 text-sm leading-relaxed text-[#14181c]/60 ">
                         {addon.description}
                       </p>
                     </div>

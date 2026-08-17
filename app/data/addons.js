@@ -1,4 +1,5 @@
 export const ADDONS = [
+  // Captain App
   {
     slug: "captain-ordering-app",
     isFeatured: true,
@@ -61,7 +62,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/captain-ordering-app/overview.webp",
+        src: "/Images/Addons/Captain-App/overview.webp",
         alt: "iMaker Restro Captain Ordering App interface for taking restaurant orders",
       },
 
@@ -129,7 +130,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-           src: "/Images/Addons/Captain-App/step-3.webp",
+            src: "/Images/Addons/Captain-App/step-3.webp",
             alt: "Captain sending an order to the kitchen through iMaker Restro",
           },
         },
@@ -143,7 +144,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-           src: "/Images/Addons/Captain-App/step-4.webp",
+            src: "/Images/Addons/Captain-App/step-4.webp",
             alt: "Captain tracking restaurant order status in iMaker Restro",
           },
         },
@@ -200,7 +201,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-           src: "/Images/Addons/Captain-App/step-3.webp",
+            src: "/Images/Addons/Captain-App/step-3.webp",
             alt: "iMaker Restro KOT generated from the Captain Ordering App",
           },
         },
@@ -384,40 +385,9 @@ export const ADDONS = [
 
     relatedAddons: {
       eyebrow: "EXPAND YOUR POS",
-
       title: "Connect More of Your Restaurant",
-
       description: "Add more tools to build a connected restaurant operation.",
-
-      items: [
-        {
-          title: "Kitchen Display System",
-          description:
-            "Give your kitchen a clear digital view of incoming orders.",
-
-          href: "/addons/kitchen-display-system",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/kitchen-display-system/card.webp",
-            alt: "iMaker Restro Kitchen Display System",
-          },
-        },
-
-        {
-          title: "QR Self-Ordering",
-          description:
-            "Let customers browse the menu and order directly from their table.",
-
-          href: "/addons/qr-self-ordering",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/qr-self-ordering/card.webp",
-            alt: "iMaker Restro QR self-ordering solution",
-          },
-        },
-      ],
+      items: ["kitchen-display-system", "scan-and-order"],
     },
 
     finalCta: {
@@ -445,6 +415,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Scan QR order
   {
     slug: "scan-and-order",
     isFeatured: true,
@@ -510,7 +482,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Scan-Order/overview.webp",
+        src: "/Images/Addons/Scan-Order/new-overview.webp",
         alt: "iMaker Restro QR self-ordering experience for restaurant tables",
       },
 
@@ -553,7 +525,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/step-1.webp",
+            src: "/Images/Addons/Scan-Order/new-step-1.webp",
             alt: "Customer scanning an iMaker Restro table QR code",
           },
         },
@@ -568,7 +540,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/step-2.webp",
+            src: "/Images/Addons/Scan-Order/new-step-2.webp",
             alt: "iMaker Restro digital restaurant menu opened through QR self-ordering",
           },
         },
@@ -583,7 +555,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/step-3.webp",
+            src: "/Images/Addons/Scan-Order/new-step-3.webp",
             alt: "Customer placing an order through iMaker Restro QR self-ordering",
           },
         },
@@ -598,7 +570,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/step-4.webp",
+            src: "/Images/Addons/Scan-Order/new-step-4.webp",
             alt: "iMaker Restro self-order acceptance workflow",
           },
         },
@@ -632,7 +604,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/scan-and-order/table-qr.webp",
+            src: "/Images/Addons/Scan-Order/new-step-1.webp",
             alt: "iMaker Restro table QR code for customer self-ordering",
           },
         },
@@ -655,7 +627,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/scan-and-order/digital-menu.webp",
+            src: "/Images/Addons/Scan-Order/new-step-2.webp",
             alt: "iMaker Restro digital menu for QR self-ordering",
           },
         },
@@ -678,7 +650,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/scan-and-order/customer-order.webp",
+            src: "/Images/Addons/Scan-Order/new-step-3.webp",
             alt: "Customer placing a self-order through iMaker Restro",
           },
         },
@@ -701,7 +673,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/scan-and-order/order-acceptance.webp",
+            src: "/Images/Addons/Scan-Order/new-step-4.webp",
             alt: "iMaker Restro QR order acceptance settings",
           },
         },
@@ -868,43 +840,10 @@ export const ADDONS = [
 
     relatedAddons: {
       eyebrow: "EXPAND YOUR WORKFLOW",
-
       title: "Connect Customer Ordering With Your Restaurant",
-
       description:
         "Combine QR self-ordering with other iMaker Restro tools for a more connected operation.",
-
-      items: [
-        {
-          title: "Captain Ordering App",
-
-          description:
-            "Give your service team a mobile way to take orders and send KOTs.",
-
-          href: "/addons/captain-ordering-app",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/captain-ordering-app/card.webp",
-            alt: "iMaker Restro Captain Ordering App",
-          },
-        },
-
-        {
-          title: "Kitchen Display System",
-
-          description:
-            "Give your kitchen a clear digital view of incoming orders.",
-
-          href: "/addons/kitchen-display-system",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/kitchen-display-system/card.webp",
-            alt: "iMaker Restro Kitchen Display System",
-          },
-        },
-      ],
+      items: ["captain-ordering-app", "kitchen-display-system"],
     },
 
     finalCta: {
@@ -932,6 +871,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Kitchen Display
   {
     slug: "kitchen-display-system",
     isFeatured: true,
@@ -1345,43 +1286,10 @@ export const ADDONS = [
 
     relatedAddons: {
       eyebrow: "EXPAND YOUR WORKFLOW",
-
       title: "Connect Your Kitchen With the Rest of Your Operation",
-
       description:
         "Combine the KDS with other iMaker Restro tools for a more connected restaurant workflow.",
-
-      items: [
-        {
-          title: "Captain Ordering App",
-
-          description:
-            "Let captains take orders and send KOTs directly from the restaurant floor.",
-
-          href: "/addons/captain-ordering-app",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/captain-ordering-app/card.webp",
-            alt: "iMaker Restro Captain Ordering App",
-          },
-        },
-
-        {
-          title: "QR Self-Ordering",
-
-          description:
-            "Let customers scan a table QR code and place their own orders.",
-
-          href: "/addons/scan-and-order",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/scan-and-order/card.webp",
-            alt: "iMaker Restro QR self-ordering",
-          },
-        },
-      ],
+      items: ["captain-ordering-app", "scan-and-order"],
     },
 
     finalCta: {
@@ -1409,6 +1317,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Restaurant Loyalty Program
   {
     slug: "restaurant-loyalty-program",
     isFeatured: true,
@@ -1803,43 +1713,10 @@ export const ADDONS = [
 
     relatedAddons: {
       eyebrow: "EXPAND YOUR POS",
-
       title: "Connect Customer Engagement With Your Restaurant",
-
       description:
         "Combine loyalty with other iMaker Restro tools to build a more connected operation.",
-
-      items: [
-        {
-          title: "Restaurant Analytics & Insights",
-
-          description:
-            "Understand restaurant performance through dashboards and detailed reports.",
-
-          href: "/addons/restaurant-analytics-insights",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/restaurant-analytics-insights/card.webp",
-            alt: "iMaker Restro Restaurant Analytics and Insights",
-          },
-        },
-
-        {
-          title: "QR Self-Ordering",
-
-          description:
-            "Give customers a convenient way to browse and order from their tables.",
-
-          href: "/addons/scan-and-order",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/scan-and-order/card.webp",
-            alt: "iMaker Restro QR Self-Ordering",
-          },
-        },
-      ],
+      items: ["restaurant-analytics-insights", "scan-and-order"],
     },
 
     finalCta: {
@@ -1867,6 +1744,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Restaurant Analytics & Insights
   {
     slug: "restaurant-analytics-insights",
     isFeatured: true,
@@ -2304,43 +2183,10 @@ export const ADDONS = [
 
     relatedAddons: {
       eyebrow: "EXPAND YOUR POS",
-
       title: "Connect Insights With Your Daily Operations",
-
       description:
         "Combine analytics with other iMaker Restro tools to build a more connected restaurant operation.",
-
-      items: [
-        {
-          title: "Restaurant Loyalty Program",
-
-          description:
-            "Keep customer information and loyalty activity connected to your restaurant operations.",
-
-          href: "/addons/restaurant-loyalty-program",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/restaurant-loyalty-program/card.webp",
-            alt: "iMaker Restro Restaurant Loyalty Program",
-          },
-        },
-
-        {
-          title: "Kitchen Display System",
-
-          description:
-            "Give your kitchen a clearer digital workflow for incoming orders and preparation.",
-
-          href: "/addons/kitchen-display-system",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/kitchen-display-system/card.webp",
-            alt: "iMaker Restro Kitchen Display System",
-          },
-        },
-      ],
+      items: ["restaurant-loyalty-program", "kitchen-display-system"],
     },
 
     finalCta: {
@@ -2368,6 +2214,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Event Management
   {
     slug: "event-and-catering-management",
     isFeatured: true,
@@ -2806,44 +2654,11 @@ export const ADDONS = [
     },
 
     relatedAddons: {
-      eyebrow: "EXPAND YOUR POS",
-
+      eyebrow: "EXPAND YOUR WORKFLOW",
       title: "Connect Events With Your Restaurant Operations",
-
       description:
         "Combine event management with other iMaker Restro tools for a more connected operation.",
-
-      items: [
-        {
-          title: "Restaurant Analytics & Insights",
-
-          description:
-            "Understand restaurant performance through connected reports and dashboards.",
-
-          href: "/addons/restaurant-analytics-insights",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/restaurant-analytics-insights/card.webp",
-            alt: "iMaker Restro Restaurant Analytics & Insights",
-          },
-        },
-
-        {
-          title: "Restaurant Loyalty Program",
-
-          description:
-            "Keep customer information and loyalty activity connected to your restaurant.",
-
-          href: "/addons/restaurant-loyalty-program",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/restaurant-loyalty-program/card.webp",
-            alt: "iMaker Restro Restaurant Loyalty Program",
-          },
-        },
-      ],
+      items: ["restaurant-analytics-insights", "restaurant-loyalty-program"],
     },
 
     finalCta: {
@@ -2871,6 +2686,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Messaging
   {
     slug: "restaurant-messaging",
     isFeaured: false,
@@ -3265,44 +3082,11 @@ export const ADDONS = [
     },
 
     relatedAddons: {
-      eyebrow: "EXPAND CUSTOMER ENGAGEMENT",
-
+      eyebrow: "EXPAND YOUR WORKFLOW",
       title: "Connect Messaging With More Customer Tools",
-
       description:
-        "Combine messaging with iMaker Restro customer and engagement features.",
-
-      items: [
-        {
-          title: "Restaurant Loyalty Program",
-
-          description:
-            "Keep customer information and loyalty activity connected to your restaurant.",
-
-          href: "/addons/restaurant-loyalty-program",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/restaurant-loyalty-program/card.webp",
-            alt: "iMaker Restro Restaurant Loyalty Program",
-          },
-        },
-
-        {
-          title: "QR Self-Ordering",
-
-          description:
-            "Give customers a convenient way to browse and order from their table.",
-
-          href: "/addons/scan-and-order",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/scan-and-order/card.webp",
-            alt: "iMaker Restro QR Self-Ordering",
-          },
-        },
-      ],
+        "Combine restaurant messaging with other iMaker Restro tools for a more connected customer experience.",
+      items: ["restaurant-loyalty-program", "scan-and-order"],
     },
 
     finalCta: {
@@ -3330,6 +3114,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Purchase Management
   {
     slug: "purchase-management",
     isFeatured: false,
@@ -3733,44 +3519,11 @@ export const ADDONS = [
     },
 
     relatedAddons: {
-      eyebrow: "CONNECT YOUR OPERATIONS",
-
+      eyebrow: "EXPAND YOUR POS",
       title: "Build a More Connected Back Office",
-
       description:
-        "Combine purchasing with inventory, recipes, and analytics for greater operational visibility.",
-
-      items: [
-        {
-          title: "Recipe Management",
-
-          description:
-            "Manage recipes and ingredient usage as part of your connected inventory workflow.",
-
-          href: "/addons/recipe-management",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/recipe-management/card.webp",
-            alt: "iMaker Restro Recipe Management",
-          },
-        },
-
-        {
-          title: "Restaurant Analytics & Insights",
-
-          description:
-            "Turn restaurant data into clearer business insights and performance visibility.",
-
-          href: "/addons/restaurant-analytics-insights",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/restaurant-analytics-insights/card.webp",
-            alt: "iMaker Restro Restaurant Analytics & Insights",
-          },
-        },
-      ],
+        "Connect purchasing with inventory, recipes, and restaurant analytics.",
+      items: ["recipe-management", "restaurant-analytics-insights"],
     },
 
     finalCta: {
@@ -3798,6 +3551,8 @@ export const ADDONS = [
       },
     },
   },
+
+  // Recipe Management
   {
     slug: "recipe-management",
     isFeatured: false,
@@ -4234,43 +3989,10 @@ export const ADDONS = [
 
     relatedAddons: {
       eyebrow: "CONNECT YOUR OPERATIONS",
-
       title: "Connect Recipes With the Rest of Your Back Office",
-
       description:
         "Bring purchasing, inventory, recipes, and analytics together for a more connected restaurant operation.",
-
-      items: [
-        {
-          title: "Purchase Management",
-
-          description:
-            "Manage suppliers and restaurant purchases through a connected procurement workflow.",
-
-          href: "/addons/purchase-management",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/purchase-management/card.webp",
-            alt: "iMaker Restro Purchase Management",
-          },
-        },
-
-        {
-          title: "Restaurant Analytics & Insights",
-
-          description:
-            "Understand restaurant performance through connected reports and dashboards.",
-
-          href: "/addons/restaurant-analytics-insights",
-
-          visual: {
-            type: "image",
-            src: "/images/addons/restaurant-analytics-insights/card.webp",
-            alt: "iMaker Restro Restaurant Analytics & Insights",
-          },
-        },
-      ],
+      items: ["purchase-management", "restaurant-analytics-insights"],
     },
 
     finalCta: {
@@ -4317,7 +4039,38 @@ export const getAddons = () => {
 };
 
 export const getAddonsBySlug = (slug) => {
-  return ADDONS.find((addon) => addon.slug === slug) ?? null;
+  const addon = ADDONS.find((addon) => addon.slug === slug);
+
+  if (!addon) {
+    return null;
+  }
+
+  const relatedItems = Array.isArray(addon.relatedAddons?.items)
+    ? addon.relatedAddons.items
+    : [];
+
+  return {
+    ...addon,
+    relatedAddons: addon.relatedAddons
+      ? {
+          ...addon.relatedAddons,
+          items: relatedItems
+            .map((relatedSlug) => {
+              const relatedAddon = ADDONS.find(
+                (addon) => addon.slug === relatedSlug,
+              );
+
+              return relatedAddon
+                ? {
+                    id: relatedAddon.slug,
+                    ...relatedAddon.card,
+                  }
+                : null;
+            })
+            .filter(Boolean),
+        }
+      : undefined,
+  };
 };
 
 export const getAddonsMenuItems = ({ featuredOnly = false } = {}) => {
