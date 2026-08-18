@@ -51,7 +51,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Captain-App/hero.webp",
+        src: "/Images/Addons/Captain-App/new-hero.webp",
         alt: "iMaker Restro Captain Ordering App showing menu items and table order management",
       },
     },
@@ -475,7 +475,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Scan-Order/hero.webp",
+        src: "/Images/Addons/Scan-Order/new-hero.webp",
         alt: "iMaker Restro QR self-ordering interface showing a digital restaurant menu",
       },
     },
@@ -935,7 +935,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/Kitchen-Display/hero.webp",
+        src: "/images/addons/Kitchen-Display/new-hero.webp",
         alt: "iMaker Restro Kitchen Display System showing active kitchen orders and preparation status",
       },
     },
@@ -1384,7 +1384,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Restaurant-Loyalty/hero.webp",
+        src: "/Images/Addons/Restaurant-Loyalty/new-hero.webp",
         alt: "iMaker Restro restaurant loyalty program showing customer information and loyalty points",
       },
     },
@@ -1815,7 +1815,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Analytics/hero.webp",
+        src: "/Images/Addons/Analytics/new-hero.webp",
         alt: "iMaker Restro analytics dashboard showing restaurant sales and performance insights",
       },
     },
@@ -2288,7 +2288,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Event-Management/hero.webp",
+        src: "/Images/Addons/Event-Management/new-hero.webp",
         alt: "iMaker Restro event and catering management interface showing restaurant bookings and event details",
       },
     },
@@ -2764,7 +2764,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Messaging/hero.webp",
+        src: "/Images/Addons/Messaging/new-hero.webp",
         alt: "iMaker Restro restaurant messaging interface for sending customer SMS",
       },
     },
@@ -3195,7 +3195,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Purchase-Management/hero.webp",
+        src: "/Images/Addons/Purchase-Management/new-hero.webp",
         alt: "iMaker Restro purchase management interface showing restaurant purchase records",
       },
     },
@@ -3635,7 +3635,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Recipe-Management/hero.webp",
+        src: "/Images/Addons/Recipe-Management/new-hero.webp",
         alt: "iMaker Restro recipe management interface showing recipe ingredients and quantities",
       },
     },
