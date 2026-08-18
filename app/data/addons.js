@@ -1075,7 +1075,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/kitchen-display-system/order-queue.webp",
+            src: "/Images/Addons/Kitchen-Display/step-1.webp",
             alt: "iMaker Restro KDS showing the kitchen order queue",
           },
         },
@@ -1099,7 +1099,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/kitchen-display-system/station-routing.webp",
+            src: "/Images/Addons/Kitchen-Display/step-2.webp",
             alt: "iMaker Restro KDS routing orders to Tandoor Bar and Dessert stations",
           },
         },
@@ -1118,7 +1118,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/kitchen-display-system/order-status.webp",
+            src: "/Images/Addons/Kitchen-Display/step-3.webp",
             alt: "iMaker Restro KDS showing pending preparing ready and served order statuses",
           },
         },
@@ -1444,7 +1444,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-loyalty-program/step-customer.webp",
+            src: "/mages/addons/restaurant-loyalty-program/step-customer.webp",
             alt: "iMaker Restro customer details interface",
           },
         },
@@ -1522,7 +1522,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-loyalty-program/customer-details.webp",
+            src: "/Images/Addons/Restaurant-Loyalty/step-1.webp",
             alt: "iMaker Restro customer details and profile interface",
           },
         },
@@ -1544,7 +1544,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-loyalty-program/loyalty-points.webp",
+            src: "/Images/Addons/Restaurant-Loyalty/step-2.webp",
             alt: "iMaker Restro customer loyalty points interface",
           },
         },
@@ -1567,7 +1567,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-loyalty-program/customer-records.webp",
+            src: "/Images/Addons/Restaurant-Loyalty/step-3.webp",
             alt: "iMaker Restro connected customer records",
           },
         },

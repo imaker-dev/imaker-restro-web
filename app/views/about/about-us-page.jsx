@@ -382,7 +382,6 @@ const AboutUsPage = () => {
           variant="compact"
         />
 
-        <div className="mt-16 rounded-[32px] bg-white p-6 sm:p-10 lg:p-14">
           {JOURNEY.map((chapter, idx) => (
             <JourneyChapter
               key={chapter.title}
@@ -391,7 +390,6 @@ const AboutUsPage = () => {
               paragraphs={chapter.paragraphs}
             />
           ))}
-        </div>
       </PageWrapper>
 
       {/* ============================================================ */}

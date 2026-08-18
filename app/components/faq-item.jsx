@@ -9,17 +9,17 @@ export default function FaqItem({ question, answer, isOpen, onToggle }) {
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="group flex w-full items-center justify-between gap-6 rounded-lg py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d9384a]/60"
+        className="group flex w-full items-center justify-between gap-6 rounded-lg py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/60"
       >
         <span className=" text-base leading-snug text-[#14181c] sm:text-lg">
           {question}
         </span>
 
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#e4e4e1] transition-colors group-hover:border-[#d9384a]/40">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#e4e4e1] transition-colors group-hover:border-prring-primary-500/40">
           {isOpen ? (
-            <Minus size={14} className="text-[#d9384a]" />
+            <Minus size={14} className="text-primary-500" />
           ) : (
-            <Plus size={14} className="text-[#d9384a]" />
+            <Plus size={14} className="text-primary-500" />
           )}
         </span>
       </button>
