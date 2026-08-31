@@ -180,7 +180,7 @@ const IndustryDetailsPage = ({ data }) => {
   };
 
   return (
-    <main>
+    <>
       {/* ============================================================ */}
       {/* HERO — 50/50 messaging vs. product, premium framed visual     */}
       {/* ============================================================ */}
@@ -203,7 +203,7 @@ const IndustryDetailsPage = ({ data }) => {
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row">
               <Link
                 href={hero.primaryCTA.link}
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#d9384a] px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-[#b92b3c] hover:shadow-lg hover:shadow-[#d9384a]/20 sm:w-auto"
+                className="btn btn-lg btn-primary"
               >
                 {hero.primaryCTA.text}
                 <ArrowUpRight
@@ -213,7 +213,7 @@ const IndustryDetailsPage = ({ data }) => {
               </Link>
               <Link
                 href={hero.secondaryCTA.link}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-[#e4e4e1] px-7 py-3.5 text-sm font-medium text-[#14181c] transition-all hover:border-[#d9384a]/30 hover:bg-[#d9384a]/5 hover:text-[#d9384a] sm:w-auto"
+                className="btn btn-lg btn-secondary"
               >
                 <Play size={15} />
                 {hero.secondaryCTA.text}
@@ -253,7 +253,7 @@ const IndustryDetailsPage = ({ data }) => {
               className="group grid grid-cols-1 gap-6 py-10 transition-colors hover:bg-[#fbfaf8] md:grid-cols-[minmax(0,280px)_1px_minmax(0,1fr)] md:gap-10 md:px-6 md:-mx-6"
             >
               <div className="flex items-start gap-3">
-                <span className="mt-1 font-mono text-xs text-[#d9384a]/50">
+                <span className="mt-1 font-mono text-xs text-primary-600/50">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-xl leading-snug text-[#14181c] sm:text-2xl">
@@ -308,11 +308,18 @@ const IndustryDetailsPage = ({ data }) => {
           {workflow.steps.map((step, idx) => {
             const Icon = ICONS[step.icon] || UtensilsCrossed;
             return (
-              <li key={step.title} className="relative flex flex-col items-start text-left">
+              <li
+                key={step.title}
+                className="relative flex flex-col items-start text-left"
+              >
                 <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white ring-1 ring-[#e4e4e1]">
-                  <Icon size={17} strokeWidth={1.5} className="text-[#d9384a]" />
+                  <Icon
+                    size={17}
+                    strokeWidth={1.5}
+                    className="text-primary-500"
+                  />
                 </div>
-                <span className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-[#d9384a]/70">
+                <span className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-primary-500/70">
                   Step {String(idx + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-1.5 text-sm font-medium leading-snug text-[#14181c]">
@@ -338,16 +345,16 @@ const IndustryDetailsPage = ({ data }) => {
           variant="compact"
         />
 
-        <div className="mt-16 space-y-16 sm:space-y-24">
+        <div className="space-y-16 sm:space-y-24">
           {features.items.map((feature, idx) => (
             <div
               key={feature.id}
-              className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-5 lg:gap-12 ${
+              className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 ${
                 idx % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <div className="lg:col-span-2 text-left">
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#d9384a]">
+              <div className="text-left">
+                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary-500">
                   {String(idx + 1).padStart(2, "0")} /{" "}
                   {String(features.items.length).padStart(2, "0")}
                 </span>
@@ -372,7 +379,7 @@ const IndustryDetailsPage = ({ data }) => {
                 </ul>
               </div>
 
-              <div className="lg:col-span-3 overflow-hidden rounded-2xl shadow-2xl shadow-black/[0.08]">
+              <div className="overflow-hidden rounded-2xl shadow-2xl shadow-black/[0.08]">
                 <ProductImage
                   src={feature.image}
                   alt={feature.title}
@@ -395,60 +402,39 @@ const IndustryDetailsPage = ({ data }) => {
           variant="compact"
         />
 
-        <div className="mt-16">
-          {ecosystem.items[0] && (
-            <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#e4e4e1] lg:grid lg:grid-cols-5">
-              <div className="aspect-[16/10] overflow-hidden lg:col-span-3 lg:aspect-auto">
-                <ProductImage
-                  src={ecosystem.items[0].image}
-                  alt={ecosystem.items[0].title}
-                  fallbackIcon={
-                    ECOSYSTEM_ICON_BY_SLUG[ecosystem.items[0].slug] || MapPin
-                  }
-                />
-              </div>
-              <div className="flex flex-col justify-center p-8 lg:col-span-2 sm:p-10">
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#d9384a]">
-                  Core Platform
-                </span>
-                <h3 className="mt-3 text-xl text-[#14181c] sm:text-2xl">
-                  {ecosystem.items[0].title}
-                </h3>
-                <p className="mt-3 text-[13.5px] leading-relaxed text-[#5b6472]">
-                  {ecosystem.items[0].description}
-                </p>
-              </div>
-            </div>
-          )}
-
-          {ecosystem.items.length > 1 && (
-            <>
-              <div
-                aria-hidden="true"
-                className="mx-auto hidden h-8 w-px bg-[#e4e4e1] lg:block"
-              />
-              <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-[#e4e4e1] sm:grid-cols-3 lg:mt-2 lg:grid-cols-4">
-                {ecosystem.items.slice(1).map((item) => {
-                  const Icon = ECOSYSTEM_ICON_BY_SLUG[item.slug] || MapPin;
-                  return (
-                    <div
-                      key={item.slug}
-                      className="group flex flex-col gap-3 bg-white p-6 transition-colors hover:bg-[#fbfaf8] sm:p-7"
-                    >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#d9384a]/8">
-                        <Icon size={17} strokeWidth={1.5} className="text-[#d9384a]" />
-                      </div>
-                      <h3 className="text-sm font-medium text-[#14181c]">{item.title}</h3>
-                      <p className="text-[12.5px] leading-relaxed text-[#5b6472] line-clamp-2">
-                        {item.description}
-                      </p>
+        {ecosystem.items.length > 1 && (
+          <>
+            <div
+              aria-hidden="true"
+              className="mx-auto hidden h-8 w-px bg-[#e4e4e1] lg:block"
+            />
+            <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-[#e4e4e1] sm:grid-cols-3 lg:mt-2 lg:grid-cols-4">
+              {ecosystem.items.map((item) => {
+                const Icon = ECOSYSTEM_ICON_BY_SLUG[item.slug] || MapPin;
+                return (
+                  <div
+                    key={item.slug}
+                    className="group flex flex-col gap-3 bg-white p-6 transition-colors hover:bg-[#fbfaf8] sm:p-7"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500/8">
+                      <Icon
+                        size={17}
+                        strokeWidth={1.5}
+                        className="text-primary-500"
+                      />
                     </div>
-                  );
-                })}
-              </div>
-            </>
-          )}
-        </div>
+                    <h3 className="text-sm font-medium text-[#14181c]">
+                      {item.title}
+                    </h3>
+                    <p className="text-[12.5px] leading-relaxed text-[#5b6472] line-clamp-2">
+                      {item.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
       </PageWrapper>
 
       {/* ============================================================ */}
@@ -462,35 +448,29 @@ const IndustryDetailsPage = ({ data }) => {
           variant="compact"
         />
 
-        <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-14">
-          <div className="rounded-2xl bg-[#14181c] p-8 shadow-2xl shadow-black/[0.18] ring-1 ring-white/[0.06] sm:p-10">
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/50">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center lg:gap-14">
+          <div className="relative overflow-hidden rounded-2xl bg-[#14181c] shadow-2xl shadow-black/[0.18] ring-1 ring-white/[0.06] aspect-[4/3]">
+            <ProductImage
+              src={analytics.image}
+              alt={analytics.title}
+              fallbackIcon={BarChart3}
+            />
+            <span className="absolute left-6 top-6 font-mono text-[10px] uppercase tracking-[0.2em] text-white/60 drop-shadow-sm sm:left-8 sm:top-8">
               {analytics.title}
             </span>
-            <div className="mt-12 flex items-end gap-2.5 sm:gap-3.5">
-              {barHeights.map((h, i) => (
-                <div key={i} className="flex-1">
-                  <div
-                    className={`rounded-t-sm bg-gradient-to-t from-[#d9384a] to-[#d9384a]/60 ${h}`}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="mt-3 flex justify-between border-t-2 border-dashed border-white/10 pt-3 font-mono text-[9px] text-white/40">
-              {barDays.map((d) => (
-                <span key={d}>{d}</span>
-              ))}
-            </div>
           </div>
-
           <div className="divide-y divide-[#e4e4e1]">
             {analytics.items.map((item, idx) => {
               const Icon =
                 ANALYTICS_ICON_ROTATION[idx % ANALYTICS_ICON_ROTATION.length];
               return (
                 <div key={item.title} className="flex gap-4 py-5 first:pt-0">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#d9384a]/8">
-                    <Icon size={16} strokeWidth={1.5} className="text-[#d9384a]" />
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-500/8">
+                    <Icon
+                      size={16}
+                      strokeWidth={1.5}
+                      className="text-primary-500"
+                    />
                   </div>
                   <div>
                     <h3 className="text-[15px] text-[#14181c]">{item.title}</h3>
@@ -523,7 +503,7 @@ const IndustryDetailsPage = ({ data }) => {
                 key={item.title}
                 className="group grid grid-cols-1 gap-3 py-9 first:pt-0 last:pb-0 sm:grid-cols-[4rem_1fr] sm:items-start sm:gap-8"
               >
-                <span className="text-3xl font-light leading-none text-[#d9384a]/25 transition-colors group-hover:text-[#d9384a]/40 sm:text-4xl">
+                <span className="text-3xl font-light leading-none text-primary-500/25 transition-colors group-hover:text-primary-500/40 sm:text-4xl">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -551,7 +531,7 @@ const IndustryDetailsPage = ({ data }) => {
 
         <div className="mt-16 grid grid-cols-1 gap-10 rounded-2xl bg-[#fbfaf8] p-8 shadow-sm sm:p-10 lg:grid-cols-2 lg:gap-0 lg:divide-x lg:divide-[#e4e4e1]">
           <div className="lg:pr-12">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#d9384a]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary-500">
               Hardware
             </p>
             <h3 className="mt-2 text-xl text-[#14181c]">{hardware.title}</h3>
@@ -564,7 +544,7 @@ const IndustryDetailsPage = ({ data }) => {
                   key={h}
                   className="flex items-center gap-3 border-b border-dashed border-[#e4e4e1] pb-3 text-[13.5px] text-[#14181c] last:border-0 last:pb-0"
                 >
-                  <Tablet size={14} className="text-[#d9384a]" />
+                  <Tablet size={14} className="text-primary-500" />
                   {h}
                 </li>
               ))}
@@ -572,10 +552,12 @@ const IndustryDetailsPage = ({ data }) => {
           </div>
 
           <div className="lg:pl-12">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#d9384a]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary-500">
               Integrations
             </p>
-            <h3 className="mt-2 text-xl text-[#14181c]">{integrations.title}</h3>
+            <h3 className="mt-2 text-xl text-[#14181c]">
+              {integrations.title}
+            </h3>
             <p className="mt-2 text-[13.5px] leading-relaxed text-[#5b6472]">
               {integrations.description}
             </p>
@@ -585,7 +567,7 @@ const IndustryDetailsPage = ({ data }) => {
                   key={i}
                   className="flex items-center gap-3 border-b border-dashed border-[#e4e4e1] pb-3 text-[13.5px] text-[#14181c] last:border-0 last:pb-0"
                 >
-                  <Plug size={14} className="text-[#d9384a]" />
+                  <Plug size={14} className="text-primary-500" />
                   {i}
                 </li>
               ))}
@@ -597,74 +579,73 @@ const IndustryDetailsPage = ({ data }) => {
       {/* ============================================================ */}
       {/* WHY CHOOSE US                                                  */}
       {/* ============================================================ */}
-      <section className="bg-[#fbfaf8]">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
-          <SectionHeading
-            eyebrow="Why iMaker"
-            title={whyChooseUs.title}
-            description={whyChooseUs.description}
-            variant="compact"
-          />
+      <PageWrapper className="bg-[#fbfaf8]">
+        <SectionHeading
+          eyebrow="Why iMaker"
+          title={whyChooseUs.title}
+          description={whyChooseUs.description}
+          variant="compact"
+        />
 
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {whyChooseUs.items.map((item) => {
-              const Icon = ICONS[item.icon] || Heart;
-              return (
-                <div
-                  key={item.title}
-                  className="group flex gap-5 rounded-xl p-2 transition-colors hover:bg-white"
-                >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d9384a]/8 transition-colors group-hover:bg-[#d9384a]/12">
-                    <Icon size={19} strokeWidth={1.5} className="text-[#d9384a]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg text-[#14181c]">{item.title}</h3>
-                    <p className="mt-2 text-[14px] leading-relaxed text-[#5b6472]">
-                      {item.description}
-                    </p>
-                  </div>
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          {whyChooseUs.items.map((item) => {
+            const Icon = ICONS[item.icon] || Heart;
+            return (
+              <div
+                key={item.title}
+                className="group flex gap-5 rounded-xl p-2 transition-colors hover:bg-white"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-500/8 transition-colors group-hover:bg-primary-500/12">
+                  <Icon
+                    size={19}
+                    strokeWidth={1.5}
+                    className="text-primary-500"
+                  />
                 </div>
-              );
-            })}
-          </div>
+                <div>
+                  <h3 className="text-lg text-[#14181c]">{item.title}</h3>
+                  <p className="mt-2 text-[14px] leading-relaxed text-[#5b6472]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </section>
+      </PageWrapper>
 
       {/* ============================================================ */}
       {/* FAQ — accessible accordion                                     */}
       {/* ============================================================ */}
       <PageWrapper className="bg-white" containerWidth="max-w-3xl mx-auto">
-          <SectionHeading
-            eyebrow="Questions"
-            title="Frequently Asked Questions"
-            highlight={"Questions"}
-            variant="compact"
-          />
+        <SectionHeading
+          eyebrow="Questions"
+          title="Frequently Asked Questions"
+          highlight={"Questions"}
+          variant="compact"
+        />
 
-          <div className="divide-y divide-[#e4e4e1] border-t border-b border-[#e4e4e1]">
-
-            {
-              faqs.map((faq,idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <FaqItem
-                    key={faq.question}
-                    question={faq.question}
-                    answer={faq.answer}
-                    isOpen={isOpen}
-                    onToggle={() => setOpenFaq(isOpen ? -1 : idx)}
-                  />
-                )
-              })
-            }
-          </div>
+        <div className="divide-y divide-[#e4e4e1] border-t border-b border-[#e4e4e1]">
+          {faqs.map((faq, idx) => {
+            const isOpen = openFaq === idx;
+            return (
+              <FaqItem
+                key={faq.question}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={isOpen}
+                onToggle={() => setOpenFaq(isOpen ? -1 : idx)}
+              />
+            );
+          })}
+        </div>
       </PageWrapper>
 
       {/* ============================================================ */}
       {/* CTA                                                            */}
       {/* ============================================================ */}
       <CtaSection cta={cta} />
-    </main>
+    </>
   );
 };
 
