@@ -132,4 +132,22 @@ export const seoPages = {
     ],
     path: "/franchise",
   }),
+
+  blogs: generateSEO({
+    title: "Restaurant POS & Management Insights | iMaker Restro",
+    description:
+      "Discover practical insights, guides, and tips on restaurant POS, billing, inventory, kitchen operations, customer experience, and growing your restaurant with iMaker Restro.",
+    keywords: [
+      "restaurant POS blog",
+      "restaurant management tips",
+      "restaurant POS guides",
+      "restaurant billing tips",
+      "restaurant inventory management",
+      "restaurant operations",
+      "restaurant technology",
+      "restaurant business growth",
+      "iMaker Restro",
+    ],
+    path: "/blogs",
+  }),
 };

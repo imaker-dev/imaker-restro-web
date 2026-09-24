@@ -6,6 +6,7 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { Eyebrow } from "../../layouts/section-heading";
 import PageWrapper from "@/app/components/page-wrapper";
+import Link from "next/link";
 
 const heroStates = [
   {
@@ -81,9 +82,7 @@ export default function NewHero() {
   const active = heroStates[activeIndex];
 
   return (
-    <PageWrapper
-      containerClassName="pt-16 lg:pt-20"
-    >
+    <PageWrapper containerClassName="pt-16 lg:pt-20">
       <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         {/* LEFT — MESSAGING */}
         <div className="text-center lg:text-left">
@@ -142,14 +141,14 @@ export default function NewHero() {
           </p>
 
           <div className="mt-8 flex items-center gap-3 sm:mt-9 sm:flex-wrap sm:justify-center sm:gap-4 lg:justify-start">
-            <button
-              type="button"
+            <Link
+              href="/contact"
               className="btn btn-lg btn-primary"
               // className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 sm:w-auto"
             >
               Book a Free Demo
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </button>
+            </Link>
 
             <button
               type="button"

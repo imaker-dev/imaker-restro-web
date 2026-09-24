@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./styles/globals.css";
 import ClientProviders from "@/app/components/client-providers";
 import { BASE_URL } from "./const";
 import Script from "next/script";

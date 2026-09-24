@@ -1,5 +1,6 @@
 import { BASE_URL } from "./const";
 import { getAddons } from "./data/addons";
+import { blogs } from "./data/blogs";
 import { getAllFeatures } from "./data/features";
 import { getIndustries } from "./data/industries";
 
@@ -10,7 +11,12 @@ const STATIC_ROUTES = [
     changeFrequency: "weekly",
   },
   {
-    path: "/pos",
+    path: "/industries",
+    priority: 0.9,
+    changeFrequency: "monthly",
+  },
+  {
+    path: "/features",
     priority: 0.9,
     changeFrequency: "monthly",
   },
@@ -78,11 +84,24 @@ export default function sitemap() {
   }));
 
   const industryPages = getIndustries().map((industry) => ({
-    url: `${BASE_URL}/outlets/${industry.slug}`,
+    url: `${BASE_URL}/industries/${industry.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
   }));
 
-  return [...staticPages, ...featurePages, ...addonPages, ...industryPages];
+  const blogPages = blogs.map((blog) => ({
+    url: `${BASE_URL}/blogs/${blog.slug}`,
+    lastModified: blog.publishedAt ? new Date(blog.publishedAt) : now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticPages,
+    ...featurePages,
+    ...addonPages,
+    ...industryPages,
+    ...blogPages,
+  ];
 }
