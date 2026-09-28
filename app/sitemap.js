@@ -3,6 +3,7 @@ import { getAddons } from "./data/addons";
 import { blogs } from "./data/blogs";
 import { getAllFeatures } from "./data/features";
 import { getIndustries } from "./data/industries";
+import FranchiseApi from "./store/api/FranchiseApi";
 
 const STATIC_ROUTES = [
   {
@@ -46,7 +47,7 @@ const STATIC_ROUTES = [
     changeFrequency: "weekly",
   },
   {
-    path: "/franchise",
+    path: "/franchises",
     priority: 0.7,
     changeFrequency: "monthly",
   },
@@ -57,7 +58,7 @@ const STATIC_ROUTES = [
   },
 ];
 
-export default function sitemap() {
+export default async function sitemap() {
   const now = new Date();
 
   const staticPages = STATIC_ROUTES.map(
@@ -97,11 +98,33 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
+  // Franchise pages
+  let franchisePages = [];
+
+  try {
+    const response = await FranchiseApi.getAllFranchisesApi();
+    const franchises = response?.data?.data.franchises || [];
+
+    franchisePages = franchises
+      .filter((franchise) => franchise?.slug)
+      .map((franchise) => ({
+        url: `${BASE_URL}/franchises/${franchise.slug}`,
+        lastModified: franchise.updated_at
+          ? new Date(franchise.updated_at)
+          : now,
+        changeFrequency: "monthly",
+        priority: 0.8,
+      }));
+  } catch (error) {
+    console.error("Failed to generate franchise sitemap:", error);
+  }
+
   return [
     ...staticPages,
     ...featurePages,
     ...addonPages,
     ...industryPages,
     ...blogPages,
+    ...franchisePages,
   ];
 }

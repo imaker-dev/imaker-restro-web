@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowLeft,
   Banknote,
@@ -16,16 +16,8 @@ import {
   Globe,
   Star,
   Check,
-  GraduationCap,
-  Megaphone,
-  Laptop2,
-  Settings,
-  Boxes,
   ShieldCheck,
-  Calendar,
-  ChevronRight,
 } from "lucide-react";
-import Link from "next/link";
 import { formatValue } from "@/app/utils/number.utils";
 import { formatText } from "@/app/utils/text.utils";
 import PageWrapper from "../../components/page-wrapper";
@@ -33,6 +25,9 @@ import FranchiseContactForm from "./components/franchise-contact-form";
 import FranchiseTag from "../franchises/components/franchise-tag";
 import { useRouter } from "next/navigation";
 import FranchiseDetailsSkeleton from "./components/franchise-details-skeleton";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchFranchise } from "@/app/store/slices/franchiseSlice";
+import { handleResponse } from "@/app/utils/helpers";
 
 // ---------------------------------------------------------------------------
 // Direct contact card (phone / email / website) — sits below the form
@@ -89,10 +84,39 @@ function DirectContactCard({ franchise }) {
 // Page
 // ---------------------------------------------------------------------------
 
-const FranchiseDetailsPage = ({ franchise, loading = false }) => {
-  const router = useRouter();
+const FranchiseDetailsPage = ({ slug }) => {
+  const dispatch = useDispatch();
 
-  if (loading) return <FranchiseDetailsSkeleton />;
+  const { isFetchingFranchise, franchise } = useSelector(
+    (state) => state.franchise,
+  );
+
+  const [hasFetched, setHasFetched] = useState(false);
+
+  const fetchFranchiseDetails = async () => {
+    if (!slug) return;
+
+    if (franchise?.slug === slug) {
+      setHasFetched(true);
+      return;
+    }
+
+    await handleResponse(
+      dispatch(fetchFranchise({ slug })),
+      () => {
+        setHasFetched(true);
+      },
+      () => {
+        setHasFetched(true);
+      },
+    );
+  };
+
+  useEffect(() => {
+    fetchFranchiseDetails();
+  }, [slug, dispatch]);
+
+  const router = useRouter();
 
   const investmentMin = Number(franchise?.investment_min);
   const investmentMax = Number(franchise?.investment_max);
@@ -105,6 +129,42 @@ const FranchiseDetailsPage = ({ franchise, loading = false }) => {
     !isNaN(establishedYear) && establishedYear > 0
       ? new Date().getFullYear() - establishedYear
       : 0;
+
+  if (isFetchingFranchise || !hasFetched) {
+    return <FranchiseDetailsSkeleton />;
+  }
+
+  if (!franchise) {
+    return (
+      <PageWrapper className="bg-[#FAFAF9]">
+        <div className="flex min-h-[60vh] items-center justify-center">
+          <div className="w-full max-w-md text-center">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100">
+              <Building2 className="h-7 w-7 text-slate-400" />
+            </div>
+
+            <h1 className="mt-5 text-2xl font-semibold text-slate-900">
+              Franchise Not Found
+            </h1>
+
+            <p className="mt-2 text-sm leading-relaxed text-slate-500">
+              We couldn't find the franchise you're looking for. It may have
+              been removed, renamed, or the link may be incorrect.
+            </p>
+
+            <button
+              type="button"
+              onClick={() => router.push("/franchises")}
+              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-700"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Franchises
+            </button>
+          </div>
+        </div>
+      </PageWrapper>
+    );
+  }
 
   return (
     <PageWrapper className="bg-[#FAFAF9]" containerClassName="pt-8 space-y-8">

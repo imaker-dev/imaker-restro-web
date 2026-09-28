@@ -1,31 +1,61 @@
-"use client";
+import React from "react";
+import FranchiseDetailsPage from "@/app/views/franchise-details/franchise-details-page";
+import { generateSEO } from "@/app/lib/seo-config";
+import FranchiseApi from "@/app/store/api/FranchiseApi";
 
-import React, { useEffect } from "react";
-import FranchiseDetailsPage from "../../views/franchise-details/franchise-details-page";
-import { useParams } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchFranchise } from "../../store/slices/franchiseSlice";
-const Page = () => {
-  const dispatch = useDispatch();
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
 
-  const params = useParams();
-  const slug = params?.slug;
+  try {
+    const response = await FranchiseApi.getFranchiseByIdApi(slug);
+    const franchise = response?.data?.data;
 
-  const { isFetchingFranchise, franchise } = useSelector(
-    (state) => state.franchise,
-  );
+    if (!franchise) {
+      return {
+        title: "Franchise Not Found | iMaker Restro",
+        description:
+          "The requested franchise opportunity could not be found on iMaker Restro.",
+        robots: {
+          index: false,
+          follow: false,
+        },
+      };
+    }
 
-  useEffect(() => {
-    if (!slug) return;
+    const keywords = [
+      `${franchise.name} franchise`,
+      `${franchise.name} franchise opportunity`,
+      "restaurant franchise",
+      "restaurant franchise opportunity",
+      "food franchise",
+      "food franchise opportunity",
+      "restaurant business opportunity",
+      "iMaker Restro franchise",
+      ...(franchise.tags || []).map((tag) => tag.replace(/_/g, " ")),
+    ];
 
-    if (franchise?.slug === slug) return;
+    return generateSEO({
+      title: `${franchise.name} Franchise | iMaker Restro`,
+      description: franchise.short_description,
+      keywords,
+      path: `/franchises/${franchise.slug}`,
+      image: franchise.cover_image_url,
+    });
+  } catch (error) {
+    console.error("Failed to fetch franchise metadata:", error);
 
-    dispatch(fetchFranchise({ slug }));
-  }, [slug, dispatch, franchise]);
+    return {
+      title: "Franchise | iMaker Restro",
+      description:
+        "Explore restaurant franchise opportunities with iMaker Restro.",
+    };
+  }
+}
 
-  return (
-    <FranchiseDetailsPage franchise={franchise} loading={isFetchingFranchise} />
-  );
+const Page = async ({ params }) => {
+  const { slug } = await params;
+
+  return <FranchiseDetailsPage slug={slug} />;
 };
 
 export default Page;

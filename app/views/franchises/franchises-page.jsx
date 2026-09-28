@@ -44,87 +44,6 @@ function FilterSelect({ value, onChange, options, icon: Icon, dark }) {
   );
 }
 
-// function ComparisonModal({ franchises, onClose }) {
-//   const rows = [
-//     { label: "Category", get: (f) => f.category },
-//     { label: "Established", get: (f) => f.established },
-//     {
-//       label: "Investment",
-//       get: (f) =>
-//         `${formatINR(f.investment.min)} - ${formatINR(f.investment.max)}`,
-//     },
-//     { label: "Franchise fee", get: (f) => formatINR(f.franchiseFee) },
-//     { label: "Expected ROI", get: (f) => `${f.roi}%`, highlight: true },
-//     { label: "Payback period", get: (f) => `${f.paybackMonths} mo` },
-//     { label: "Space required", get: (f) => f.space },
-//     { label: "Existing outlets", get: (f) => f.outlets },
-//     { label: "Monthly revenue", get: (f) => formatINR(f.monthlyRevenue) },
-//   ];
-
-//   return (
-//     <div
-//       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm"
-//       role="dialog"
-//       aria-modal="true"
-//       onClick={onClose}
-//     >
-//       <div
-//         className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl bg-white shadow-[0_32px_80px_-20px_rgba(0,0,0,0.45)]"
-//         onClick={(e) => e.stopPropagation()}
-//       >
-//         <div className="flex items-center justify-between px-7 py-6">
-//           <h2 className="text-[17px] font-semibold text-slate-900">
-//             Compare opportunities
-//           </h2>
-//           <button
-//             onClick={onClose}
-//             aria-label="Close"
-//             className="rounded-full p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
-//           >
-//             <X className="h-4.5 w-4.5" />
-//           </button>
-//         </div>
-//         <div className="overflow-x-auto px-7 pb-7">
-//           <table className="w-full min-w-[480px] border-collapse text-left">
-//             <thead>
-//               <tr>
-//                 <th className="w-32 pb-3 text-[11px] font-medium uppercase tracking-wide text-slate-400">
-//                   Metric
-//                 </th>
-//                 {franchises.map((f) => (
-//                   <th
-//                     key={f.id}
-//                     className="pb-3 pl-5 text-[13px] font-semibold text-slate-900"
-//                   >
-//                     {f.name}
-//                   </th>
-//                 ))}
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {rows.map((row) => (
-//                 <tr key={row.label} className="border-t border-slate-100">
-//                   <td className="py-3 text-[12px] font-medium text-slate-500">
-//                     {row.label}
-//                   </td>
-//                   {franchises.map((f) => (
-//                     <td
-//                       key={f.id}
-//                       className={`py-3 pl-5 text-[13px] ${row.highlight ? "font-semibold text-amber-700" : "text-slate-700"}`}
-//                     >
-//                       {row.get(f)}
-//                     </td>
-//                   ))}
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </table>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 const FranchisesPage = () => {
   const dispatch = useDispatch();
 
@@ -174,7 +93,7 @@ const FranchisesPage = () => {
         investment_max: selectedRange?.max ?? undefined,
       }),
     );
-  }, [searchTerm, category, investmentRange, location]);
+  }, [searchTerm, category, investmentRange, location, dispatch]);
 
   // Build options with value/label structure for FilterSelect
   const categoryOptions = [

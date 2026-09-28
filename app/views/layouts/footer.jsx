@@ -46,6 +46,7 @@ function FooterColumn({ title, links, columns = 1 }) {
           <li key={label}>
             <Link
               href={href}
+              prefetch={false}
               className="inline-flex items-center text-base text-secondary-400 transition-all duration-200 hover:translate-x-0.5 hover:text-primary-600"
             >
               {label}
@@ -88,10 +89,7 @@ export default function Footer() {
           </div>
 
           <div className="col-span-2 sm:col-span-2 lg:col-span-1">
-            <FooterColumn
-              title={company.title}
-              links={company.links}
-            />
+            <FooterColumn title={company.title} links={company.links} />
           </div>
         </div>
 
@@ -164,10 +162,7 @@ export default function Footer() {
                     href={`tel:${CONTACT_INFO.phones.india.replace(/\s+/g, "")}`}
                     className="flex items-center gap-2.5 text-[14px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
                   >
-                    <Phone
-                      size={15}
-                      className="shrink-0 text-secondary-400"
-                    />
+                    <Phone size={15} className="shrink-0 text-secondary-400" />
                     {CONTACT_INFO.phones.india}
                   </a>
 
@@ -175,17 +170,18 @@ export default function Footer() {
                     href={`mailto:${CONTACT_INFO.email}`}
                     className="flex items-center gap-2.5 text-[14px] text-secondary-600 transition-colors duration-200 hover:text-primary-600"
                   >
-                    <Mail
-                      size={15}
-                      className="shrink-0 text-secondary-400"
-                    />
+                    <Mail size={15} className="shrink-0 text-secondary-400" />
                     {CONTACT_INFO.email}
                   </a>
                 </div>
 
                 {/* CTA */}
                 <div className="pt-1">
-                  <Link href={contact.ctaHref} className="btn btn-primary">
+                  <Link
+                    href={contact.ctaHref}
+                    prefetch={false}
+                    className="btn btn-primary"
+                  >
                     {contact.ctaLabel}
                     <ArrowRight size={15} className="shrink-0" />
                   </Link>
@@ -206,6 +202,7 @@ export default function Footer() {
               <Link
                 key={label}
                 href={href}
+                prefetch={false}
                 className="transition-colors duration-200 hover:text-primary-600"
               >
                 {label}
