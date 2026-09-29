@@ -6,6 +6,8 @@ export const CONTACT_INFO = {
     usa: "(+1) 229 999 2926",
   },
 
+  websiteUrl: "https://www.imaker.io/",
+
   email: "solutions@imaker.technology",
   address: "404, Suyash Solitaire, Kudasan, Gandinagar, Gujarat-382421",
   mapEmbedUrl:

@@ -39,8 +39,8 @@ export const FEATURES = [
       description:
         "Process dine-in and takeaway orders faster with a connected POS that keeps billing, taxes, discounts, payments, receipts, and daily sales organized in one place.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Billing/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Billing/new-hero-1.webp",
     },
 
     problems: {
@@ -80,7 +80,7 @@ export const FEATURES = [
         description:
           "Create and manage restaurant bills from one streamlined interface, with quick access to menu items, order details, discounts, taxes, and billing controls.",
         layout: "right",
-        image: "/images/features/billing/billing-screen.webp",
+        image: "/Images/Pos/Billing/billing-screen.webp",
         highlights: [
           "Quickly search and add menu items",
           "Navigate menu categories with ease",
@@ -98,7 +98,7 @@ export const FEATURES = [
         description:
           "Complete payments using the methods your restaurant accepts while keeping each transaction connected to its bill and payment record.",
         layout: "left",
-        image: "/images/features/billing/payment-screen.webp",
+        image: "/Images/Pos/Billing/payment-screen.webp",
         highlights: [
           "Accept cash payments at checkout",
           "Process UPI and other supported digital payments",
@@ -152,7 +152,7 @@ export const FEATURES = [
       title: "Know Where Every Bill Stands",
       description:
         "Turn daily billing activity into useful business visibility with reports covering sales, payments, discounts, taxes, adjustments, dues, and more.",
-      image: "/images/features/billing/analytics-dashboard.webp",
+      image: "/Images/Pos/Billing/analytics-dashboard.webp",
       insights: [
         {
           title: "Daily Sales",
@@ -270,7 +270,7 @@ export const FEATURES = [
       description:
         "Manage dine-in and takeaway orders through a connected POS workflow that keeps order taking, KOTs, kitchen progress, adjustments, and billing organized.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
+      secondaryCta: "Explore Features",
       image: "/Images/Pos/Orders/new-hero.webp",
     },
 
@@ -311,7 +311,7 @@ export const FEATURES = [
         description:
           "Create and manage restaurant orders while keeping items, quantities, instructions, order status, and billing information connected.",
         layout: "right",
-        image: "/images/features/orders/order-management-screen.webp",
+        image: "/Images/Pos/Orders/order-management-screen.webp",
         highlights: [
           "Create and manage dine-in orders",
           "Handle takeaway orders without blocking tables",
@@ -329,7 +329,7 @@ export const FEATURES = [
         description:
           "Restaurant service doesn't always go exactly as planned. Handle reorders, cancellations, No Charge items, and supported bill adjustments while keeping control over the workflow.",
         layout: "left",
-        image: "/images/features/orders/order-actions-screen.webp",
+        image: "/Images/Pos/Orders/order-actions-screen.webp",
         highlights: [
           "Reorder items when customers need more",
           "Cancel individual items or complete orders",
@@ -383,7 +383,7 @@ export const FEATURES = [
       title: "Understand How Orders Move Through Your Restaurant",
       description:
         "Use connected reports to understand sales activity, item performance, staff activity, cancellations, and other operational details generated from your orders.",
-      image: "/images/features/orders/analytics-dashboard.webp",
+      image: "/Images/Pos/Orders/analytics-dashboard.webp",
       insights: [
         {
           title: "Item Sales",
@@ -500,8 +500,8 @@ export const FEATURES = [
       description:
         "Manage floors, sections, tables, seating capacity, and table-based orders from one connected POS interface designed to keep service organized during every shift.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Tables/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Tables/new-hero-1.webp",
     },
 
     problems: {
@@ -543,7 +543,7 @@ export const FEATURES = [
         description:
           "Organize your restaurant into floors and sections and give your team a clearer way to manage tables throughout the day.",
         layout: "right",
-        image: "/Images/Pos/Tables/step-1.webp",
+        image: "/Images/Pos/Tables/floor-management.webp",
         highlights: [
           "Manage multiple restaurant floors",
           "Organize tables into different sections",
@@ -561,7 +561,7 @@ export const FEATURES = [
         description:
           "Keep table-based service flexible with seating information, mergeable tables, and a workflow that connects tables directly to restaurant orders.",
         layout: "left",
-        image: "/Images/Pos/Tables/step-2.webp",
+        image: "/Images/Pos/Tables/table-operations.webp",
         highlights: [
           "Assign seating capacity to individual tables",
           "Merge tables when larger groups need more space",
@@ -615,7 +615,7 @@ export const FEATURES = [
       title: "Understand What's Happening Across Your Floor",
       description:
         "Keep table operations connected to restaurant reporting so you can review sales activity across sections and understand how your restaurant is performing.",
-      image: "/images/features/tables/analytics-dashboard.webp",
+      image: "/Images/Pos/Tables/analytics-dashboard.webp",
       insights: [
         {
           title: "Section Sales",
@@ -721,8 +721,8 @@ export const FEATURES = [
       description:
         "Create and manage restaurant menu items with categories, variants, add-ons, custom pricing, special instructions, and flexible tax settings—all connected to your POS.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Menu/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Menu/new-hero-1.webp",
     },
 
     problems: {
@@ -760,7 +760,7 @@ export const FEATURES = [
         description:
           "Manage categories and different types of menu items from one place, making it easier for your team to find and add the right items during service.",
         layout: "right",
-        image: "/Images/Pos/Menu/step-1.webp",
+        image: "/Images/Pos/Menu/menu-management.webp",
         highlights: [
           "Organize items into menu categories",
           "Create simple menu items",
@@ -778,7 +778,7 @@ export const FEATURES = [
         description:
           "Handle the different ways customers order your food with variants, add-ons, custom-price items, and special instructions built into the menu workflow.",
         layout: "left",
-        image: "/Images/Pos/Menu/step-1.webp",
+        image: "/Images/Pos/Menu/menu-options.webp",
         highlights: [
           "Support multiple item variants",
           "Offer add-ons with menu items",
@@ -832,7 +832,7 @@ export const FEATURES = [
       title: "See Which Parts of Your Menu Are Performing",
       description:
         "Your menu becomes part of your restaurant's sales data, helping you understand item and category performance through connected reports.",
-      image: "/images/features/menu/analytics-dashboard.webp",
+      image: "/Images/Pos/Menu/analytics-dashboard.webp",
       insights: [
         {
           title: "Item Sales",
@@ -942,8 +942,8 @@ export const FEATURES = [
       description:
         "Manage restaurant inventory and stock from a connected POS platform, giving your team better visibility into what is available and helping keep daily operations organized.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Inventory/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Inventory/new-hero-1.webp",
     },
 
     problems: {
@@ -983,7 +983,7 @@ export const FEATURES = [
         description:
           "Keep inventory and stock information organized so your team can manage restaurant operations with better visibility.",
         layout: "right",
-        image: "/images/features/inventory/inventory-screen.webp",
+        image: "/Images/Pos/Inventory/inventory-screen.webp",
         highlights: [
           "Manage restaurant inventory from one place",
           "Keep stock information organized",
@@ -1001,7 +1001,7 @@ export const FEATURES = [
         description:
           "Bring inventory management into your wider restaurant management system instead of treating stock as a completely separate process.",
         layout: "left",
-        image: "/images/features/inventory/stock-management-screen.webp",
+        image: "/Images/Pos/Inventory/stock-management-screen.webp",
         highlights: [
           "Keep inventory within your restaurant management platform",
           "Manage stock alongside other restaurant operations",
@@ -1055,7 +1055,7 @@ export const FEATURES = [
       title: "Connect Stock Management with Restaurant Performance",
       description:
         "Inventory is only one part of running a restaurant. iMaker Restro connects stock management with your broader POS, reporting, and operational workflows.",
-      image: "/images/features/inventory/analytics-dashboard.webp",
+      image: "/Images/Pos/Inventory/analytics-dashboard.webp",
       insights: [
         {
           title: "Inventory Management",
@@ -1161,8 +1161,8 @@ export const FEATURES = [
       description:
         "Connect orders to your kitchen with automatic KOTs, multiple kitchen and station routing, a digital Kitchen Display System, and clear order-status tracking.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Kitchen/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Kitchen/new-hero-1.webp",
     },
 
     problems: {
@@ -1201,7 +1201,7 @@ export const FEATURES = [
         description:
           "Automatically generate KOTs from restaurant orders and route them to the appropriate kitchen or station so preparation can begin without unnecessary manual coordination.",
         layout: "right",
-        image: "/images/features/kitchen/kot-screen.webp",
+        image: "/Images/Pos/Kitchen/kot-screen.webp",
         highlights: [
           "Generate KOTs automatically from orders",
           "Send orders to the appropriate kitchen",
@@ -1219,7 +1219,7 @@ export const FEATURES = [
         description:
           "Replace scattered paper tickets with a digital kitchen display that helps the team see active orders and follow their preparation status.",
         layout: "left",
-        image: "/images/features/kitchen/kds-screen.webp",
+        image: "/Images/Pos/Kitchen/kds-screen.webp",
         highlights: [
           "View active kitchen orders digitally",
           "See pending orders clearly",
@@ -1273,7 +1273,7 @@ export const FEATURES = [
       title: "See How Kitchen Activity Connects to the Business",
       description:
         "Kitchen operations are connected to your wider restaurant reporting, giving managers visibility into station activity, item performance, staff sales, and daily operations.",
-      image: "/images/features/kitchen/analytics-dashboard.webp",
+      image: "/Images/Pos/Kitchen/analytics-dashboard.webp",
       insights: [
         {
           title: "Station Sales",
@@ -1385,8 +1385,8 @@ export const FEATURES = [
       description:
         "Maintain customer information and keep it connected to orders, billing, and restaurant operations so your team can deliver a more informed and consistent customer experience.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Customers/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Customers/new-hero-1.webp",
     },
 
     problems: {
@@ -1427,7 +1427,7 @@ export const FEATURES = [
         description:
           "Maintain customer information within your restaurant POS so your team can access relevant customer details as part of everyday operations.",
         layout: "right",
-        image: "/images/features/customers/customer-management-screen.webp",
+        image: "/Images/Pos/Customers/customer-management-screen.webp",
         highlights: [
           "Maintain customer information",
           "Keep customer records organized",
@@ -1445,7 +1445,7 @@ export const FEATURES = [
         description:
           "Maintain visibility into outstanding customer dues alongside your restaurant's billing and payment information.",
         layout: "left",
-        image: "/images/features/customers/customer-dues-screen.webp",
+        image: "/Images/Pos/Customers/customer-dues-screen.webp",
         highlights: [
           "Maintain customer due information",
           "Keep dues connected to customer records",
@@ -1499,7 +1499,7 @@ export const FEATURES = [
       title: "Keep Customer Activity Connected to Your Business",
       description:
         "Customer information becomes more useful when it stays connected to your restaurant's orders, billing, payments, and reporting workflows.",
-      image: "/images/features/customers/analytics-dashboard.webp",
+      image: "/Images/Pos/Customers/analytics-dashboard.webp",
       insights: [
         {
           title: "Customer Records",
@@ -1607,8 +1607,8 @@ export const FEATURES = [
       description:
         "Manage shift opening, closing, staff activity, cash handling, and shift-level reports from one connected restaurant POS.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Shifts/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Shifts/new-hero-1.webp",
     },
 
     problems: {
@@ -1648,7 +1648,7 @@ export const FEATURES = [
         description:
           "Open a shift with the information your team needs and keep the beginning of every operating period properly recorded.",
         layout: "right",
-        image: "/Images/Pos/Shifts/step-1.webp",
+        image: "/Images/Pos/Shifts/shift-opening.webp",
         highlights: [
           "Start a new shift from the POS",
           "Record the opening cash amount",
@@ -1666,7 +1666,7 @@ export const FEATURES = [
         description:
           "Review shift sales, payment activity, and closing information before completing the shift and handing operations to the next team.",
         layout: "left",
-        image: "/Images/Pos/Shifts/step-2.webp",
+        image: "/Images/Pos/Shifts/shift-closing.webp",
         highlights: [
           "Review sales generated during the shift",
           "Review payment activity",
@@ -1719,7 +1719,7 @@ export const FEATURES = [
       title: "Know What Happened During Every Shift",
       description:
         "Review shift-level sales and payment information to understand daily activity, support reconciliation, and maintain better operational accountability.",
-      image: "/images/features/shifts/shift-reports-dashboard.webp",
+      image: "/Images/Pos/Shifts/shift-reports-dashboard.webp",
       insights: [
         {
           title: "Shift Sales",
@@ -1824,8 +1824,8 @@ export const FEATURES = [
       description:
         "See live sales, revenue, orders, tables, staff performance, and detailed reports from one connected dashboard built to help you understand how your restaurant is performing.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Reports/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Reports/new-hero-1.webp",
     },
 
     problems: {
@@ -1868,7 +1868,7 @@ export const FEATURES = [
         description:
           "Get a live overview of the numbers that matter most, from current sales and revenue to running orders, active tables, and staff performance.",
         layout: "right",
-        image: "/images/features/reports/dashboard-screen.webp",
+        image: "/Images/Pos/Reports/dashboard-screen.webp",
         highlights: [
           "Monitor live sales activity",
           "View the current revenue overview",
@@ -1886,7 +1886,7 @@ export const FEATURES = [
         description:
           "Explore detailed reports to understand what's selling, how payments are coming in, where discounts are being applied, and how different parts of the restaurant are performing.",
         layout: "left",
-        image: "/images/features/reports/reports-screen.webp",
+        image: "/Images/Pos/Reports/reports-screen.webp",
         highlights: [
           "Review daily sales reports",
           "Analyze item and category sales",
@@ -1940,7 +1940,7 @@ export const FEATURES = [
       title: "The Numbers Behind Your Restaurant, All in One Place",
       description:
         "From everyday sales to detailed operational activity, iMaker Restro gives owners and managers a broader view of what's happening across the restaurant.",
-      image: "/images/features/reports/analytics-dashboard.webp",
+      image: "/Images/Pos/Reports/analytics-dashboard.webp",
       insights: [
         {
           title: "Sales & Revenue",
@@ -2059,8 +2059,8 @@ export const FEATURES = [
       description:
         "Manage multiple branches and franchise outlets from one connected platform with centralized reporting and visibility across your restaurant business.",
       primaryCta: "Book a Free Demo",
-      secondaryCta: "Watch Product Tour",
-      image: "/Images/Pos/Franchises/new-hero.webp",
+      secondaryCta: "Explore Features",
+      image: "/Images/Pos/Franchises/new-hero-1.webp",
     },
 
     problems: {
@@ -2099,8 +2099,7 @@ export const FEATURES = [
         description:
           "Get a centralized view of your restaurant locations without switching between separate systems or accounts.",
         layout: "right",
-        image:
-          "/images/features/multi-branch/multi-branch-dashboard-screen.webp",
+        image: "/Images/Pos/Franchises/multi-branch-dashboard-screen.webp",
         highlights: [
           "Manage multiple restaurant branches",
           "Access outlets from one owner account",
@@ -2118,7 +2117,7 @@ export const FEATURES = [
         description:
           "Review centralized restaurant reports to understand how your different branches are performing and get a broader view of the business.",
         layout: "left",
-        image: "/images/features/multi-branch/branch-reports-screen.webp",
+        image: "/Images/Pos/Franchises/branch-reports-screen.webp",
         highlights: [
           "Review reports across multiple branches",
           "Monitor outlet-level performance",
@@ -2172,7 +2171,7 @@ export const FEATURES = [
       title: "A Clearer View Across Every Location",
       description:
         "Centralized reporting helps restaurant owners understand what's happening across their branches without relying on disconnected outlet-level information.",
-      image: "/images/features/multi-branch/multi-branch-analytics.webp",
+      image: "/Images/Pos/Franchises/multi-branch-analytics.webp",
       insights: [
         {
           title: "Branch Performance",

@@ -139,6 +139,19 @@ export default function Footer() {
             {/* Contact */}
             <div className="lg:w-[320px] lg:shrink-0">
               <div className="space-y-4">
+                {/* Company Name */}
+                <a
+                  href={CONTACT_INFO.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${CONTACT_INFO.name} website`}
+                  className="group block"
+                >
+                  <p className="text-base font-semibold text-secondary-900 transition-colors duration-200 group-hover:text-primary-600">
+                    {CONTACT_INFO.name}
+                  </p>
+                </a>
+
                 {/* Address */}
                 <a
                   href={CONTACT_INFO.mapDirectionUrl}
@@ -147,10 +160,6 @@ export default function Footer() {
                   aria-label={`Get directions to ${CONTACT_INFO.name}`}
                   className="group block"
                 >
-                  <p className="text-base font-semibold text-secondary-900 transition-colors duration-200 group-hover:text-primary-600">
-                    {CONTACT_INFO.name}
-                  </p>
-
                   <p className="mt-1 max-w-sm text-[14px] leading-relaxed text-secondary-500 transition-colors duration-200 group-hover:text-secondary-700">
                     {CONTACT_INFO.address}
                   </p>

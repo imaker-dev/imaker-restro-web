@@ -45,7 +45,7 @@ export const FOOTER_NAVIGATION = {
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "/terms-of-service" },
     { label: "Refund Policy", href: "/refund-policy" },
-    { label: "Cookies", href: "/cookies" },
+    // { label: "Cookies", href: "/cookies" },
   ],
 
   social: [

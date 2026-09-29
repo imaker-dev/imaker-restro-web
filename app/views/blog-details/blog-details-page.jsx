@@ -238,24 +238,8 @@ export default function BlogDetailsPage({ blog }) {
 
   const related = getRelatedBlogs(blog);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: blog.title,
-    description: blog.seo?.description || blog.excerpt,
-    image: blog.seo?.ogImage || blog.coverImage,
-    datePublished: blog.publishedAt,
-    author: { "@type": "Organization", name: BLOG_AUTHOR.name },
-    publisher: { "@type": "Organization", name: BLOG_AUTHOR.name },
-    ...(url && { mainEntityOfPage: url }),
-  };
-
   return (
     <main className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
 
       {/* Reading progress */}
       <div className="fixed left-0 top-0 z-[60] h-[3px] w-full">

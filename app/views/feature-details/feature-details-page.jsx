@@ -21,6 +21,7 @@ import PageWrapper from "@/app/components/page-wrapper";
 import SectionHeading, { Eyebrow } from "../layouts/section-heading";
 import CtaSection from "../layouts/cta-section";
 import FaqItem from "@/app/components/faq-item";
+import Link from "next/link";
 
 /* ------------------------------------------------------------------ */
 /* Icon lookups                                                        */
@@ -257,7 +258,7 @@ const FeatureDetailsPage = ({ data }) => {
 
         <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
           <Eyebrow className="justify-center">{hero.eyebrow}</Eyebrow>
-          <h1 className="mt-6 text-[36px] font-normal leading-[1.1] tracking-[-0.01em] text-[#14181c] sm:text-[52px] md:text-[60px]">
+          <h1 className="mt-6 text-[36px] font-medium leading-[1.1] tracking-[-0.01em] text-[#14181c] sm:text-[52px] md:text-[60px]">
             {hero.title}{" "}
             <span className="text-primary-500">{hero.highlightedTitle}</span>
           </h1>
@@ -265,16 +266,16 @@ const FeatureDetailsPage = ({ data }) => {
             {hero.description}
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <button type="button" className="btn btn-lg btn-primary">
+            <Link href="/contact" className="btn btn-lg btn-primary">
               {hero.primaryCta}
               <ArrowUpRight
                 size={15}
                 className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
-            </button>
-            <button type="button" className="btn btn-lg btn-secondary">
+            </Link>
+            <Link href="/features" className="btn btn-lg btn-secondary">
               {hero.secondaryCta}
-            </button>
+            </Link>
           </div>
         </div>
 

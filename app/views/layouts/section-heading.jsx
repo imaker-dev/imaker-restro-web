@@ -3,17 +3,19 @@ import clsx from "clsx";
 export const Eyebrow = ({ children, className = "" }) => (
   <p
     className={clsx(
-      "inline-flex items-start gap-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-500/90 sm:text-[13px] lg:text-[14px]",
+      "inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-primary-500/90 sm:text-[13px] lg:text-[14px]",
       className,
     )}
   >
     <span
-      className="mt-[0.55em] h-px w-6 shrink-0 bg-primary-500/90"
+      className="h-px w-5 shrink-0 bg-primary-500/90 sm:w-6"
       aria-hidden="true"
     />
-    <span>{children}</span>
+    <span className="leading-[1.4]">{children}</span>
   </p>
 );
+
+
 const variants = {
   default: {
     wrapper: "mb-8 sm:mb-10 lg:mb-12 max-w-3xl",

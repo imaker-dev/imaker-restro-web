@@ -31,8 +31,8 @@ export default function BlogsPage() {
         containerClassName="mt-16"
       >
         {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(99,102,241,0.14),transparent)]" /> */}
-        <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-fuchsia-300/20 blur-3xl" />
-        <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-indigo-300/20 blur-3xl" />
+        {/* <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-primary-300/20 blur-3xl" /> */}
+        <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-primary-300/20 blur-3xl" />
         <SectionHeading
           eyebrow={"The POS Blog"}
           title={"Smarter outlets start with better insights"}
