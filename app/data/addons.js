@@ -51,7 +51,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Captain-App/new-hero.webp",
+        src: "/Images/Addons/Captain-App/new-hero-1.webp",
         alt: "iMaker Restro Captain Ordering App showing menu items and table order management",
       },
     },
@@ -66,7 +66,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Captain-App/overview.webp",
+        src: "/Images/Addons/Captain-App/new-overview.webp",
         alt: "iMaker Restro Captain Ordering App interface for taking restaurant orders",
       },
 
@@ -182,7 +182,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Captain-App/step-2.webp",
+            src: "/Images/Addons/Captain-App/ordering.webp",
             alt: "Captain taking a restaurant order directly from the table",
           },
         },
@@ -205,7 +205,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Captain-App/step-3.webp",
+            src: "/Images/Addons/Captain-App/kot.webp",
             alt: "iMaker Restro KOT generated from the Captain Ordering App",
           },
         },
@@ -228,7 +228,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Captain-App/step-4.webp",
+            src: "/Images/Addons/Captain-App/order-updates.webp",
             alt: "Captain viewing active restaurant orders and table status",
           },
         },
@@ -285,7 +285,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/captain-ordering-app/benefits.webp",
+        src: "/Images/Addons/Captain-app/benefits.webp",
         alt: "iMaker Restro Captain Ordering App connected with restaurant order operations",
       },
 
@@ -475,7 +475,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Scan-Order/new-hero.webp",
+        src: "/Images/Addons/Scan-Order/new-hero-1.webp",
         alt: "iMaker Restro QR self-ordering interface showing a digital restaurant menu",
       },
     },
@@ -490,7 +490,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Scan-Order/new-overview.webp",
+        src: "/Images/Addons/Scan-Order/overview.webp",
         alt: "iMaker Restro QR self-ordering experience for restaurant tables",
       },
 
@@ -612,7 +612,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/new-step-1.webp",
+            src: "/Images/Addons/Scan-Order/scan.webp",
             alt: "iMaker Restro table QR code for customer self-ordering",
           },
         },
@@ -635,7 +635,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/new-step-2.webp",
+            src: "/Images/Addons/Scan-Order/digital-menu.webp",
             alt: "iMaker Restro digital menu for QR self-ordering",
           },
         },
@@ -658,7 +658,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/new-step-3.webp",
+            src: "/Images/Addons/Scan-Order/customer-order.webp",
             alt: "Customer placing a self-order through iMaker Restro",
           },
         },
@@ -681,7 +681,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Scan-Order/new-step-4.webp",
+            src: "/Images/Addons/Scan-Order/order-acceptance.webp",
             alt: "iMaker Restro QR order acceptance settings",
           },
         },
@@ -732,7 +732,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/scan-and-order/benefits.webp",
+        src: "/Images/Addons/Scan-Order/benefits.webp",
         alt: "iMaker Restro QR self-ordering connected to restaurant operations",
       },
 
@@ -935,7 +935,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/Kitchen-Display/new-hero.webp",
+        src: "/images/addons/Kitchen-Display/new-hero-1.webp",
         alt: "iMaker Restro Kitchen Display System showing active kitchen orders and preparation status",
       },
     },
@@ -950,7 +950,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/kitchen-display-system/overview.webp",
+        src: "/Images/Addons/Kitchen-Display/overview.webp",
         alt: "iMaker Restro Kitchen Display System showing restaurant kitchen orders",
       },
 
@@ -1075,7 +1075,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Kitchen-Display/step-1.webp",
+            src: "/Images/Addons/Kitchen-Display/order-queue.webp",
             alt: "iMaker Restro KDS showing the kitchen order queue",
           },
         },
@@ -1099,7 +1099,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Kitchen-Display/step-2.webp",
+            src: "/Images/Addons/Kitchen-Display/station-routing.webp",
             alt: "iMaker Restro KDS routing orders to Tandoor Bar and Dessert stations",
           },
         },
@@ -1118,7 +1118,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Kitchen-Display/step-3.webp",
+            src: "/Images/Addons/Kitchen-Display/order-status.webp",
             alt: "iMaker Restro KDS showing pending preparing ready and served order statuses",
           },
         },
@@ -1181,7 +1181,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/kitchen-display-system/benefits.webp",
+        src: "/Images/Addons/Kitchen-Display/benefits.webp",
         alt: "iMaker Restro Kitchen Display System providing a connected digital kitchen workflow",
       },
 
@@ -1384,7 +1384,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Restaurant-Loyalty/new-hero.webp",
+        src: "/Images/Addons/Restaurant-Loyalty/new-hero-1.webp",
         alt: "iMaker Restro restaurant loyalty program showing customer information and loyalty points",
       },
     },
@@ -1399,7 +1399,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/restaurant-loyalty-program/overview.webp",
+        src: "/Images/Addons/Restaurant-Loyalty/overview.webp",
         alt: "iMaker Restro customer loyalty management interface",
       },
 
@@ -1522,7 +1522,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Restaurant-Loyalty/step-1.webp",
+            src: "/Images/Addons/Restaurant-Loyalty/customer-details.webp",
             alt: "iMaker Restro customer details and profile interface",
           },
         },
@@ -1544,7 +1544,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Restaurant-Loyalty/step-2.webp",
+            src: "/Images/Addons/Restaurant-Loyalty/loyalty-points.webp",
             alt: "iMaker Restro customer loyalty points interface",
           },
         },
@@ -1567,7 +1567,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/Images/Addons/Restaurant-Loyalty/step-3.webp",
+            src: "/Images/Addons/Restaurant-Loyalty/customer-records.webp",
             alt: "iMaker Restro connected customer records",
           },
         },
@@ -1617,7 +1617,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/restaurant-loyalty-program/benefits.webp",
+        src: "/Images/Addons/Restaurant-Loyalty/benefits.webp",
         alt: "iMaker Restro restaurant customer loyalty and points management",
       },
 
@@ -1815,7 +1815,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/Images/Addons/Analytics/new-hero.webp",
+        src: "/Images/Addons/Analytics/new-hero-1.webp",
         alt: "iMaker Restro analytics dashboard showing restaurant sales and performance insights",
       },
     },
@@ -1830,7 +1830,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/restaurant-analytics-insights/overview.webp",
+        src: "/Images/Addons/Analytics/overview.webp",
         alt: "iMaker Restro restaurant analytics dashboard with business performance data",
       },
 
@@ -1953,7 +1953,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-analytics-insights/sales.webp",
+            src: "/Images/Addons/Analytics/sales.webp",
             alt: "iMaker Restro sales analytics dashboard",
           },
         },
@@ -1976,7 +1976,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-analytics-insights/products.webp",
+            src: "/Images/Addons/Analytics/products.webp",
             alt: "iMaker Restro product performance analytics dashboard",
           },
         },
@@ -1999,7 +1999,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-analytics-insights/payments.webp",
+            src: "/Images/Addons/Analytics/payments.webp",
             alt: "iMaker Restro payment analytics dashboard",
           },
         },
@@ -2022,7 +2022,7 @@ export const ADDONS = [
 
           visual: {
             type: "screenshot",
-            src: "/images/addons/restaurant-analytics-insights/outlets.webp",
+            src: "/Images/Addons/Analytics/outlets.webp",
             alt: "iMaker Restro multi-outlet analytics dashboard",
           },
         },
@@ -2084,7 +2084,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/restaurant-analytics-insights/benefits.webp",
+        src: "/Images/Addons/Analytics/benifits.webp",
         alt: "iMaker Restro restaurant analytics dashboard providing business insights",
       },
 

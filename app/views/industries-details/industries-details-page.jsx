@@ -36,6 +36,7 @@ import {
   Zap,
   LayoutGrid,
   Image as ImageIcon,
+  X,
 } from "lucide-react";
 import PageWrapper from "@/app/components/page-wrapper";
 import Link from "next/link";
@@ -152,17 +153,6 @@ const IndustryDetailsPage = ({ data }) => {
     cta,
   } = data;
 
-  const barHeights = [
-    "h-[34px]",
-    "h-[58px]",
-    "h-[42px]",
-    "h-[76px]",
-    "h-[52px]",
-    "h-[66px]",
-    "h-[46px]",
-  ];
-  const barDays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
-
   const renderHighlightedTitle = (title, highlightedText) => {
     if (!highlightedText || !title.includes(highlightedText)) {
       return title;
@@ -246,48 +236,46 @@ const IndustryDetailsPage = ({ data }) => {
           variant="compact"
         />
 
-        <div className="mt-16 divide-y divide-[#e4e4e1] border-t border-[#e4e4e1]">
+        <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
           {challenges.items.map((item, idx) => (
             <div
               key={item.title}
-              className="group grid grid-cols-1 gap-6 py-10 transition-colors hover:bg-[#fbfaf8] md:grid-cols-[minmax(0,280px)_1px_minmax(0,1fr)] md:gap-10 md:px-6 md:-mx-6"
+              className="flex flex-col rounded-2xl border border-[#e4e4e1] bg-white p-7 sm:p-8"
             >
-              <div className="flex items-start gap-3">
-                <span className="mt-1 font-mono text-xs text-primary-600/50">
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-xs text-primary-500">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-xl leading-snug text-[#14181c] sm:text-2xl">
+                <h3 className="text-lg font-medium leading-snug text-[#14181c] sm:text-xl">
                   {item.title}
                 </h3>
               </div>
 
-              <div
-                className="hidden w-px bg-[#e4e4e1] md:block"
-                aria-hidden="true"
-              />
+              {/* Problem */}
+              <div className="mt-6 flex gap-3">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-50">
+                  <X size={11} className="text-red-500" />
+                </span>
+                <p className="text-[14px] leading-relaxed text-[#5b6472]">
+                  {item.problem}
+                </p>
+              </div>
 
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div>
-                  <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-red-600/90">
-                    The Problem
-                  </p>
-                  <p className="mt-3 text-[14px] italic leading-relaxed text-[#5b6472]">
-                    {item.problem}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-emerald-600">
-                    The iMaker Way
-                  </p>
-                  <p className="mt-3 text-[14px] leading-relaxed text-[#14181c]">
-                    {item.solution}
-                  </p>
-                </div>
+              {/* Solution */}
+              <div className="mt-5 flex gap-3 border-t border-[#e4e4e1] pt-5">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-50">
+                  <Check size={11} className="text-emerald-600" />
+                </span>
+                <p className="text-[14px] leading-relaxed text-[#14181c]">
+                  {item.solution}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </PageWrapper>
+
+      
 
       {/* ============================================================ */}
       {/* WORKFLOW — a connected operational sequence, not a card grid   */}
@@ -300,32 +288,30 @@ const IndustryDetailsPage = ({ data }) => {
           variant="compact"
         />
 
-        <ol className="relative mt-16 grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:grid-cols-6 lg:gap-x-3">
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 top-[22px] hidden h-px bg-[#e4e4e1] lg:block"
-          />
+        <ol className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {workflow.steps.map((step, idx) => {
             const Icon = ICONS[step.icon] || UtensilsCrossed;
             return (
               <li
                 key={step.title}
-                className="relative flex flex-col items-start text-left"
+                className="rounded-2xl border border-[#e4e4e1] bg-white p-7"
               >
-                <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white ring-1 ring-[#e4e4e1]">
-                  <Icon
-                    size={17}
-                    strokeWidth={1.5}
-                    className="text-primary-500"
-                  />
+                <div className="flex items-center justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-500/8">
+                    <Icon
+                      size={18}
+                      strokeWidth={1.5}
+                      className="text-primary-500"
+                    />
+                  </div>
+                  <span className="text-3xl font-light leading-none text-primary-500/25">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
                 </div>
-                <span className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-primary-500/70">
-                  Step {String(idx + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-1.5 text-sm font-medium leading-snug text-[#14181c]">
+                <h3 className="mt-6 text-[15px] font-medium leading-snug text-[#14181c]">
                   {step.title}
                 </h3>
-                <p className="mt-1 text-[12.5px] leading-relaxed text-[#5b6472] line-clamp-2">
+                <p className="mt-2 text-[13.5px] leading-relaxed text-[#5b6472]">
                   {step.description}
                 </p>
               </li>
@@ -573,44 +559,6 @@ const IndustryDetailsPage = ({ data }) => {
               ))}
             </ul>
           </div>
-        </div>
-      </PageWrapper>
-
-      {/* ============================================================ */}
-      {/* WHY CHOOSE US                                                  */}
-      {/* ============================================================ */}
-      <PageWrapper className="bg-[#fbfaf8]">
-        <SectionHeading
-          eyebrow="Why iMaker"
-          title={whyChooseUs.title}
-          description={whyChooseUs.description}
-          variant="compact"
-        />
-
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
-          {whyChooseUs.items.map((item) => {
-            const Icon = ICONS[item.icon] || Heart;
-            return (
-              <div
-                key={item.title}
-                className="group flex gap-5 rounded-xl p-2 transition-colors hover:bg-white"
-              >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-500/8 transition-colors group-hover:bg-primary-500/12">
-                  <Icon
-                    size={19}
-                    strokeWidth={1.5}
-                    className="text-primary-500"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg text-[#14181c]">{item.title}</h3>
-                  <p className="mt-2 text-[14px] leading-relaxed text-[#5b6472]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
         </div>
       </PageWrapper>
 

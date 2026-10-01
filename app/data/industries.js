@@ -419,43 +419,6 @@ export const INDUSTRIES = [
       ],
     },
 
-    whyChooseUs: {
-      title: "Why Food Court and Canteen Operators Choose iMaker Restro",
-
-      description:
-        "High-volume food service needs more than basic billing. iMaker Restro combines fast counter operations, kitchen coordination, inventory control, and centralized reporting in one platform built for Indian food court and canteen operations.",
-
-      items: [
-        {
-          icon: "Zap",
-          title: "Built for Speed",
-          description:
-            "Billing screens are designed for fast order entry and quick payment processing. Staff complete transactions in seconds during rush hours.",
-        },
-
-        {
-          icon: "LayoutGrid",
-          title: "Multi-Counter Ready",
-          description:
-            "Run any number of counters from one system. Each counter works independently while data syncs centrally.",
-        },
-
-        {
-          icon: "ChefHat",
-          title: "Kitchen Synced Instantly",
-          description:
-            "KOT or KDS integration ensures orders reach the kitchen the moment billing completes. No delays between counter and preparation.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Scalable",
-          description:
-            "One platform works for a single food court counter or multiple canteen locations with centralized reporting.",
-        },
-      ],
-    },
-
     faqs: [
       {
         question:
@@ -931,43 +894,6 @@ export const INDUSTRIES = [
         "QR Ordering Integration",
         "Barcode Scanners",
         "Multi-Location Dashboards",
-      ],
-    },
-
-    whyChooseUs: {
-      title: "Why Café and Coffee Shop Operators Choose iMaker Restro",
-
-      description:
-        "Cafés need more than basic billing. iMaker Restro combines fast counter operations, barista coordination, inventory control, and centralized reporting in one platform built for Indian café and coffee shop operations.",
-
-      items: [
-        {
-          icon: "Zap",
-          title: "Built for Speed",
-          description:
-            "Billing screens are designed for fast order entry with preset modifiers. Staff complete transactions in seconds during rush hours.",
-        },
-
-        {
-          icon: "Coffee",
-          title: "Barista Synced Instantly",
-          description:
-            "KOT or KDS integration sends orders to the barista station the moment billing completes. Customizations are visible. Remakes drop.",
-        },
-
-        {
-          icon: "ShoppingBag",
-          title: "Dine-In and Takeaway Together",
-          description:
-            "Handle both order types on the same counter. Order tags ensure correct service and packaging every time.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Ready",
-          description:
-            "One platform works for a single café or multiple locations with centralized menus, recipes, and reports.",
-        },
       ],
     },
 
@@ -1448,43 +1374,6 @@ export const INDUSTRIES = [
       ],
     },
 
-    whyChooseUs: {
-      title: "Why Bakery and Cake Shop Operators Choose iMaker Restro",
-
-      description:
-        "Bakeries need more than basic billing. iMaker Restro combines fast counter operations, inventory tracking, custom order management, and production coordination in one platform built for Indian bakery and cake shop operations.",
-
-      items: [
-        {
-          icon: "Zap",
-          title: "Built for Speed",
-          description:
-            "Billing screens with category-based product selection help staff complete transactions quickly during morning and evening rush.",
-        },
-
-        {
-          icon: "Package",
-          title: "Inventory That Updates Itself",
-          description:
-            "Stock deducts as products sell. Low-stock alerts tell you what needs baking before the shelf empties.",
-        },
-
-        {
-          icon: "Cake",
-          title: "Custom Orders Organized",
-          description:
-            "Log cake orders with all specifications, advance payments, and pickup dates. Track every order from placement to handoff.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Ready",
-          description:
-            "One platform works for a single bakery or multiple locations with centralized recipes, menus, and reports.",
-        },
-      ],
-    },
-
     faqs: [
       {
         question: "How does iMaker Restro help reduce bakery product wastage?",
@@ -1959,43 +1848,6 @@ export const INDUSTRIES = [
   //       "WhatsApp & Email for Reports",
   //       "Direct Online Ordering Integration",
   //       "Multi-Location Dashboards",
-  //     ],
-  //   },
-
-  //   whyChooseUs: {
-  //     title: "Why Cloud Kitchen Operators Choose iMaker Restro",
-
-  //     description:
-  //       "Delivery-only kitchens need more than basic billing. iMaker Restro combines online order consolidation, kitchen display coordination, inventory control, and multi-brand reporting in one platform built for Indian cloud kitchen operations.",
-
-  //     items: [
-  //       {
-  //         icon: "Smartphone",
-  //         title: "Orders Consolidated Automatically",
-  //         description:
-  //           "Orders from multiple platforms appear in one system. No manual entry. No switching between tablets. Kitchen receives orders faster.",
-  //       },
-
-  //       {
-  //         icon: "ChefHat",
-  //         title: "Kitchen Stays Organized",
-  //         description:
-  //           "KDS displays orders in sequence with timers. Stations handle their relevant items. Order flow stays clear even during peak volume.",
-  //       },
-
-  //       {
-  //         icon: "Package",
-  //         title: "Inventory That Updates Itself",
-  //         description:
-  //           "Stock deducts as orders fire. Low-stock alerts tell you what needs restocking before it affects order fulfillment.",
-  //       },
-
-  //       {
-  //         icon: "BarChart",
-  //         title: "Multi-Brand and Multi-Location Ready",
-  //         description:
-  //           "One platform manages multiple brands from one kitchen or multiple kitchen locations with centralized reporting.",
-  //       },
   //     ],
   //   },
 
@@ -2474,43 +2326,6 @@ export const INDUSTRIES = [
         "WhatsApp & Email for Reports",
         "Direct Online Ordering Integration",
         "Multi-Location Dashboards",
-      ],
-    },
-
-    whyChooseUs: {
-      title: "Why Pizzeria and Pizza Shop Operators Choose iMaker Restro",
-
-      description:
-        "Pizza businesses need more than basic billing. iMaker Restro combines fast pizza order processing, accurate customization handling, kitchen coordination, and inventory control in one platform built for Indian pizzeria operations.",
-
-      items: [
-        {
-          icon: "Zap",
-          title: "Built for Pizza Order Speed",
-          description:
-            "Preset modifier buttons for sizes, crusts, and toppings help staff process even complex pizza orders quickly during rush hours.",
-        },
-
-        {
-          icon: "ChefHat",
-          title: "Accurate Kitchen Communication",
-          description:
-            "Complete pizza builds print on KOT or display on KDS. Toppings, half-and-half splits, and modifications are always clear.",
-        },
-
-        {
-          icon: "ShoppingBag",
-          title: "Dine-In, Takeaway & Delivery Together",
-          description:
-            "Manage all three order types on one screen. Order tagging ensures correct service and packing every time.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Ready",
-          description:
-            "One platform works for a single pizza shop or multiple locations with centralized menus, recipes, and reports.",
-        },
       ],
     },
 
@@ -2993,42 +2808,6 @@ export const INDUSTRIES = [
       ],
     },
 
-    whyChooseUs: {
-      title: "Why Bar and Brewery Operators Choose iMaker Restro",
-
-      description:
-        "Bars and breweries need more than basic billing. iMaker Restro combines fast beverage order processing, bar-kitchen coordination, beverage inventory tracking, and table management in one platform built for Indian bar and brewery operations.",
-
-      items: [
-        {
-          icon: "Zap",
-          title: "Built for Speed",
-          description:
-            "Billing screens with quick category switching help staff process drink and food orders fast during busy evening hours.",
-        },
-
-        {
-          icon: "Glass",
-          title: "Bar & Kitchen in Sync",
-          description:
-            "Orders split automatically. Beverages go to the bar. Food goes to the kitchen. Drinks and food reach tables together.",
-        },
-
-        {
-          icon: "Package",
-          title: "Beverage Inventory That Updates Itself",
-          description:
-            "Stock deducts as drinks pour. Par-level alerts tell you what needs restocking before the evening rush begins.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Ready",
-          description:
-            "One platform works for a single bar or multiple locations with centralized menus, recipes, and reports.",
-        },
-      ],
-    },
 
     faqs: [
       {
@@ -3508,42 +3287,6 @@ export const INDUSTRIES = [
       ],
     },
 
-    whyChooseUs: {
-      title: "Why Fine Dining Operators Choose iMaker Restro",
-
-      description:
-        "Fine dining needs more than basic billing. iMaker Restro combines table management, course-wise kitchen coordination, guest profiles, and inventory control in one platform built for Indian fine dining operations.",
-
-      items: [
-        {
-          icon: "LayoutGrid",
-          title: "Table & Reservation Control",
-          description:
-            "Manage bookings and table status on one screen. Assign tables based on guest history. Floor managers see the entire dining room in real time.",
-        },
-
-        {
-          icon: "ChefHat",
-          title: "Course-Wise Kitchen Sync",
-          description:
-            "Captains fire each course when the table is ready. The kitchen receives courses in sequence. Service flows at the correct pace.",
-        },
-
-        {
-          icon: "UserCheck",
-          title: "Guest Profiles That Travel",
-          description:
-            "Preferences, dietary notes, and visit history are visible to all staff. Guests receive consistent service on every visit.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Ready",
-          description:
-            "One platform works for a single restaurant or multiple fine dining locations with centralized profiles and reports.",
-        },
-      ],
-    },
 
     faqs: [
       {
@@ -4018,43 +3761,6 @@ export const INDUSTRIES = [
         "WhatsApp & Email for Reports",
         "Barcode Scanners",
         "Multi-Location Dashboards",
-      ],
-    },
-
-    whyChooseUs: {
-      title: "Why QSR Operators Choose iMaker Restro",
-
-      description:
-        "Quick service restaurants need more than basic billing. iMaker Restro combines fast counter operations, kitchen coordination, inventory control, and centralized reporting in one platform built for Indian QSR operations.",
-
-      items: [
-        {
-          icon: "Zap",
-          title: "Built for Speed",
-          description:
-            "Billing screens with large item buttons and preset combos help staff complete transactions in seconds during peak hours.",
-        },
-
-        {
-          icon: "LayoutGrid",
-          title: "Multi-Counter Ready",
-          description:
-            "Run any number of billing counters from one system. Each counter works independently while data syncs centrally.",
-        },
-
-        {
-          icon: "ChefHat",
-          title: "Kitchen Synced Instantly",
-          description:
-            "KOT or KDS integration sends orders to the kitchen the moment billing completes. No delays between counter and preparation.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Ready",
-          description:
-            "One platform works for a single QSR or multiple locations with centralized menus, recipes, and reports.",
-        },
       ],
     },
 
@@ -4535,43 +4241,6 @@ export const INDUSTRIES = [
       ],
     },
 
-    whyChooseUs: {
-      title:
-        "Why Ice Cream Parlour and Dessert Shop Operators Choose iMaker Restro",
-
-      description:
-        "Dessert businesses need more than basic billing. iMaker Restro combines fast counter operations, accurate customization handling, inventory tracking, and seasonal menu management in one platform built for Indian ice cream parlour and dessert shop operations.",
-
-      items: [
-        {
-          icon: "Zap",
-          title: "Built for Speed",
-          description:
-            "Billing screens with large flavor buttons and preset toppings help staff complete customized orders fast during peak hours.",
-        },
-
-        {
-          icon: "Coffee",
-          title: "Customizations Stay Accurate",
-          description:
-            "Flavors, toppings, and sauces print clearly on KOT or display. Staff serve exactly what was ordered. Remakes drop.",
-        },
-
-        {
-          icon: "Package",
-          title: "Inventory That Updates Itself",
-          description:
-            "Stock deducts as orders complete. Par-level alerts tell you what's running low before the evening rush.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Single and Multi-Outlet Ready",
-          description:
-            "One platform works for a single parlour or multiple locations with centralized menus, recipes, and reports.",
-        },
-      ],
-    },
 
     faqs: [
       {
@@ -5048,44 +4717,6 @@ export const INDUSTRIES = [
         "WhatsApp & Email for Reports",
         "Centralized Dashboard Access",
         "Multi-Location Data Sync",
-      ],
-    },
-
-    whyChooseUs: {
-      title:
-        "Why Restaurant Chain and Franchise Operators Choose iMaker Restro",
-
-      description:
-        "Growing restaurant businesses need more than single-outlet software. iMaker Restro combines multi-outlet management, centralized menu control, consolidated reporting, and role-based access in one platform built for Indian restaurant chain and franchise operations.",
-
-      items: [
-        {
-          icon: "LayoutGrid",
-          title: "Built for Multi-Outlet Scale",
-          description:
-            "Manage two outlets or two hundred from one platform. Each outlet operates independently while data syncs centrally.",
-        },
-
-        {
-          icon: "CheckCircle",
-          title: "Consistent Standards Everywhere",
-          description:
-            "Centralized menus, recipes, and pricing maintain the same quality and experience at every location.",
-        },
-
-        {
-          icon: "UserCheck",
-          title: "Role-Based Access Control",
-          description:
-            "Outlet staff, regional managers, and central teams see only what they need. Sensitive data stays protected.",
-        },
-
-        {
-          icon: "BarChart",
-          title: "Enterprise Reporting Ready",
-          description:
-            "Consolidated chain-wide reports and outlet comparisons are available instantly. No manual data collection required.",
-        },
       ],
     },
 
