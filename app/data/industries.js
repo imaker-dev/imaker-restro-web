@@ -24,17 +24,13 @@ export const INDUSTRIES = [
         "Kitchen Display System",
         "Inventory Management",
       ],
-
-      canonical: "/restaurant-pos/food-court-canteen",
-
-      image: "/images/seo/food-court-canteen.webp",
     },
 
     card: {
       title: "Food Court",
       description:
         "Fast billing and centralized operations for high-volume food courts and canteens.",
-      icon: "/Images/Industries/Icons/food-court.png",
+      icon: "/Images/Industries/Food-Court/icon.webp",
     },
 
     hero: {
@@ -504,17 +500,13 @@ export const INDUSTRIES = [
         "Kitchen Display System",
         "Inventory Management",
       ],
-
-      canonical: "/restaurant-pos/cafe",
-
-      image: "/images/seo/cafe.webp",
     },
 
     card: {
       title: "Cafés",
       description:
         "Serve more customers with faster billing, beverage customization, and inventory control.",
-      icon: "/Images/Industries/Icons/cafe.png",
+      icon: "/Images/Industries/Cafe/icon.webp",
     },
 
     hero: {
@@ -982,17 +974,13 @@ export const INDUSTRIES = [
         "Recipe Management",
         "Batch Management",
       ],
-
-      canonical: "/restaurant-pos/bakery",
-
-      image: "/images/seo/bakery.webp",
     },
 
     card: {
       title: "Bakery",
       description:
         "Track fresh inventory, custom orders, and bakery production efficiently.",
-      icon: "/Images/Industries/Icons/bakery.png",
+      icon: "/Images/Industries/Bakery/icon.webp",
     },
 
     hero: {
@@ -1460,9 +1448,6 @@ export const INDUSTRIES = [
   //       "Multi Outlet Management",
   //     ],
 
-  //     canonical: "/restaurant-pos/cloud-kitchen",
-
-  //     image: "/images/seo/cloud-kitchen.webp",
   //   },
 
   //   card: {
@@ -1939,17 +1924,13 @@ export const INDUSTRIES = [
         "Inventory Management",
         "Pizza Order Management",
       ],
-
-      canonical: "/restaurant-pos/pizzeria",
-
-      image: "/images/seo/pizzeria.webp",
     },
 
     card: {
       title: "Pizzerias",
       description:
         "Simplify pizza ordering, customization, delivery, and kitchen coordination.",
-      icon: "/Images/Industries/Icons/pizzeria.png",
+      icon: "/Images/Industries/Pizzeria/icon.webp",
     },
 
     hero: {
@@ -2419,17 +2400,13 @@ export const INDUSTRIES = [
         "Kitchen Display System",
         "KOT Management",
       ],
-
-      canonical: "/restaurant-pos/bar-brewery",
-
-      image: "/images/seo/bar-brewery.webp",
     },
 
     card: {
       title: "Bars & Breweries",
       description:
         "Manage bar operations, drink inventory, and orders from a single POS platform.",
-      icon: "/Images/Industries/Icons/bar.png",
+      icon: "/Images/Industries/Bar/icon.webp",
     },
 
     hero: {
@@ -2899,17 +2876,13 @@ export const INDUSTRIES = [
         "KOT Management",
         "Guest Management",
       ],
-
-      canonical: "/restaurant-pos/fine-dining",
-
-      image: "/images/seo/fine-dining.webp",
     },
 
     card: {
       title: "Fine Dining",
       description:
         "Deliver premium dining experiences with table management, KOT, and seamless service.",
-      icon: "/Images/Industries/Icons/fine-dining.png",
+      icon: "/Images/Industries/Dinein/icon.webp",
     },
 
     hero: {
@@ -3376,17 +3349,13 @@ export const INDUSTRIES = [
         "Fast Billing",
         "Inventory Management",
       ],
-
-      canonical: "/restaurant-pos/quick-service-restaurant",
-
-      image: "/images/seo/qsr.webp",
     },
 
     card: {
       title: "Quick Service",
       description:
         "Reduce queues with lightning-fast billing and streamlined order processing.",
-      icon: "/Images/Industries/Icons/qsr.png",
+      icon: "/Images/Industries/QSR/icon.webp",
     },
     hero: {
       badge: "QSR POS",
@@ -3854,17 +3823,13 @@ export const INDUSTRIES = [
         "KOT Management",
         "Kitchen Display System",
       ],
-
-      canonical: "/restaurant-pos/ice-cream-parlour-dessert-shop",
-
-      image: "/images/seo/ice-cream-parlour.webp",
     },
 
     card: {
       title: "Dessert Shops",
       description:
         "Manage flavors, toppings, inventory, and daily sales with ease.",
-      icon: "/Images/Industries/Icons/desserts.png",
+      icon: "/Images/Industries/Desserts/icon.webp",
     },
     hero: {
       badge: "Ice Cream Parlour POS",
@@ -4331,17 +4296,13 @@ export const INDUSTRIES = [
         "Restaurant Analytics",
         "Inventory Management",
       ],
-
-      canonical: "/restaurant-pos/large-restaurant-chains-franchises",
-
-      image: "/images/seo/restaurant-chain.webp",
     },
 
     card: {
       title: "Restaurant Chains",
       description:
         "Standardize operations, reporting, and management across multiple outlets.",
-      icon: "/Images/Industries/Icons/large-chains.png",
+      icon: "/Images/Industries/Large-Chains/icon.webp",
     },
 
     hero: {

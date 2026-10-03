@@ -407,9 +407,9 @@ export default function TestimonialCarousel({
         </div>
       </div>
 
-      <div className="w-full flex justify-center lg:mt-10">
+      {/* <div className="w-full flex justify-center lg:mt-10">
         <Link href="/testimonials" className="btn btn-primary">View All Testimonials <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></Link>
-      </div>
+      </div> */}
     </PageWrapper>
   );
 }

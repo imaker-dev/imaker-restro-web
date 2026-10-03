@@ -9,6 +9,7 @@ import AddonsMarketplaceSection from "./components/addons-marketplace-section";
 import CtaSection from "../layouts/cta-section";
 import TestimonialSlider from "./components/testimonial-section";
 import PlatformCompatibility from "./components/platform-compatibility";
+import BlogSection from "./components/blog-section";
 
 export default function Homepage() {
   return (
@@ -29,7 +30,6 @@ export default function Homepage() {
       {/* Platform Compatibility */}
       <PlatformCompatibility />
 
-
       {/* FAQ */}
       <FAQSection />
 
@@ -41,7 +41,10 @@ export default function Homepage() {
       {/* Customer Testimonials */}
       <TestimonialSlider />
 
+      {/* Blogs */}
+      <BlogSection />
 
+      {/* CTA Section */}
       <CtaSection
         eyebrow="READY WHEN YOU ARE"
         title="Run Your Restaurant With One Connected Platform."

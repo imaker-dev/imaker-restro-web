@@ -190,7 +190,7 @@ const IndustryDetailsPage = ({ data }) => {
               {hero.description}
             </p>
 
-            <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-wrap items-start gap-3">
               <Link
                 href={hero.primaryCTA.link}
                 className="btn btn-lg btn-primary"
@@ -274,8 +274,6 @@ const IndustryDetailsPage = ({ data }) => {
           ))}
         </div>
       </PageWrapper>
-
-      
 
       {/* ============================================================ */}
       {/* WORKFLOW — a connected operational sequence, not a card grid   */}

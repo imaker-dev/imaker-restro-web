@@ -10,7 +10,11 @@ export async function generateMetadata({ params }) {
     return {};
   }
 
-  return generateSEO(industry.seo);
+  return generateSEO({
+    ...industry.seo,
+    path: `/industries/${slug}`,
+    image: industry.hero?.image,
+  });
 }
 
 const Page = async ({ params }) => {
