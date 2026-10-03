@@ -1,3 +1,5 @@
+'use client'
+
 import { Clock, CalendarDays, ArrowUpRight } from "lucide-react";
 import { formatDate } from "@/app/data/blogs";
 import Link from "next/link";

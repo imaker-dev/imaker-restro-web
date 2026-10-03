@@ -18,6 +18,7 @@ import BlogCard from "../blogs-page/components/blog-card";
 import { BLOG_AUTHOR, formatDate, getRelatedBlogs } from "@/app/data/blogs";
 import PageWrapper from "@/app/components/page-wrapper";
 import SectionHeading from "../layouts/section-heading";
+import FaqItem from "@/app/components/faq-item";
 
 const BLOG_PATH = "/blogs";
 
@@ -117,7 +118,7 @@ const BENEFITS = [
 
 function CtaCard() {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-slate-900 p-7 text-white shadow-[0_28px_60px_-28px_rgba(15,23,42,0.6)]">
+    <div className="relative overflow-hidden rounded-3xl bg-[#101216]  p-7 text-white shadow-[0_28px_60px_-28px_rgba(15,23,42,0.6)]">
       <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary-600/40 blur-3xl" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
@@ -183,6 +184,32 @@ function MobileCtaBar({ show }) {
   );
 }
 
+function FaqSection({ faqs }) {
+  const [openIndex, setOpenIndex] = useState(0); // first one open; use -1 for all closed
+  if (!faqs?.length) return null;
+
+  return (
+    <section className="py-10">
+      <SectionHeading
+        eyebrow="FAQ"
+        title="Frequently asked questions"
+        variant="compact"
+      />
+      <div>
+        {faqs.map((f, i) => (
+          <FaqItem
+            key={f.question}
+            question={f.question}
+            answer={f.answer}
+            isOpen={openIndex === i}
+            onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* -------------------------------- page -------------------------------- */
 export default function BlogDetailsPage({ blog }) {
   const articleRef = useRef(null);
@@ -240,7 +267,6 @@ export default function BlogDetailsPage({ blog }) {
 
   return (
     <main className="min-h-screen bg-white">
-
       {/* Reading progress */}
       <div className="fixed left-0 top-0 z-[60] h-[3px] w-full">
         <div
@@ -260,7 +286,7 @@ export default function BlogDetailsPage({ blog }) {
             All articles
           </Link>
 
-          <div className="mt-8 grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="mt-4 grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-6">
               <div className="flex flex-wrap items-center gap-3">
                 <span className="rounded-full bg-primary-600 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white">
@@ -272,7 +298,7 @@ export default function BlogDetailsPage({ blog }) {
                 </span>
               </div>
 
-              <h1 className="mt-6 text-balance text-3xl font-bold leading-[1.12] tracking-tight text-slate-900 sm:text-4xl xl:text-[2.85rem]">
+              <h1 className="mt-6 text-balance text-3xl font-semibold leading-[1.12] tracking-tight text-slate-900 sm:text-4xl xl:text-[2.85rem]">
                 {blog.title}
               </h1>
 
@@ -332,8 +358,10 @@ export default function BlogDetailsPage({ blog }) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
+          <FaqSection faqs={blog.faqs} />
+
           {blog.tags?.length > 0 && (
-            <div className="mt-12 flex flex-wrap gap-2 border-t border-slate-200 pt-8">
+            <div className=" flex flex-wrap gap-2 border-t border-slate-200 pt-8">
               {blog.tags.map((tag) => (
                 <span
                   key={tag}
