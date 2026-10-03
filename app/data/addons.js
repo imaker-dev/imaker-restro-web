@@ -935,7 +935,7 @@ export const ADDONS = [
 
       visual: {
         type: "screenshot",
-        src: "/images/addons/Kitchen-Display/new-hero-1.webp",
+        src: "/Images/Addons/Kitchen-Display/new-hero-1.webp",
         alt: "iMaker Restro Kitchen Display System showing active kitchen orders and preparation status",
       },
     },

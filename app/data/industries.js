@@ -1,3 +1,5 @@
+import { i, image } from "motion/react-client";
+
 export const INDUSTRIES = [
   // Food Court & Canteen
   {
@@ -45,7 +47,7 @@ export const INDUSTRIES = [
       description:
         "Long queues and slow billing cost you customers during peak hours. iMaker Restro speeds up order processing across multiple counters, syncs orders directly to the kitchen, tracks inventory in real time, and gives you centralized reports—so your team serves more customers with fewer delays.",
 
-      image: "/Images/Industries/food-court-hero.webp",
+      image: "/Images/Industries/Food-Court/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -168,7 +170,7 @@ export const INDUSTRIES = [
         {
           id: "fast-billing",
           title: "Fast Billing Counter",
-          image: "/images/features/fast-billing.webp",
+          image: "/Images/Industries/Food-Court/fast-billing.webp",
           description:
             "Process orders faster during rush hours. The billing screen is designed for speed—large item buttons, preset modifiers, and one-tap payment. Staff complete transactions in seconds, queues move quicker, and counters serve more customers per hour.",
 
@@ -183,7 +185,7 @@ export const INDUSTRIES = [
         {
           id: "multi-counter",
           title: "Multi-Counter Management",
-          image: "/images/features/multi-counter.webp",
+          image: "/Images/Industries/Food-Court/multi-counter.webp",
           description:
             "Run multiple billing counters from one system. Each counter operates independently while orders, payments, and inventory sync centrally. Add or remove counters during peak and off-peak hours without disrupting operations.",
 
@@ -198,7 +200,7 @@ export const INDUSTRIES = [
         {
           id: "kot-kds",
           title: "KOT & Kitchen Display System",
-          image: "/images/features/kds-food-court.webp",
+          image: "/Images/Industries/Food-Court/kds-food-court.webp",
           description:
             "Orders reach the kitchen the moment billing completes. Choose printed KOT slips or digital KDS displays. Kitchen staff see orders in sequence. No lost slips. No verbal miscommunication. Preparation starts immediately.",
 
@@ -213,7 +215,7 @@ export const INDUSTRIES = [
         {
           id: "inventory",
           title: "Real-Time Inventory Tracking",
-          image: "/images/features/inventory-food-court.webp",
+          image: "/Images/Industries/Food-Court/inventory-food-court.webp",
           description:
             "Stock levels update as orders are billed across counters. Set par-level alerts to trigger restocking before items run out. Track ingredient consumption per counter and prevent selling items that are no longer available.",
 
@@ -228,7 +230,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Centralized Reports & Reconciliation",
-          image: "/images/features/reports-food-court.webp",
+          image: "/Images/Industries/Food-Court/reports-food-court.webp",
           description:
             "Close the day with one consolidated report. View sales, payments, item performance, and counter-wise revenue from a single dashboard. End-of-day reconciliation that used to take hours now takes minutes.",
 
@@ -353,6 +355,8 @@ export const INDUSTRIES = [
 
       description:
         "iMaker Restro reports show counter performance, item sales, peak hour trends, and inventory movement—data operators need to make informed decisions.",
+
+      image: "/Images/Industries/Food-Court/analytics.webp",
 
       items: [
         {
@@ -523,7 +527,7 @@ export const INDUSTRIES = [
       description:
         "Slow billing during morning rush costs you customers. iMaker Restro speeds up order processing, syncs orders to the barista station instantly, handles dine-in and takeaway together, and tracks inventory as items sell—so your team serves more customers without errors.",
 
-      image: "/Images/Industries/cafe-hero.webp",
+      image: "/Images/Industries/Cafe/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -646,7 +650,7 @@ export const INDUSTRIES = [
         {
           id: "fast-billing",
           title: "Fast Billing Counter",
-          image: "/images/features/fast-billing-cafe.webp",
+          image: "/Images/Industries/Cafe/fast-billing-cafe.webp",
           description:
             "Process orders faster during rush hours. The billing screen is designed for speed—large item buttons, preset beverage modifiers, and one-tap payment. Staff complete transactions quickly, queues move faster, and counters serve more customers per hour.",
 
@@ -661,7 +665,7 @@ export const INDUSTRIES = [
         {
           id: "order-management",
           title: "Dine-In & Takeaway Management",
-          image: "/images/features/order-management-cafe.webp",
+          image: "/Images/Industries/Cafe/order-management-cafe.webp",
           description:
             "Handle both order types on the same counter without confusion. Each order gets tagged as dine-in or takeaway at billing. The KDS and KOT display the order type clearly so the barista and kitchen staff serve and pack correctly every time.",
 
@@ -676,7 +680,7 @@ export const INDUSTRIES = [
         {
           id: "kot-kds",
           title: "KOT & Kitchen Display System",
-          image: "/images/features/kds-cafe.webp",
+          image: "/Images/Industries/Cafe/kds-cafe.webp",
           description:
             "Orders reach the barista station the moment billing completes. Choose printed KOT slips or digital KDS displays. Customizations like milk type, sugar level, and temperature appear clearly. No lost slips. No verbal miscommunication.",
 
@@ -691,7 +695,7 @@ export const INDUSTRIES = [
         {
           id: "inventory",
           title: "Real-Time Inventory Tracking",
-          image: "/images/features/inventory-cafe.webp",
+          image: "/Images/Industries/Cafe/inventory-cafe.webp",
           description:
             "Stock levels update as orders are billed. Track milk, coffee beans, syrups, and consumables in real time. Set par-level alerts to trigger restocking before items run out mid-shift. Know exactly what's available at any moment.",
 
@@ -706,7 +710,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Reports & Daily Reconciliation",
-          image: "/images/features/reports-cafe.webp",
+          image: "/Images/Industries/Cafe/reports-cafe.webp",
           description:
             "Close the day with one consolidated report. View sales, payment breakdowns, item performance, and peak hour data from a single dashboard. End-of-day reconciliation that used to take hours now takes minutes.",
 
@@ -831,6 +835,7 @@ export const INDUSTRIES = [
 
       description:
         "iMaker Restro reports show item performance, peak hour trends, payment breakdowns, and inventory movement—data café owners need to make informed decisions.",
+      image: "/Images/Industries/Cafe/analytics.webp",
 
       items: [
         {
@@ -1000,7 +1005,7 @@ export const INDUSTRIES = [
       description:
         "Selling out too early costs revenue. Overproduction leads to wastage. iMaker Restro helps you track inventory as items sell, manage custom cake orders alongside walk-in sales, and generate reports that show what's selling and what's sitting—so you produce smarter and waste less.",
 
-      image: "/Images/Industries/bakery-hero.webp",
+      image: "/Images/Industries/Bakery/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -1123,7 +1128,7 @@ export const INDUSTRIES = [
         {
           id: "fast-billing",
           title: "Fast Billing Counter",
-          image: "/images/features/fast-billing-bakery.webp",
+          image: "/Images/Industries/Bakery/fast-billing-bakery.webp",
           description:
             "Process walk-in sales quickly during rush hours. The billing screen organizes products by category with large selection buttons. Staff complete transactions in seconds, queues move faster, and counters serve more customers during peak windows.",
 
@@ -1138,7 +1143,7 @@ export const INDUSTRIES = [
         {
           id: "inventory",
           title: "Real-Time Inventory Tracking",
-          image: "/images/features/inventory-bakery.webp",
+          image: "/Images/Industries/Bakery/inventory-bakery.webp",
           description:
             "Stock levels update automatically as products are billed. Track ingredients like flour, sugar, butter, and cream with auto-deduction on sales. Set par-level alerts for best-selling items. Know what's on the shelf and what needs baking without manual counting.",
 
@@ -1153,7 +1158,7 @@ export const INDUSTRIES = [
         {
           id: "custom-orders",
           title: "Custom & Pre-Order Management",
-          image: "/images/features/custom-orders-bakery.webp",
+          image: "/Images/Industries/Bakery/custom-orders-bakery.webp",
           description:
             "Log cake and custom orders with full specifications—size, flavor, message, design notes, pickup date, and advance payment. Staff access order details from any terminal. Track order status from placement to pickup. Nothing gets missed or miscommunicated.",
 
@@ -1168,7 +1173,7 @@ export const INDUSTRIES = [
         {
           id: "kot-kds",
           title: "KOT & Kitchen Display System",
-          image: "/images/features/kds-bakery.webp",
+          image: "/Images/Industries/Bakery/kds-bakery.webp",
           description:
             "Custom orders and production requests reach the kitchen instantly. Choose printed KOT slips or digital KDS displays. Production staff see orders with complete specifications. No lost slips. No verbal miscommunication about custom requirements.",
 
@@ -1183,7 +1188,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Sales Reports & Product Performance",
-          image: "/images/features/reports-bakery.webp",
+          image: "/Images/Industries/Bakery/reports-bakery.webp",
           description:
             "Close the day with consolidated reports showing product-wise sales, category performance, peak hour data, and wastage tracking. Identify best-sellers and slow-movers. Adjust production quantities based on actual sales patterns instead of estimates.",
 
@@ -1309,6 +1314,7 @@ export const INDUSTRIES = [
       description:
         "iMaker Restro reports show product performance, category trends, peak sales hours, and wastage patterns—data bakery owners need to make informed production decisions.",
 
+      image: "/Images/Industries/Bakery/analytics.webp",
       items: [
         {
           title: "Product-Wise Sales",
@@ -1945,6 +1951,7 @@ export const INDUSTRIES = [
         "Simplify pizza ordering, customization, delivery, and kitchen coordination.",
       icon: "/Images/Industries/Icons/pizzeria.png",
     },
+
     hero: {
       badge: "Pizzeria POS",
 
@@ -1955,7 +1962,7 @@ export const INDUSTRIES = [
       description:
         "Pizza orders involve multiple customizations—size, crust, toppings, half-and-half splits. Generic POS systems struggle to handle this complexity at speed. iMaker Restro processes customized pizza orders quickly, sends accurate tickets to the kitchen, tracks inventory, and manages dine-in, takeaway, and delivery from one screen.",
 
-      image: "/Images/Industries/pizzeria-hero.webp",
+      image: "/Images/Industries/Pizzeria/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -2078,7 +2085,7 @@ export const INDUSTRIES = [
         {
           id: "fast-billing",
           title: "Fast Pizza Order Billing",
-          image: "/images/features/fast-billing-pizzeria.webp",
+          image: "/Images/Industries/Pizzeria/fast-billing-pizzeria.webp",
           description:
             "Process pizza orders quickly with preset size, crust, and topping buttons. Build half-and-half pizzas with clear modifier selections. Staff complete even complex orders fast. Queues move quicker during peak hours.",
 
@@ -2093,7 +2100,7 @@ export const INDUSTRIES = [
         {
           id: "order-management",
           title: "Dine-In, Takeaway & Delivery Management",
-          image: "/images/features/order-management-pizzeria.webp",
+          image: "/Images/Industries/Pizzeria/order-management-pizzeria.webp",
           description:
             "Handle all three order types on one screen without confusion. Each order gets tagged at billing. The KDS and KOT display the order type prominently. Kitchen packs and serves correctly. Service mistakes drop.",
 
@@ -2108,7 +2115,7 @@ export const INDUSTRIES = [
         {
           id: "kot-kds",
           title: "KOT & Kitchen Display System",
-          image: "/images/features/kds-pizzeria.webp",
+          image: "/Images/Industries/Pizzeria/kds-pizzeria.webp",
           description:
             "Orders reach the kitchen the moment billing completes. Choose printed KOT slips or digital KDS displays. Pizza builds with all customizations appear clearly. No lost slips. No misread handwriting. Preparation starts immediately.",
 
@@ -2123,7 +2130,7 @@ export const INDUSTRIES = [
         {
           id: "inventory",
           title: "Real-Time Inventory Tracking",
-          image: "/images/features/inventory-pizzeria.webp",
+          image: "/Images/Industries/Pizzeria/inventory-pizzeria.webp",
           description:
             "Track cheese, toppings, dough, and packaging materials as orders are processed. Inventory updates automatically. Set par-level alerts for high-consumption items. Know what's running low before the weekend rush.",
 
@@ -2138,7 +2145,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Sales Reports & Performance Analytics",
-          image: "/images/features/reports-pizzeria.webp",
+          image: "/Images/Industries/Pizzeria/reports-pizzeria.webp",
           description:
             "Close the day with consolidated reports showing pizza-wise sales, modifier popularity, peak order hours, and order type breakdowns. Identify best-selling pizzas and toppings. Make menu decisions based on actual sales data.",
 
@@ -2264,6 +2271,7 @@ export const INDUSTRIES = [
       description:
         "iMaker Restro reports show pizza-wise sales, topping trends, peak order hours, and order type breakdowns—data pizzeria owners need to optimize menus and operations.",
 
+      image: "/Images/Industries/Pizzeria/analytics.webp",
       items: [
         {
           title: "Pizza-Wise Sales",
@@ -2434,7 +2442,7 @@ export const INDUSTRIES = [
       description:
         "Evening crowds mean high order volume, fast-paced service, and no room for billing delays. iMaker Restro speeds up beverage and food order processing, syncs bar and kitchen stations, tracks beverage inventory in real time, and handles table and counter billing—so your team serves faster during the busiest hours.",
 
-      image: "/Images/Industries/bar-hero.webp",
+      image: "/Images/Industries/Bar/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -2557,7 +2565,7 @@ export const INDUSTRIES = [
         {
           id: "fast-billing",
           title: "Fast Beverage & Food Billing",
-          image: "/images/features/fast-billing-bar.webp",
+          image: "/Images/Industries/Bar/fast-billing-bar.webp",
           description:
             "Process drink and food orders quickly during busy evenings. The billing screen switches between beverage and food categories with one tap. Large item buttons and preset modifiers speed up entry. Staff complete transactions fast. Customers wait less.",
 
@@ -2572,7 +2580,7 @@ export const INDUSTRIES = [
         {
           id: "bar-kitchen-coordination",
           title: "Bar & Kitchen Order Coordination",
-          image: "/images/features/bar-kitchen-kds.webp",
+          image: "/Images/Industries/Bar/bar-kitchen-kds.webp",
           description:
             "Orders split automatically—beverages to the bar KDS, food to the kitchen KDS. Both stations see their items with timers. Drinks and food prepare in parallel. Table service stays synchronized. Food doesn't arrive before drinks or long after.",
 
@@ -2587,7 +2595,7 @@ export const INDUSTRIES = [
         {
           id: "beverage-inventory",
           title: "Beverage Inventory Tracking",
-          image: "/images/features/beverage-inventory.webp",
+          image: "/Images/Industries/Bar/beverage-inventory.webp",
           description:
             "Track bottled beer, spirits, cocktail ingredients, and brewed beer in real time. Inventory updates automatically as drinks are poured and orders processed. Set par-level alerts for fast-moving items. Know exactly what's available and what needs restocking before peak hours.",
 
@@ -2602,7 +2610,7 @@ export const INDUSTRIES = [
         {
           id: "table-management",
           title: "Table & Service Area Management",
-          image: "/images/features/table-management-bar.webp",
+          image: "/Images/Industries/Bar/table-management-bar.webp",
           description:
             "Manage bar counter, table service, and outdoor seating from one system. Every order is tagged by table number and service area. The KDS displays the origin clearly. Servers know where each order goes. Table turnover stays organized during peak hours.",
 
@@ -2617,7 +2625,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Sales Reports & Beverage Analytics",
-          image: "/images/features/reports-bar.webp",
+          image: "/Images/Industries/Bar/reports-bar.webp",
           description:
             "Close the day with consolidated reports showing beverage-wise sales, food performance, peak hour data, and inventory consumption. Identify best-selling drinks and brews. Track pour costs. Make menu and purchasing decisions based on actual sales data.",
 
@@ -2743,6 +2751,8 @@ export const INDUSTRIES = [
       description:
         "iMaker Restro reports show beverage sales, food performance, peak hour trends, and inventory consumption—data bar and brewery owners need to make informed decisions.",
 
+      image: "/Images/Industries/Bar/analytics.webp",
+
       items: [
         {
           title: "Beverage-Wise Sales",
@@ -2807,7 +2817,6 @@ export const INDUSTRIES = [
         "Multi-Location Dashboards",
       ],
     },
-
 
     faqs: [
       {
@@ -2913,7 +2922,7 @@ export const INDUSTRIES = [
       description:
         "Fine dining depends on precise coordination between the floor and kitchen. iMaker Restro manages reservations, tables, course-wise order flow, guest preferences, and wine inventory from one platform—so your team delivers consistent service without operational friction.",
 
-      image: "/Images/Industries/fine-dining-hero.webp",
+      image: "/Images/Industries/Dinein/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -3036,7 +3045,7 @@ export const INDUSTRIES = [
         {
           id: "table-management",
           title: "Table & Reservation Management",
-          image: "/images/features/table-management-fine-dining.webp",
+          image: "/Images/Industries/Dinein/table-management-fine-dining.webp",
           description:
             "See upcoming reservations and table status on one screen. Assign tables based on party size and guest preferences. Track table progress through courses. Floor managers know exactly which tables are occupied, available, or approaching dessert.",
 
@@ -3051,7 +3060,7 @@ export const INDUSTRIES = [
         {
           id: "course-firing",
           title: "Course-Wise Kitchen Coordination",
-          image: "/images/features/course-firing-kds.webp",
+          image: "/Images/Industries/Dinein/course-firing-kds.webp",
           description:
             "Captains fire each course individually when the table is ready. The KDS releases courses in sequence to the correct stations. Starters, mains, and desserts flow at the right pace. No course overlap. No plates waiting under heat lamps.",
 
@@ -3066,7 +3075,7 @@ export const INDUSTRIES = [
         {
           id: "guest-profiles",
           title: "Guest Preference Profiles",
-          image: "/images/features/guest-profiles-fine-dining.webp",
+          image: "/Images/Industries/Dinein/guest-profiles-fine-dining.webp",
           description:
             "Store dietary restrictions, allergies, past orders, wine preferences, seating choices, and special dates in guest profiles. Hosts, captains, and managers access the same information. Returning guests receive consistent, personalized service every visit.",
 
@@ -3081,7 +3090,7 @@ export const INDUSTRIES = [
         {
           id: "inventory",
           title: "Wine & Ingredient Inventory",
-          image: "/images/features/inventory-fine-dining.webp",
+          image: "/Images/Industries/Dinein/inventory-fine-dining.webp",
           description:
             "Track wine by vintage, producer, and bin location. Monitor high-value ingredients with real-time stock updates. Inventory deducts as orders fire. Set par-level alerts for premium items. Know exactly what's in your cellar and kitchen at all times.",
 
@@ -3096,7 +3105,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Operational Reports & Analytics",
-          image: "/images/features/reports-fine-dining.webp",
+          image: "/Images/Industries/Dinein/reports-fine-dining.webp",
           description:
             "Close service with consolidated reports showing table-wise revenue, menu item performance, wine sales, and guest visit frequency. Identify top-performing dishes and wines. Make menu and purchasing decisions based on actual service data.",
 
@@ -3221,7 +3230,7 @@ export const INDUSTRIES = [
 
       description:
         "iMaker Restro reports show table performance, menu item trends, wine sales, and guest visit patterns—data fine dining operators need to make informed decisions.",
-
+      image: "/Images/Industries/Dinein/analytics.webp",
       items: [
         {
           title: "Table-Wise Revenue",
@@ -3286,7 +3295,6 @@ export const INDUSTRIES = [
         "Multi-Location Dashboards",
       ],
     },
-
 
     faqs: [
       {
@@ -3390,7 +3398,7 @@ export const INDUSTRIES = [
       description:
         "Every second counts when queues build during lunch and dinner rush. iMaker Restro speeds up billing with a fast-order screen, sends orders to the kitchen the moment payment completes, tracks inventory as items sell, and consolidates reports across counters—so your team serves more customers per hour without errors.",
 
-      image: "/Images/Industries/qsr-hero.webp",
+      image: "/Images/Industries/QSR/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -3513,7 +3521,7 @@ export const INDUSTRIES = [
         {
           id: "fast-billing",
           title: "Fast Counter Billing",
-          image: "/images/features/fast-billing-qsr.webp",
+          image: "/Images/Industries/QSR/fast-billing-qsr.webp",
           description:
             "Process orders at speed during peak hours. The billing screen uses large item buttons, preset combo meals, and quick modifier selection. Staff complete transactions in seconds. Queues move faster. More customers served per hour.",
 
@@ -3528,7 +3536,7 @@ export const INDUSTRIES = [
         {
           id: "multi-counter",
           title: "Multi-Counter Billing",
-          image: "/images/features/multi-counter-qsr.webp",
+          image: "/Images/Industries/QSR/multi-counter-qsr.webp",
           description:
             "Run multiple billing counters from one system. Each counter operates independently while orders, payments, and inventory sync centrally. Add counters during peak hours. Reduce during off-peak. Scale counter capacity as order volume demands.",
 
@@ -3543,7 +3551,7 @@ export const INDUSTRIES = [
         {
           id: "kot-kds",
           title: "KOT & Kitchen Display System",
-          image: "/images/features/kds-qsr.webp",
+          image: "/Images/Industries/QSR/kds-qsr.webp",
           description:
             "Orders reach the kitchen the moment billing completes. Choose printed KOT slips or digital KDS displays. Orders appear in sequence with timers. Route items to specific prep stations. No lost slips. No verbal miscommunication. Kitchen throughput improves.",
 
@@ -3558,7 +3566,7 @@ export const INDUSTRIES = [
         {
           id: "inventory",
           title: "Real-Time Inventory Tracking",
-          image: "/images/features/inventory-qsr.webp",
+          image: "/Images/Industries/QSR/inventory-qsr.webp",
           description:
             "Stock levels update automatically as orders are billed. Track ingredients, consumables, and packaging materials in real time. Set par-level alerts for high-consumption items. Know what's running low before the lunch rush begins.",
 
@@ -3573,7 +3581,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Centralized Reports & Reconciliation",
-          image: "/images/features/reports-qsr.webp",
+          image: "/Images/Industries/QSR/reports-qsr.webp",
           description:
             "Close the day with one consolidated report. View sales, item performance, peak hour data, and counter-wise revenue from a single dashboard. End-of-day reconciliation that used to take hours now takes minutes.",
 
@@ -3699,6 +3707,7 @@ export const INDUSTRIES = [
       description:
         "iMaker Restro reports show item performance, peak hour trends, counter-wise sales, and inventory consumption—data QSR operators need to make informed decisions.",
 
+      image: "/Images/Industries/QSR/analytics.webp",
       items: [
         {
           title: "Item Performance",
@@ -3867,7 +3876,7 @@ export const INDUSTRIES = [
       description:
         "Evening crowds, customized orders, and long queues slow down service when it matters most. iMaker Restro speeds up billing with preset flavor and topping buttons, sends preparation orders to the counter or kitchen display, tracks inventory as items sell, and consolidates reports across outlets—so your team serves faster during peak hours.",
 
-      image: "/Images/Industries/desserts-hero.webp",
+      image: "/Images/Industries/Desserts/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -3990,7 +3999,7 @@ export const INDUSTRIES = [
         {
           id: "fast-billing",
           title: "Fast Counter Billing",
-          image: "/images/features/fast-billing-ice-cream.webp",
+          image: "/Images/Industries/Desserts/fast-billing-ice-cream.webp",
           description:
             "Process orders quickly during peak hours. The billing screen uses large flavor buttons, preset topping options, and one-tap payment. Staff complete even customized orders fast. Queues clear quicker on busy evenings.",
 
@@ -4005,7 +4014,7 @@ export const INDUSTRIES = [
         {
           id: "modifier-management",
           title: "Topping & Modifier Management",
-          image: "/images/features/modifier-ice-cream.webp",
+          image: "/Images/Industries/Desserts/modifier-ice-cream.webp",
           description:
             "Manage flavors, scoops, toppings, sauces, cones, and add-ons with preset modifier buttons. Customizations print clearly on KOT or display on the preparation screen. Staff serve exactly what the customer ordered. Remakes and wastage drop.",
 
@@ -4020,7 +4029,7 @@ export const INDUSTRIES = [
         {
           id: "kot-preparation",
           title: "KOT & Preparation Display",
-          image: "/images/features/kds-ice-cream.webp",
+          image: "/Images/Industries/Desserts/kds-ice-cream.webp",
           description:
             "Orders reach the preparation counter the moment billing completes. Choose printed KOT slips or digital display. Sundaes, shakes, and waffle orders appear with complete customization details. No verbal miscommunication. Preparation starts immediately.",
 
@@ -4035,7 +4044,7 @@ export const INDUSTRIES = [
         {
           id: "inventory",
           title: "Real-Time Inventory Tracking",
-          image: "/images/features/inventory-ice-cream.webp",
+          image: "/Images/Industries/Desserts/inventory-ice-cream.webp",
           description:
             "Track ice cream flavors, toppings, sauces, cones, and dry goods in real time. Inventory updates automatically as orders are billed. Set par-level alerts for fast-moving items. Know what's running low before the weekend rush.",
 
@@ -4050,7 +4059,7 @@ export const INDUSTRIES = [
         {
           id: "reports",
           title: "Sales Reports & Performance Analytics",
-          image: "/images/features/reports-ice-cream.webp",
+          image: "/Images/Industries/Desserts/reports-ice-cream.webp",
           description:
             "Close the day with consolidated reports showing flavor-wise sales, topping popularity, peak hour data, and seasonal item performance. Identify best-selling flavors and combos. Plan inventory and menus based on actual sales data.",
 
@@ -4175,7 +4184,7 @@ export const INDUSTRIES = [
 
       description:
         "iMaker Restro reports show flavor performance, topping trends, peak sales hours, and seasonal item data—insights ice cream parlour owners need to make informed decisions.",
-
+      image: "/Images/Industries/Desserts/analytics.webp",
       items: [
         {
           title: "Flavor-Wise Sales",
@@ -4240,7 +4249,6 @@ export const INDUSTRIES = [
         "Multi-Location Dashboards",
       ],
     },
-
 
     faqs: [
       {
@@ -4346,7 +4354,7 @@ export const INDUSTRIES = [
       description:
         "Managing multiple outlets with separate systems creates reporting gaps and operational inconsistency. iMaker Restro centralizes menu management, tracks inventory across locations, consolidates sales and performance reports, and controls user access by role—so you maintain the same standards at every outlet from one platform.",
 
-      image: "/Images/Industries/large-chains-hero.webp",
+      image: "/Images/Industries/Large-Chains/hero.webp",
 
       primaryCTA: {
         text: "Book Free Demo",
@@ -4469,7 +4477,7 @@ export const INDUSTRIES = [
         {
           id: "multi-outlet",
           title: "Multi-Outlet Central Management",
-          image: "/images/features/multi-outlet-chain.webp",
+          image: "/Images/Industries/Large-Chains/multi-outlet-chain.webp",
           description:
             "Manage all restaurant locations from a single central console. Each outlet operates its own POS independently while sales, inventory, and performance data sync centrally. Add new outlets as the business grows without adding administrative complexity.",
 
@@ -4484,7 +4492,7 @@ export const INDUSTRIES = [
         {
           id: "centralized-menu",
           title: "Standardized Menu & Recipe Management",
-          image: "/images/features/menu-management-chain.webp",
+          image: "/Images/Industries/Large-Chains/menu-management-chain.webp",
           description:
             "Create and update menus, pricing, and recipes centrally. Changes push to all outlets or selected locations. Maintain brand consistency while allowing controlled regional variations. New outlet setup completes faster with pre-configured menus.",
 
@@ -4499,7 +4507,7 @@ export const INDUSTRIES = [
         {
           id: "consolidated-inventory",
           title: "Centralized Inventory Visibility",
-          image: "/images/features/inventory-chain.webp",
+          image: "/Images/Industries/Large-Chains/inventory-chain.webp",
           description:
             "View stock levels across all outlets from one screen. Track ingredient consumption per location. Set par-level alerts per outlet. Identify overstocking and shortages. Move inventory between locations based on demand.",
 
@@ -4514,7 +4522,7 @@ export const INDUSTRIES = [
         {
           id: "user-roles",
           title: "User & Role-Based Access Control",
-          image: "/images/features/user-roles-chain.webp",
+          image: "/Images/Industries/Large-Chains/user-roles-chain.webp",
           description:
             "Assign permissions by role. Outlet staff access only their location. Regional managers view their assigned cluster. Central operations teams and owners access the entire business. Sensitive data stays protected. Operational control stays organized.",
 
@@ -4529,7 +4537,7 @@ export const INDUSTRIES = [
         {
           id: "consolidated-reports",
           title: "Consolidated Business Reports",
-          image: "/images/features/reports-chain.webp",
+          image: "/Images/Industries/Large-Chains/reports-chain.webp",
           description:
             "Generate chain-wide reports instantly. Compare outlet performance, item sales, and peak hours across locations. No manual data collection from individual outlets. Decision-makers access current business data at any time from any location.",
 
@@ -4654,7 +4662,7 @@ export const INDUSTRIES = [
 
       description:
         "iMaker Restro reports provide outlet comparisons, chain-wide sales trends, and consolidated inventory data—insights chain and franchise operators need to grow efficiently.",
-
+      image: "/Images/Industries/Large-Chains/analytics.webp",
       items: [
         {
           title: "Outlet Performance Comparison",
@@ -4789,7 +4797,6 @@ export const getIndustries = () => {
 export const getIndustryBySlug = (slug) => {
   return INDUSTRIES.find((industry) => industry.slug === slug) ?? null;
 };
-
 
 // Returns menu items for navigation
 export const getIndustryMenuItems = () => {
